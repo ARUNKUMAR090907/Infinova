@@ -1,0 +1,49 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Build
+dist/
+build/
+.next/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary/download files
+*.crdownload
+tmp/
+temp/
+
+# Large archives / datasets
+*.zip
+*.7z
+
+# Raster/data dumps
+*.tif
+*.tiff
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3

@@ -1,0 +1,1 @@
+"""MarineGuard External Integration Adapters."""

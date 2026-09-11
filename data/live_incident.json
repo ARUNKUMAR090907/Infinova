@@ -1,0 +1,19 @@
+{
+  "incident_id": "MG-LIVE-20260910",
+  "title": "Arabian Sea Active Operational Incident (Live Feeds)",
+  "data_provenance": "LIVE SCIENTIFIC FEEDS (CDSE / CMEMS / ERA5 / AIS)",
+  "location_name": "Arabian Sea, Mumbai Offshore Corridor",
+  "observation_time": "2026-09-10T04:53:53Z",
+  "estimated_spill_age_hours": 4.5,
+  "sar_image": "data/satellite/live_sar.png",
+  "ais_file": "data/ais/live_ais.csv",
+  "ocean_file": "data/ocean/live_ocean.csv",
+  "georef": {
+    "crs": "EPSG:4326",
+    "north": 19.45,
+    "south": 18.8,
+    "west": 71.5,
+    "east": 72.2
+  },
+  "notes": "Live operational feeds ingested from Copernicus Data Space, Copernicus Marine, ECMWF ERA5, and VesselFinder AIS."
+}

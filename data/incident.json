@@ -1,0 +1,19 @@
+{
+  "incident_id": "MG-2026-DEMO-001",
+  "title": "Synthetic Arabian Sea oil-slick investigation",
+  "data_provenance": "SYNTHETIC DEMONSTRATION DATA",
+  "location_name": "Arabian Sea, west of Mumbai (synthetic scene)",
+  "observation_time": "2026-03-14T06:30:00Z",
+  "estimated_spill_age_hours": 4.5,
+  "sar_image": "data/satellite/demo_sar.png",
+  "ais_file": "data/ais/demo_ais.csv",
+  "ocean_file": "data/ocean/demo_ocean.csv",
+  "georef": {
+    "crs": "EPSG:4326",
+    "north": 19.28,
+    "south": 18.92,
+    "west": 71.62,
+    "east": 72.02
+  },
+  "notes": "All satellite, AIS, and oceanographic inputs in this incident are synthetic demonstration data. They are not real-world observations."
+}

@@ -1,0 +1,26 @@
+{
+  "model": "MarineGuard U-Net Segmentation",
+  "checkpoint": "ml\\weights\\unet_oilspill.pt",
+  "test_samples_evaluated": 21,
+  "total_dataset_size": 140,
+  "metrics": {
+    "accuracy": 0.9927,
+    "precision": 0.8915,
+    "recall": 0.9736,
+    "f1": 0.9307,
+    "iou": 0.8704,
+    "dice": 0.9307
+  },
+  "class_performance": {
+    "oil_spill": {
+      "dice": 0.9307,
+      "iou": 0.8704,
+      "precision": 0.8915,
+      "recall": 0.9736
+    },
+    "background_sea": {
+      "accuracy": 0.9927
+    }
+  },
+  "evaluation_notes": "Metrics computed on independent test split. Dice and IoU prioritize positive oil-spill pixels over sea background."
+}

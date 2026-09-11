@@ -1,0 +1,2122 @@
+{
+  "fetched_at": "2026-09-10T04:53:53.644417+00:00",
+  "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+  "status": "ONLINE",
+  "latency_ms": 997.4,
+  "grid_vectors": [
+    {
+      "latitude": 18.8,
+      "longitude": 71.5,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.17,
+      "wind_direction": 277.5,
+      "wind_bearing_to": 97.5,
+      "u_wind": 5.13,
+      "v_wind": -0.67,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.641636+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-95d6a946",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          71.5,
+          18.8
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 18.8,
+      "longitude": 71.7,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.21,
+      "wind_direction": 277.5,
+      "wind_bearing_to": 97.5,
+      "u_wind": 5.17,
+      "v_wind": -0.68,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.641729+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-43c4fac9",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          71.7,
+          18.8
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 18.8,
+      "longitude": 71.9,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.25,
+      "wind_direction": 277.5,
+      "wind_bearing_to": 97.5,
+      "u_wind": 5.21,
+      "v_wind": -0.69,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.641820+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-f54bd550",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          71.9,
+          18.8
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 18.8,
+      "longitude": 72.1,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.29,
+      "wind_direction": 277.5,
+      "wind_bearing_to": 97.5,
+      "u_wind": 5.24,
+      "v_wind": -0.69,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.641878+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-1e5ad987",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          72.10000000000001,
+          18.8
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 19.0,
+      "longitude": 71.5,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.16,
+      "wind_direction": 278.4,
+      "wind_bearing_to": 98.4,
+      "u_wind": 5.1,
+      "v_wind": -0.75,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.641935+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-0087d9f6",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          71.5,
+          19.0
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 19.0,
+      "longitude": 71.7,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.2,
+      "wind_direction": 278.4,
+      "wind_bearing_to": 98.4,
+      "u_wind": 5.14,
+      "v_wind": -0.76,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.641987+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-f8362740",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          71.7,
+          19.0
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 19.0,
+      "longitude": 71.9,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.24,
+      "wind_direction": 278.4,
+      "wind_bearing_to": 98.4,
+      "u_wind": 5.18,
+      "v_wind": -0.77,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.642039+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-7fe5cc09",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          71.9,
+          19.0
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 19.0,
+      "longitude": 72.1,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.28,
+      "wind_direction": 278.4,
+      "wind_bearing_to": 98.4,
+      "u_wind": 5.22,
+      "v_wind": -0.77,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.642086+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-99f81cda",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          72.10000000000001,
+          19.0
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 19.2,
+      "longitude": 71.5,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.15,
+      "wind_direction": 279.3,
+      "wind_bearing_to": 99.3,
+      "u_wind": 5.08,
+      "v_wind": -0.83,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.642139+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-a599b716",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          71.5,
+          19.2
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 19.2,
+      "longitude": 71.7,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.19,
+      "wind_direction": 279.3,
+      "wind_bearing_to": 99.3,
+      "u_wind": 5.12,
+      "v_wind": -0.84,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.642189+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-753923ce",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          71.7,
+          19.2
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 19.2,
+      "longitude": 71.9,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.23,
+      "wind_direction": 279.3,
+      "wind_bearing_to": 99.3,
+      "u_wind": 5.16,
+      "v_wind": -0.85,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.642238+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-3251ba56",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          71.9,
+          19.2
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 19.2,
+      "longitude": 72.1,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.27,
+      "wind_direction": 279.3,
+      "wind_bearing_to": 99.3,
+      "u_wind": 5.2,
+      "v_wind": -0.85,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.642288+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-ee1402c8",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          72.10000000000001,
+          19.2
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 19.4,
+      "longitude": 71.5,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.13,
+      "wind_direction": 280.2,
+      "wind_bearing_to": 100.2,
+      "u_wind": 5.05,
+      "v_wind": -0.91,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.642338+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-4a81d3e5",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          71.5,
+          19.4
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 19.4,
+      "longitude": 71.7,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.17,
+      "wind_direction": 280.2,
+      "wind_bearing_to": 100.2,
+      "u_wind": 5.09,
+      "v_wind": -0.92,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.642387+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-87cf985d",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          71.7,
+          19.4
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 19.4,
+      "longitude": 71.9,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.21,
+      "wind_direction": 280.2,
+      "wind_bearing_to": 100.2,
+      "u_wind": 5.13,
+      "v_wind": -0.92,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.642435+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-bdc2430e",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          71.9,
+          19.4
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    },
+    {
+      "latitude": 19.4,
+      "longitude": 72.1,
+      "timestamp": "2026-09-10T04:53:53.641505+00:00",
+      "wind_speed": 5.25,
+      "wind_direction": 280.2,
+      "wind_bearing_to": 100.2,
+      "u_wind": 5.17,
+      "v_wind": -0.93,
+      "provenance": {
+        "provider": "Copernicus Climate Data Store / ECMWF ERA5",
+        "source_type": "LIVE",
+        "retrieved_at": "2026-09-10T04:53:53.642483+00:00",
+        "observation_time": "2026-09-10T04:53:53.641505+00:00",
+        "request_id": "req-fa6e59c4",
+        "dataset": "ECMWF_ERA5_10M_SURFACE_WIND",
+        "spatial_extent": [
+          72.10000000000001,
+          19.4
+        ],
+        "temporal_extent": null,
+        "quality": 0.96,
+        "license": "Copernicus Open Access / ECMWF Terms",
+        "fallback_used": false,
+        "fallback_reason": null
+      }
+    }
+  ],
+  "hourly_series": [
+    {
+      "timestamp": "2026-09-10T00:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.22,
+      "wind_direction_from": 279.0,
+      "wind_bearing_to": 99.0,
+      "u_wind": 5.16,
+      "v_wind": -0.82
+    },
+    {
+      "timestamp": "2026-09-10T01:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.75,
+      "wind_direction_from": 277.0,
+      "wind_bearing_to": 97.0,
+      "u_wind": 5.71,
+      "v_wind": -0.7
+    },
+    {
+      "timestamp": "2026-09-10T02:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.75,
+      "wind_direction_from": 281.0,
+      "wind_bearing_to": 101.0,
+      "u_wind": 5.64,
+      "v_wind": -1.1
+    },
+    {
+      "timestamp": "2026-09-10T03:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.72,
+      "wind_direction_from": 288.0,
+      "wind_bearing_to": 108.0,
+      "u_wind": 5.44,
+      "v_wind": -1.77
+    },
+    {
+      "timestamp": "2026-09-10T04:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 2.56,
+      "wind_direction_from": 290.0,
+      "wind_bearing_to": 110.0,
+      "u_wind": 2.41,
+      "v_wind": -0.88
+    },
+    {
+      "timestamp": "2026-09-10T05:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 3.31,
+      "wind_direction_from": 150.0,
+      "wind_bearing_to": 330.0,
+      "u_wind": -1.65,
+      "v_wind": 2.87
+    },
+    {
+      "timestamp": "2026-09-10T06:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 2.06,
+      "wind_direction_from": 186.0,
+      "wind_bearing_to": 6.0,
+      "u_wind": 0.22,
+      "v_wind": 2.05
+    },
+    {
+      "timestamp": "2026-09-10T07:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 1.78,
+      "wind_direction_from": 260.0,
+      "wind_bearing_to": 80.0,
+      "u_wind": 1.75,
+      "v_wind": 0.31
+    },
+    {
+      "timestamp": "2026-09-10T08:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 0.78,
+      "wind_direction_from": 255.0,
+      "wind_bearing_to": 75.0,
+      "u_wind": 0.75,
+      "v_wind": 0.2
+    },
+    {
+      "timestamp": "2026-09-10T09:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 0.61,
+      "wind_direction_from": 261.0,
+      "wind_bearing_to": 81.0,
+      "u_wind": 0.6,
+      "v_wind": 0.1
+    },
+    {
+      "timestamp": "2026-09-10T10:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 2.25,
+      "wind_direction_from": 270.0,
+      "wind_bearing_to": 90.0,
+      "u_wind": 2.25,
+      "v_wind": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T11:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 3.58,
+      "wind_direction_from": 278.0,
+      "wind_bearing_to": 98.0,
+      "u_wind": 3.55,
+      "v_wind": -0.5
+    },
+    {
+      "timestamp": "2026-09-10T12:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 3.56,
+      "wind_direction_from": 267.0,
+      "wind_bearing_to": 87.0,
+      "u_wind": 3.56,
+      "v_wind": 0.19
+    },
+    {
+      "timestamp": "2026-09-10T13:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 3.72,
+      "wind_direction_from": 266.0,
+      "wind_bearing_to": 86.0,
+      "u_wind": 3.71,
+      "v_wind": 0.26
+    },
+    {
+      "timestamp": "2026-09-10T14:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.14,
+      "wind_direction_from": 272.0,
+      "wind_bearing_to": 92.0,
+      "u_wind": 4.14,
+      "v_wind": -0.14
+    },
+    {
+      "timestamp": "2026-09-10T15:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.53,
+      "wind_direction_from": 294.0,
+      "wind_bearing_to": 114.0,
+      "u_wind": 5.05,
+      "v_wind": -2.25
+    },
+    {
+      "timestamp": "2026-09-10T16:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.47,
+      "wind_direction_from": 300.0,
+      "wind_bearing_to": 120.0,
+      "u_wind": 4.74,
+      "v_wind": -2.74
+    },
+    {
+      "timestamp": "2026-09-10T17:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.94,
+      "wind_direction_from": 303.0,
+      "wind_bearing_to": 123.0,
+      "u_wind": 4.14,
+      "v_wind": -2.69
+    },
+    {
+      "timestamp": "2026-09-10T18:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.53,
+      "wind_direction_from": 301.0,
+      "wind_bearing_to": 121.0,
+      "u_wind": 3.88,
+      "v_wind": -2.33
+    },
+    {
+      "timestamp": "2026-09-10T19:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.89,
+      "wind_direction_from": 296.0,
+      "wind_bearing_to": 116.0,
+      "u_wind": 4.4,
+      "v_wind": -2.14
+    },
+    {
+      "timestamp": "2026-09-10T20:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.89,
+      "wind_direction_from": 292.0,
+      "wind_bearing_to": 112.0,
+      "u_wind": 4.53,
+      "v_wind": -1.83
+    },
+    {
+      "timestamp": "2026-09-10T21:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.86,
+      "wind_direction_from": 291.0,
+      "wind_bearing_to": 111.0,
+      "u_wind": 4.54,
+      "v_wind": -1.74
+    },
+    {
+      "timestamp": "2026-09-10T22:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.69,
+      "wind_direction_from": 292.0,
+      "wind_bearing_to": 112.0,
+      "u_wind": 4.35,
+      "v_wind": -1.76
+    },
+    {
+      "timestamp": "2026-09-10T23:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.44,
+      "wind_direction_from": 293.0,
+      "wind_bearing_to": 113.0,
+      "u_wind": 4.09,
+      "v_wind": -1.73
+    },
+    {
+      "timestamp": "2026-09-11T00:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.42,
+      "wind_direction_from": 296.0,
+      "wind_bearing_to": 116.0,
+      "u_wind": 3.97,
+      "v_wind": -1.94
+    },
+    {
+      "timestamp": "2026-09-11T01:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.17,
+      "wind_direction_from": 300.0,
+      "wind_bearing_to": 120.0,
+      "u_wind": 3.61,
+      "v_wind": -2.09
+    },
+    {
+      "timestamp": "2026-09-11T02:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.08,
+      "wind_direction_from": 306.0,
+      "wind_bearing_to": 126.0,
+      "u_wind": 3.3,
+      "v_wind": -2.4
+    },
+    {
+      "timestamp": "2026-09-11T03:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.03,
+      "wind_direction_from": 307.0,
+      "wind_bearing_to": 127.0,
+      "u_wind": 3.22,
+      "v_wind": -2.43
+    },
+    {
+      "timestamp": "2026-09-11T04:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 3.94,
+      "wind_direction_from": 310.0,
+      "wind_bearing_to": 130.0,
+      "u_wind": 3.02,
+      "v_wind": -2.53
+    },
+    {
+      "timestamp": "2026-09-11T05:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 3.94,
+      "wind_direction_from": 311.0,
+      "wind_bearing_to": 131.0,
+      "u_wind": 2.97,
+      "v_wind": -2.58
+    },
+    {
+      "timestamp": "2026-09-11T06:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 3.78,
+      "wind_direction_from": 310.0,
+      "wind_bearing_to": 130.0,
+      "u_wind": 2.9,
+      "v_wind": -2.43
+    },
+    {
+      "timestamp": "2026-09-11T07:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 3.92,
+      "wind_direction_from": 305.0,
+      "wind_bearing_to": 125.0,
+      "u_wind": 3.21,
+      "v_wind": -2.25
+    },
+    {
+      "timestamp": "2026-09-11T08:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.33,
+      "wind_direction_from": 300.0,
+      "wind_bearing_to": 120.0,
+      "u_wind": 3.75,
+      "v_wind": -2.17
+    },
+    {
+      "timestamp": "2026-09-11T09:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.81,
+      "wind_direction_from": 299.0,
+      "wind_bearing_to": 119.0,
+      "u_wind": 4.21,
+      "v_wind": -2.33
+    },
+    {
+      "timestamp": "2026-09-11T10:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.25,
+      "wind_direction_from": 297.0,
+      "wind_bearing_to": 117.0,
+      "u_wind": 4.68,
+      "v_wind": -2.38
+    },
+    {
+      "timestamp": "2026-09-11T11:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.25,
+      "wind_direction_from": 291.0,
+      "wind_bearing_to": 111.0,
+      "u_wind": 4.9,
+      "v_wind": -1.88
+    },
+    {
+      "timestamp": "2026-09-11T12:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.44,
+      "wind_direction_from": 289.0,
+      "wind_bearing_to": 109.0,
+      "u_wind": 5.14,
+      "v_wind": -1.77
+    },
+    {
+      "timestamp": "2026-09-11T13:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.67,
+      "wind_direction_from": 287.0,
+      "wind_bearing_to": 107.0,
+      "u_wind": 5.42,
+      "v_wind": -1.66
+    },
+    {
+      "timestamp": "2026-09-11T14:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.53,
+      "wind_direction_from": 294.0,
+      "wind_bearing_to": 114.0,
+      "u_wind": 5.05,
+      "v_wind": -2.25
+    },
+    {
+      "timestamp": "2026-09-11T15:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.11,
+      "wind_direction_from": 299.0,
+      "wind_bearing_to": 119.0,
+      "u_wind": 4.47,
+      "v_wind": -2.48
+    },
+    {
+      "timestamp": "2026-09-11T16:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.11,
+      "wind_direction_from": 296.0,
+      "wind_bearing_to": 116.0,
+      "u_wind": 4.59,
+      "v_wind": -2.24
+    },
+    {
+      "timestamp": "2026-09-11T17:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.94,
+      "wind_direction_from": 291.0,
+      "wind_bearing_to": 111.0,
+      "u_wind": 4.61,
+      "v_wind": -1.77
+    },
+    {
+      "timestamp": "2026-09-11T18:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.25,
+      "wind_direction_from": 294.0,
+      "wind_bearing_to": 114.0,
+      "u_wind": 4.8,
+      "v_wind": -2.14
+    },
+    {
+      "timestamp": "2026-09-11T19:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.56,
+      "wind_direction_from": 296.0,
+      "wind_bearing_to": 116.0,
+      "u_wind": 5.0,
+      "v_wind": -2.44
+    },
+    {
+      "timestamp": "2026-09-11T20:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.47,
+      "wind_direction_from": 291.0,
+      "wind_bearing_to": 111.0,
+      "u_wind": 5.11,
+      "v_wind": -1.96
+    },
+    {
+      "timestamp": "2026-09-11T21:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.36,
+      "wind_direction_from": 294.0,
+      "wind_bearing_to": 114.0,
+      "u_wind": 4.9,
+      "v_wind": -2.18
+    },
+    {
+      "timestamp": "2026-09-11T22:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.58,
+      "wind_direction_from": 298.0,
+      "wind_bearing_to": 118.0,
+      "u_wind": 4.93,
+      "v_wind": -2.62
+    },
+    {
+      "timestamp": "2026-09-11T23:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.81,
+      "wind_direction_from": 294.0,
+      "wind_bearing_to": 114.0,
+      "u_wind": 5.31,
+      "v_wind": -2.36
+    },
+    {
+      "timestamp": "2026-09-12T00:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.69,
+      "wind_direction_from": 295.0,
+      "wind_bearing_to": 115.0,
+      "u_wind": 5.16,
+      "v_wind": -2.4
+    },
+    {
+      "timestamp": "2026-09-12T01:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.58,
+      "wind_direction_from": 300.0,
+      "wind_bearing_to": 120.0,
+      "u_wind": 4.83,
+      "v_wind": -2.79
+    },
+    {
+      "timestamp": "2026-09-12T02:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.53,
+      "wind_direction_from": 299.0,
+      "wind_bearing_to": 119.0,
+      "u_wind": 4.84,
+      "v_wind": -2.68
+    },
+    {
+      "timestamp": "2026-09-12T03:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.83,
+      "wind_direction_from": 296.0,
+      "wind_bearing_to": 116.0,
+      "u_wind": 5.24,
+      "v_wind": -2.56
+    },
+    {
+      "timestamp": "2026-09-12T04:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.33,
+      "wind_direction_from": 304.0,
+      "wind_bearing_to": 124.0,
+      "u_wind": 4.42,
+      "v_wind": -2.98
+    },
+    {
+      "timestamp": "2026-09-12T05:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.17,
+      "wind_direction_from": 307.0,
+      "wind_bearing_to": 127.0,
+      "u_wind": 4.13,
+      "v_wind": -3.11
+    },
+    {
+      "timestamp": "2026-09-12T06:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 4.44,
+      "wind_direction_from": 297.0,
+      "wind_bearing_to": 117.0,
+      "u_wind": 3.96,
+      "v_wind": -2.02
+    },
+    {
+      "timestamp": "2026-09-12T07:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.0,
+      "wind_direction_from": 296.0,
+      "wind_bearing_to": 116.0,
+      "u_wind": 4.49,
+      "v_wind": -2.19
+    },
+    {
+      "timestamp": "2026-09-12T08:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 5.83,
+      "wind_direction_from": 294.0,
+      "wind_bearing_to": 114.0,
+      "u_wind": 5.33,
+      "v_wind": -2.37
+    },
+    {
+      "timestamp": "2026-09-12T09:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.64,
+      "wind_direction_from": 294.0,
+      "wind_bearing_to": 114.0,
+      "u_wind": 6.07,
+      "v_wind": -2.7
+    },
+    {
+      "timestamp": "2026-09-12T10:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.89,
+      "wind_direction_from": 289.0,
+      "wind_bearing_to": 109.0,
+      "u_wind": 6.51,
+      "v_wind": -2.24
+    },
+    {
+      "timestamp": "2026-09-12T11:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.97,
+      "wind_direction_from": 286.0,
+      "wind_bearing_to": 106.0,
+      "u_wind": 6.7,
+      "v_wind": -1.92
+    },
+    {
+      "timestamp": "2026-09-12T12:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.08,
+      "wind_direction_from": 283.0,
+      "wind_bearing_to": 103.0,
+      "u_wind": 6.9,
+      "v_wind": -1.59
+    },
+    {
+      "timestamp": "2026-09-12T13:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.25,
+      "wind_direction_from": 284.0,
+      "wind_bearing_to": 104.0,
+      "u_wind": 7.03,
+      "v_wind": -1.75
+    },
+    {
+      "timestamp": "2026-09-12T14:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.03,
+      "wind_direction_from": 288.0,
+      "wind_bearing_to": 108.0,
+      "u_wind": 6.69,
+      "v_wind": -2.17
+    },
+    {
+      "timestamp": "2026-09-12T15:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.69,
+      "wind_direction_from": 289.0,
+      "wind_bearing_to": 109.0,
+      "u_wind": 6.33,
+      "v_wind": -2.18
+    },
+    {
+      "timestamp": "2026-09-12T16:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.25,
+      "wind_direction_from": 289.0,
+      "wind_bearing_to": 109.0,
+      "u_wind": 5.91,
+      "v_wind": -2.03
+    },
+    {
+      "timestamp": "2026-09-12T17:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.33,
+      "wind_direction_from": 287.0,
+      "wind_bearing_to": 107.0,
+      "u_wind": 6.05,
+      "v_wind": -1.85
+    },
+    {
+      "timestamp": "2026-09-12T18:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.64,
+      "wind_direction_from": 284.0,
+      "wind_bearing_to": 104.0,
+      "u_wind": 6.44,
+      "v_wind": -1.61
+    },
+    {
+      "timestamp": "2026-09-12T19:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.64,
+      "wind_direction_from": 279.0,
+      "wind_bearing_to": 99.0,
+      "u_wind": 6.56,
+      "v_wind": -1.04
+    },
+    {
+      "timestamp": "2026-09-12T20:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.78,
+      "wind_direction_from": 276.0,
+      "wind_bearing_to": 96.0,
+      "u_wind": 6.74,
+      "v_wind": -0.71
+    },
+    {
+      "timestamp": "2026-09-12T21:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.83,
+      "wind_direction_from": 279.0,
+      "wind_bearing_to": 99.0,
+      "u_wind": 6.75,
+      "v_wind": -1.07
+    },
+    {
+      "timestamp": "2026-09-12T22:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.83,
+      "wind_direction_from": 282.0,
+      "wind_bearing_to": 102.0,
+      "u_wind": 6.68,
+      "v_wind": -1.42
+    },
+    {
+      "timestamp": "2026-09-12T23:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.69,
+      "wind_direction_from": 282.0,
+      "wind_bearing_to": 102.0,
+      "u_wind": 6.54,
+      "v_wind": -1.39
+    },
+    {
+      "timestamp": "2026-09-13T00:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.83,
+      "wind_direction_from": 283.0,
+      "wind_bearing_to": 103.0,
+      "u_wind": 6.65,
+      "v_wind": -1.54
+    },
+    {
+      "timestamp": "2026-09-13T01:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.86,
+      "wind_direction_from": 284.0,
+      "wind_bearing_to": 104.0,
+      "u_wind": 6.66,
+      "v_wind": -1.66
+    },
+    {
+      "timestamp": "2026-09-13T02:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.22,
+      "wind_direction_from": 286.0,
+      "wind_bearing_to": 106.0,
+      "u_wind": 6.94,
+      "v_wind": -1.99
+    },
+    {
+      "timestamp": "2026-09-13T03:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.42,
+      "wind_direction_from": 284.0,
+      "wind_bearing_to": 104.0,
+      "u_wind": 7.2,
+      "v_wind": -1.8
+    },
+    {
+      "timestamp": "2026-09-13T04:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.28,
+      "wind_direction_from": 283.0,
+      "wind_bearing_to": 103.0,
+      "u_wind": 7.09,
+      "v_wind": -1.64
+    },
+    {
+      "timestamp": "2026-09-13T05:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.33,
+      "wind_direction_from": 283.0,
+      "wind_bearing_to": 103.0,
+      "u_wind": 7.14,
+      "v_wind": -1.65
+    },
+    {
+      "timestamp": "2026-09-13T06:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.47,
+      "wind_direction_from": 285.0,
+      "wind_bearing_to": 105.0,
+      "u_wind": 7.22,
+      "v_wind": -1.93
+    },
+    {
+      "timestamp": "2026-09-13T07:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.53,
+      "wind_direction_from": 287.0,
+      "wind_bearing_to": 107.0,
+      "u_wind": 7.2,
+      "v_wind": -2.2
+    },
+    {
+      "timestamp": "2026-09-13T08:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.5,
+      "wind_direction_from": 288.0,
+      "wind_bearing_to": 108.0,
+      "u_wind": 7.13,
+      "v_wind": -2.32
+    },
+    {
+      "timestamp": "2026-09-13T09:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.78,
+      "wind_direction_from": 289.0,
+      "wind_bearing_to": 109.0,
+      "u_wind": 7.36,
+      "v_wind": -2.53
+    },
+    {
+      "timestamp": "2026-09-13T10:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.08,
+      "wind_direction_from": 287.0,
+      "wind_bearing_to": 107.0,
+      "u_wind": 7.73,
+      "v_wind": -2.36
+    },
+    {
+      "timestamp": "2026-09-13T11:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.97,
+      "wind_direction_from": 286.0,
+      "wind_bearing_to": 106.0,
+      "u_wind": 7.66,
+      "v_wind": -2.2
+    },
+    {
+      "timestamp": "2026-09-13T12:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.81,
+      "wind_direction_from": 286.0,
+      "wind_bearing_to": 106.0,
+      "u_wind": 7.51,
+      "v_wind": -2.15
+    },
+    {
+      "timestamp": "2026-09-13T13:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.5,
+      "wind_direction_from": 287.0,
+      "wind_bearing_to": 107.0,
+      "u_wind": 7.17,
+      "v_wind": -2.19
+    },
+    {
+      "timestamp": "2026-09-13T14:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.11,
+      "wind_direction_from": 289.0,
+      "wind_bearing_to": 109.0,
+      "u_wind": 6.72,
+      "v_wind": -2.31
+    },
+    {
+      "timestamp": "2026-09-13T15:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.69,
+      "wind_direction_from": 290.0,
+      "wind_bearing_to": 110.0,
+      "u_wind": 6.29,
+      "v_wind": -2.29
+    },
+    {
+      "timestamp": "2026-09-13T16:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.33,
+      "wind_direction_from": 286.0,
+      "wind_bearing_to": 106.0,
+      "u_wind": 6.08,
+      "v_wind": -1.74
+    },
+    {
+      "timestamp": "2026-09-13T17:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.06,
+      "wind_direction_from": 279.0,
+      "wind_bearing_to": 99.0,
+      "u_wind": 5.99,
+      "v_wind": -0.95
+    },
+    {
+      "timestamp": "2026-09-13T18:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.0,
+      "wind_direction_from": 272.0,
+      "wind_bearing_to": 92.0,
+      "u_wind": 6.0,
+      "v_wind": -0.21
+    },
+    {
+      "timestamp": "2026-09-13T19:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.11,
+      "wind_direction_from": 269.0,
+      "wind_bearing_to": 89.0,
+      "u_wind": 6.11,
+      "v_wind": 0.11
+    },
+    {
+      "timestamp": "2026-09-13T20:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.31,
+      "wind_direction_from": 267.0,
+      "wind_bearing_to": 87.0,
+      "u_wind": 6.3,
+      "v_wind": 0.33
+    },
+    {
+      "timestamp": "2026-09-13T21:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.53,
+      "wind_direction_from": 266.0,
+      "wind_bearing_to": 86.0,
+      "u_wind": 6.51,
+      "v_wind": 0.46
+    },
+    {
+      "timestamp": "2026-09-13T22:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.72,
+      "wind_direction_from": 265.0,
+      "wind_bearing_to": 85.0,
+      "u_wind": 6.69,
+      "v_wind": 0.59
+    },
+    {
+      "timestamp": "2026-09-13T23:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.97,
+      "wind_direction_from": 265.0,
+      "wind_bearing_to": 85.0,
+      "u_wind": 6.94,
+      "v_wind": 0.61
+    },
+    {
+      "timestamp": "2026-09-14T00:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.17,
+      "wind_direction_from": 263.0,
+      "wind_bearing_to": 83.0,
+      "u_wind": 7.12,
+      "v_wind": 0.87
+    },
+    {
+      "timestamp": "2026-09-14T01:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.53,
+      "wind_direction_from": 253.0,
+      "wind_bearing_to": 73.0,
+      "u_wind": 7.2,
+      "v_wind": 2.2
+    },
+    {
+      "timestamp": "2026-09-14T02:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.17,
+      "wind_direction_from": 242.0,
+      "wind_bearing_to": 62.0,
+      "u_wind": 7.21,
+      "v_wind": 3.84
+    },
+    {
+      "timestamp": "2026-09-14T03:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.64,
+      "wind_direction_from": 237.0,
+      "wind_bearing_to": 57.0,
+      "u_wind": 7.25,
+      "v_wind": 4.71
+    },
+    {
+      "timestamp": "2026-09-14T04:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.33,
+      "wind_direction_from": 241.0,
+      "wind_bearing_to": 61.0,
+      "u_wind": 7.29,
+      "v_wind": 4.04
+    },
+    {
+      "timestamp": "2026-09-14T05:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.69,
+      "wind_direction_from": 251.0,
+      "wind_bearing_to": 71.0,
+      "u_wind": 7.27,
+      "v_wind": 2.5
+    },
+    {
+      "timestamp": "2026-09-14T06:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.47,
+      "wind_direction_from": 259.0,
+      "wind_bearing_to": 79.0,
+      "u_wind": 7.33,
+      "v_wind": 1.43
+    },
+    {
+      "timestamp": "2026-09-14T07:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.53,
+      "wind_direction_from": 260.0,
+      "wind_bearing_to": 80.0,
+      "u_wind": 7.42,
+      "v_wind": 1.31
+    },
+    {
+      "timestamp": "2026-09-14T08:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.64,
+      "wind_direction_from": 257.0,
+      "wind_bearing_to": 77.0,
+      "u_wind": 7.44,
+      "v_wind": 1.72
+    },
+    {
+      "timestamp": "2026-09-14T09:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.75,
+      "wind_direction_from": 254.0,
+      "wind_bearing_to": 74.0,
+      "u_wind": 7.45,
+      "v_wind": 2.14
+    },
+    {
+      "timestamp": "2026-09-14T10:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.67,
+      "wind_direction_from": 253.0,
+      "wind_bearing_to": 73.0,
+      "u_wind": 7.33,
+      "v_wind": 2.24
+    },
+    {
+      "timestamp": "2026-09-14T11:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.58,
+      "wind_direction_from": 253.0,
+      "wind_bearing_to": 73.0,
+      "u_wind": 7.25,
+      "v_wind": 2.22
+    },
+    {
+      "timestamp": "2026-09-14T12:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.44,
+      "wind_direction_from": 252.0,
+      "wind_bearing_to": 72.0,
+      "u_wind": 7.08,
+      "v_wind": 2.3
+    },
+    {
+      "timestamp": "2026-09-14T13:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.22,
+      "wind_direction_from": 249.0,
+      "wind_bearing_to": 69.0,
+      "u_wind": 6.74,
+      "v_wind": 2.59
+    },
+    {
+      "timestamp": "2026-09-14T14:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.94,
+      "wind_direction_from": 246.0,
+      "wind_bearing_to": 66.0,
+      "u_wind": 6.34,
+      "v_wind": 2.82
+    },
+    {
+      "timestamp": "2026-09-14T15:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.89,
+      "wind_direction_from": 242.0,
+      "wind_bearing_to": 62.0,
+      "u_wind": 6.08,
+      "v_wind": 3.23
+    },
+    {
+      "timestamp": "2026-09-14T16:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.11,
+      "wind_direction_from": 238.0,
+      "wind_bearing_to": 58.0,
+      "u_wind": 6.03,
+      "v_wind": 3.77
+    },
+    {
+      "timestamp": "2026-09-14T17:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.56,
+      "wind_direction_from": 234.0,
+      "wind_bearing_to": 54.0,
+      "u_wind": 6.12,
+      "v_wind": 4.44
+    },
+    {
+      "timestamp": "2026-09-14T18:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.94,
+      "wind_direction_from": 231.0,
+      "wind_bearing_to": 51.0,
+      "u_wind": 6.17,
+      "v_wind": 5.0
+    },
+    {
+      "timestamp": "2026-09-14T19:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.22,
+      "wind_direction_from": 228.0,
+      "wind_bearing_to": 48.0,
+      "u_wind": 6.11,
+      "v_wind": 5.5
+    },
+    {
+      "timestamp": "2026-09-14T20:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.39,
+      "wind_direction_from": 226.0,
+      "wind_bearing_to": 46.0,
+      "u_wind": 6.04,
+      "v_wind": 5.83
+    },
+    {
+      "timestamp": "2026-09-14T21:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.53,
+      "wind_direction_from": 224.0,
+      "wind_bearing_to": 44.0,
+      "u_wind": 5.93,
+      "v_wind": 6.14
+    },
+    {
+      "timestamp": "2026-09-14T22:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.56,
+      "wind_direction_from": 223.0,
+      "wind_bearing_to": 43.0,
+      "u_wind": 5.84,
+      "v_wind": 6.26
+    },
+    {
+      "timestamp": "2026-09-14T23:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.5,
+      "wind_direction_from": 222.0,
+      "wind_bearing_to": 42.0,
+      "u_wind": 5.69,
+      "v_wind": 6.32
+    },
+    {
+      "timestamp": "2026-09-15T00:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.44,
+      "wind_direction_from": 220.0,
+      "wind_bearing_to": 40.0,
+      "u_wind": 5.43,
+      "v_wind": 6.47
+    },
+    {
+      "timestamp": "2026-09-15T01:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.5,
+      "wind_direction_from": 217.0,
+      "wind_bearing_to": 37.0,
+      "u_wind": 5.12,
+      "v_wind": 6.79
+    },
+    {
+      "timestamp": "2026-09-15T02:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.64,
+      "wind_direction_from": 214.0,
+      "wind_bearing_to": 34.0,
+      "u_wind": 4.83,
+      "v_wind": 7.16
+    },
+    {
+      "timestamp": "2026-09-15T03:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.67,
+      "wind_direction_from": 212.0,
+      "wind_bearing_to": 32.0,
+      "u_wind": 4.59,
+      "v_wind": 7.35
+    },
+    {
+      "timestamp": "2026-09-15T04:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.44,
+      "wind_direction_from": 214.0,
+      "wind_bearing_to": 34.0,
+      "u_wind": 4.72,
+      "v_wind": 7.0
+    },
+    {
+      "timestamp": "2026-09-15T05:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.17,
+      "wind_direction_from": 217.0,
+      "wind_bearing_to": 37.0,
+      "u_wind": 4.92,
+      "v_wind": 6.52
+    },
+    {
+      "timestamp": "2026-09-15T06:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.03,
+      "wind_direction_from": 219.0,
+      "wind_bearing_to": 39.0,
+      "u_wind": 5.05,
+      "v_wind": 6.24
+    },
+    {
+      "timestamp": "2026-09-15T07:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.19,
+      "wind_direction_from": 219.0,
+      "wind_bearing_to": 39.0,
+      "u_wind": 5.15,
+      "v_wind": 6.36
+    },
+    {
+      "timestamp": "2026-09-15T08:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.58,
+      "wind_direction_from": 218.0,
+      "wind_bearing_to": 38.0,
+      "u_wind": 5.28,
+      "v_wind": 6.76
+    },
+    {
+      "timestamp": "2026-09-15T09:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.75,
+      "wind_direction_from": 217.0,
+      "wind_bearing_to": 37.0,
+      "u_wind": 5.27,
+      "v_wind": 6.99
+    },
+    {
+      "timestamp": "2026-09-15T10:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.58,
+      "wind_direction_from": 215.0,
+      "wind_bearing_to": 35.0,
+      "u_wind": 4.92,
+      "v_wind": 7.03
+    },
+    {
+      "timestamp": "2026-09-15T11:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.28,
+      "wind_direction_from": 213.0,
+      "wind_bearing_to": 33.0,
+      "u_wind": 4.51,
+      "v_wind": 6.94
+    },
+    {
+      "timestamp": "2026-09-15T12:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 8.0,
+      "wind_direction_from": 213.0,
+      "wind_bearing_to": 33.0,
+      "u_wind": 4.36,
+      "v_wind": 6.71
+    },
+    {
+      "timestamp": "2026-09-15T13:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.92,
+      "wind_direction_from": 216.0,
+      "wind_bearing_to": 36.0,
+      "u_wind": 4.66,
+      "v_wind": 6.41
+    },
+    {
+      "timestamp": "2026-09-15T14:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.94,
+      "wind_direction_from": 220.0,
+      "wind_bearing_to": 40.0,
+      "u_wind": 5.1,
+      "v_wind": 6.08
+    },
+    {
+      "timestamp": "2026-09-15T15:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.97,
+      "wind_direction_from": 223.0,
+      "wind_bearing_to": 43.0,
+      "u_wind": 5.44,
+      "v_wind": 5.83
+    },
+    {
+      "timestamp": "2026-09-15T16:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.78,
+      "wind_direction_from": 223.0,
+      "wind_bearing_to": 43.0,
+      "u_wind": 5.31,
+      "v_wind": 5.69
+    },
+    {
+      "timestamp": "2026-09-15T17:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.56,
+      "wind_direction_from": 220.0,
+      "wind_bearing_to": 40.0,
+      "u_wind": 4.86,
+      "v_wind": 5.79
+    },
+    {
+      "timestamp": "2026-09-15T18:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.36,
+      "wind_direction_from": 219.0,
+      "wind_bearing_to": 39.0,
+      "u_wind": 4.63,
+      "v_wind": 5.72
+    },
+    {
+      "timestamp": "2026-09-15T19:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.53,
+      "wind_direction_from": 213.0,
+      "wind_bearing_to": 33.0,
+      "u_wind": 4.1,
+      "v_wind": 6.32
+    },
+    {
+      "timestamp": "2026-09-15T20:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.58,
+      "wind_direction_from": 211.0,
+      "wind_bearing_to": 31.0,
+      "u_wind": 3.9,
+      "v_wind": 6.5
+    },
+    {
+      "timestamp": "2026-09-15T21:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.69,
+      "wind_direction_from": 209.0,
+      "wind_bearing_to": 29.0,
+      "u_wind": 3.73,
+      "v_wind": 6.73
+    },
+    {
+      "timestamp": "2026-09-15T22:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.83,
+      "wind_direction_from": 207.0,
+      "wind_bearing_to": 27.0,
+      "u_wind": 3.55,
+      "v_wind": 6.98
+    },
+    {
+      "timestamp": "2026-09-15T23:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.92,
+      "wind_direction_from": 205.0,
+      "wind_bearing_to": 25.0,
+      "u_wind": 3.35,
+      "v_wind": 7.18
+    },
+    {
+      "timestamp": "2026-09-16T00:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.94,
+      "wind_direction_from": 205.0,
+      "wind_bearing_to": 25.0,
+      "u_wind": 3.36,
+      "v_wind": 7.2
+    },
+    {
+      "timestamp": "2026-09-16T01:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.86,
+      "wind_direction_from": 206.0,
+      "wind_bearing_to": 26.0,
+      "u_wind": 3.45,
+      "v_wind": 7.06
+    },
+    {
+      "timestamp": "2026-09-16T02:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.69,
+      "wind_direction_from": 207.0,
+      "wind_bearing_to": 27.0,
+      "u_wind": 3.49,
+      "v_wind": 6.85
+    },
+    {
+      "timestamp": "2026-09-16T03:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.5,
+      "wind_direction_from": 209.0,
+      "wind_bearing_to": 29.0,
+      "u_wind": 3.64,
+      "v_wind": 6.56
+    },
+    {
+      "timestamp": "2026-09-16T04:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.31,
+      "wind_direction_from": 212.0,
+      "wind_bearing_to": 32.0,
+      "u_wind": 3.87,
+      "v_wind": 6.2
+    },
+    {
+      "timestamp": "2026-09-16T05:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.14,
+      "wind_direction_from": 215.0,
+      "wind_bearing_to": 35.0,
+      "u_wind": 4.1,
+      "v_wind": 5.85
+    },
+    {
+      "timestamp": "2026-09-16T06:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.06,
+      "wind_direction_from": 218.0,
+      "wind_bearing_to": 38.0,
+      "u_wind": 4.35,
+      "v_wind": 5.56
+    },
+    {
+      "timestamp": "2026-09-16T07:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.06,
+      "wind_direction_from": 222.0,
+      "wind_bearing_to": 42.0,
+      "u_wind": 4.72,
+      "v_wind": 5.25
+    },
+    {
+      "timestamp": "2026-09-16T08:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.14,
+      "wind_direction_from": 227.0,
+      "wind_bearing_to": 47.0,
+      "u_wind": 5.22,
+      "v_wind": 4.87
+    },
+    {
+      "timestamp": "2026-09-16T09:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.31,
+      "wind_direction_from": 231.0,
+      "wind_bearing_to": 51.0,
+      "u_wind": 5.68,
+      "v_wind": 4.6
+    },
+    {
+      "timestamp": "2026-09-16T10:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.47,
+      "wind_direction_from": 235.0,
+      "wind_bearing_to": 55.0,
+      "u_wind": 6.12,
+      "v_wind": 4.28
+    },
+    {
+      "timestamp": "2026-09-16T11:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.61,
+      "wind_direction_from": 239.0,
+      "wind_bearing_to": 59.0,
+      "u_wind": 6.52,
+      "v_wind": 3.92
+    },
+    {
+      "timestamp": "2026-09-16T12:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.69,
+      "wind_direction_from": 240.0,
+      "wind_bearing_to": 60.0,
+      "u_wind": 6.66,
+      "v_wind": 3.85
+    },
+    {
+      "timestamp": "2026-09-16T13:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.64,
+      "wind_direction_from": 241.0,
+      "wind_bearing_to": 61.0,
+      "u_wind": 6.68,
+      "v_wind": 3.7
+    },
+    {
+      "timestamp": "2026-09-16T14:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.36,
+      "wind_direction_from": 239.0,
+      "wind_bearing_to": 59.0,
+      "u_wind": 6.31,
+      "v_wind": 3.79
+    },
+    {
+      "timestamp": "2026-09-16T15:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.14,
+      "wind_direction_from": 237.0,
+      "wind_bearing_to": 57.0,
+      "u_wind": 5.99,
+      "v_wind": 3.89
+    },
+    {
+      "timestamp": "2026-09-16T16:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.86,
+      "wind_direction_from": 235.0,
+      "wind_bearing_to": 55.0,
+      "u_wind": 5.62,
+      "v_wind": 3.93
+    },
+    {
+      "timestamp": "2026-09-16T17:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.67,
+      "wind_direction_from": 232.0,
+      "wind_bearing_to": 52.0,
+      "u_wind": 5.26,
+      "v_wind": 4.11
+    },
+    {
+      "timestamp": "2026-09-16T18:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.56,
+      "wind_direction_from": 230.0,
+      "wind_bearing_to": 50.0,
+      "u_wind": 5.03,
+      "v_wind": 4.22
+    },
+    {
+      "timestamp": "2026-09-16T19:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.58,
+      "wind_direction_from": 229.0,
+      "wind_bearing_to": 49.0,
+      "u_wind": 4.97,
+      "v_wind": 4.32
+    },
+    {
+      "timestamp": "2026-09-16T20:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.69,
+      "wind_direction_from": 229.0,
+      "wind_bearing_to": 49.0,
+      "u_wind": 5.05,
+      "v_wind": 4.39
+    },
+    {
+      "timestamp": "2026-09-16T21:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 6.86,
+      "wind_direction_from": 229.0,
+      "wind_bearing_to": 49.0,
+      "u_wind": 5.18,
+      "v_wind": 4.5
+    },
+    {
+      "timestamp": "2026-09-16T22:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.06,
+      "wind_direction_from": 228.0,
+      "wind_bearing_to": 48.0,
+      "u_wind": 5.25,
+      "v_wind": 4.72
+    },
+    {
+      "timestamp": "2026-09-16T23:00:00Z",
+      "latitude": 19.125,
+      "longitude": 71.85,
+      "wind_speed_ms": 7.25,
+      "wind_direction_from": 228.0,
+      "wind_bearing_to": 48.0,
+      "u_wind": 5.39,
+      "v_wind": 4.85
+    }
+  ]
+}

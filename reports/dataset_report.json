@@ -1,0 +1,27 @@
+{
+  "dataset_name": "SAR Oil Spill Semantic Segmentation Dataset (Zenodo 8064564 + S1)",
+  "total_paired_samples": 140,
+  "archive_masks_extracted": 60,
+  "image_format": "PNG (Grayscale / SAR Backscatter Intensity)",
+  "mask_format": "PNG (Binary 0=Sea/Lookalike, 255=Oil Slick)",
+  "resolutions": [
+    [
+      256,
+      256
+    ]
+  ],
+  "classes": {
+    "0": "Clean Sea / Low-Wind Lookalike",
+    "1": "Oil Spill / Hydrocarbon Slick"
+  },
+  "positive_pixel_fraction": 0.0692,
+  "class_imbalance_note": "Oil pixels represent 6.92% of pixels, requiring Dice Loss to handle class imbalance.",
+  "splits": {
+    "train_ratio": 0.7,
+    "val_ratio": 0.15,
+    "test_ratio": 0.15,
+    "train_count": 98,
+    "val_count": 21,
+    "test_count": 21
+  }
+}
