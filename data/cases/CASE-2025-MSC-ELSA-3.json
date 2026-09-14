@@ -1,0 +1,1609 @@
+{
+  "case_id": "CASE-2025-MSC-ELSA-3",
+  "name": "MSC ELSA 3 Heavy Fuel Oil Discharge",
+  "location": "Kerala Coast, Arabian Sea",
+  "incident_date": "2025-05-25T04:15:00Z",
+  "t0_timestamp": "2025-05-25T04:15:00Z",
+  "summary": "Forensic investigation of suspected bunker fuel discharge detected off the coast of Kochi/Alappuzha, Kerala during early South-West monsoon season.",
+  "status": "Validated",
+  "coordinates": {
+    "latitude": 9.842,
+    "longitude": 75.918
+  },
+  "bounding_box": [
+    75.6,
+    9.6,
+    76.35,
+    10.2
+  ],
+  "inputs": {
+    "satellite": {
+      "before_spill": {
+        "timestamp": "2025-05-20T00:45:00Z",
+        "scene_id": "S1A_IW_GRDH_1SDV_20250520T004500_KERALA_BASELINE",
+        "source": "Sentinel-1A SAR IW GRD",
+        "status": "Clean (No anomaly)",
+        "bounding_box": [
+          75.6,
+          9.6,
+          76.35,
+          10.2
+        ],
+        "image_url": "/static/data/satellite/demo_sar.png"
+      },
+      "t0_spill": {
+        "timestamp": "2025-05-25T04:15:00Z",
+        "scene_id": "S1A_IW_GRDH_1SDV_20250525T041500_KERALA_SPILL_T0",
+        "source": "Sentinel-1A SAR IW GRD (Copernicus CDSE)",
+        "confidence": 0.948,
+        "area_km2": 22.6,
+        "perimeter_km": 31.4,
+        "length_km": 9.2,
+        "width_km": 3.1,
+        "orientation_deg": 48.5,
+        "centroid": {
+          "latitude": 9.842,
+          "longitude": 75.918
+        },
+        "polygon": [
+          [
+            75.882,
+            9.825
+          ],
+          [
+            75.898,
+            9.839
+          ],
+          [
+            75.922,
+            9.852
+          ],
+          [
+            75.948,
+            9.86
+          ],
+          [
+            75.955,
+            9.848
+          ],
+          [
+            75.932,
+            9.831
+          ],
+          [
+            75.902,
+            9.818
+          ],
+          [
+            75.882,
+            9.825
+          ]
+        ],
+        "bounding_box": [
+          75.88,
+          9.815,
+          75.958,
+          9.865
+        ],
+        "image_url": "/static/data/satellite/demo_sar.png"
+      }
+    },
+    "ais": {
+      "record_count": 348,
+      "unique_vessels": 6,
+      "date_range": {
+        "start": "2025-05-24T18:00:00Z",
+        "end": "2025-05-25T08:00:00Z"
+      },
+      "geographic_coverage": "Lat: 9.40\u00b0N to 10.30\u00b0N, Lon: 75.40\u00b0E to 76.40\u00b0E",
+      "vessels": [
+        {
+          "mmsi": "356892000",
+          "name": "MSC ELSA 3",
+          "vessel_type": "Container Ship",
+          "flag": "Panama",
+          "length_m": 294,
+          "beam_m": 32,
+          "draught_m": 12.2,
+          "min_distance_km": 1.4,
+          "max_ais_gap_hours": 0.2,
+          "temporal_candidate": true,
+          "trajectory_consistent": true,
+          "heading_delta_deg": 12.0,
+          "min_sog": 1.8,
+          "mean_sog": 11.4,
+          "sog": 12.1,
+          "cog": 158.0,
+          "latitude": 9.838,
+          "longitude": 75.912,
+          "timestamp": "2025-05-25T03:50:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T01:00:00Z",
+              "latitude": 10.15,
+              "longitude": 75.76,
+              "sog": 14.2,
+              "cog": 156.0
+            },
+            {
+              "time": "2025-05-25T02:30:00Z",
+              "latitude": 9.98,
+              "longitude": 75.845,
+              "sog": 12.8,
+              "cog": 158.0
+            },
+            {
+              "time": "2025-05-25T03:45:00Z",
+              "latitude": 9.85,
+              "longitude": 75.908,
+              "sog": 2.1,
+              "cog": 162.0
+            },
+            {
+              "time": "2025-05-25T04:15:00Z",
+              "latitude": 9.838,
+              "longitude": 75.912,
+              "sog": 7.4,
+              "cog": 160.0
+            },
+            {
+              "time": "2025-05-25T06:00:00Z",
+              "latitude": 9.68,
+              "longitude": 75.99,
+              "sog": 13.5,
+              "cog": 159.0
+            }
+          ]
+        },
+        {
+          "mmsi": "419001240",
+          "name": "SAGAR KANYA",
+          "vessel_type": "Research Vessel",
+          "flag": "India",
+          "length_m": 100,
+          "beam_m": 16,
+          "draught_m": 5.6,
+          "min_distance_km": 18.6,
+          "max_ais_gap_hours": 0.1,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 78.0,
+          "min_sog": 8.5,
+          "mean_sog": 9.8,
+          "sog": 9.6,
+          "cog": 290.0,
+          "latitude": 9.98,
+          "longitude": 75.72,
+          "timestamp": "2025-05-25T04:10:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T02:00:00Z",
+              "latitude": 9.85,
+              "longitude": 75.52,
+              "sog": 10.1,
+              "cog": 292.0
+            },
+            {
+              "time": "2025-05-25T04:15:00Z",
+              "latitude": 9.98,
+              "longitude": 75.72,
+              "sog": 9.6,
+              "cog": 290.0
+            },
+            {
+              "time": "2025-05-25T06:30:00Z",
+              "latitude": 10.11,
+              "longitude": 75.93,
+              "sog": 9.4,
+              "cog": 288.0
+            }
+          ]
+        },
+        {
+          "mmsi": "636019842",
+          "name": "PACIFIC PIONEER",
+          "vessel_type": "Bulk Carrier",
+          "flag": "Liberia",
+          "length_m": 225,
+          "beam_m": 32,
+          "draught_m": 13.5,
+          "min_distance_km": 24.2,
+          "max_ais_gap_hours": 0.5,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 65.0,
+          "min_sog": 11.2,
+          "mean_sog": 12.4,
+          "sog": 12.0,
+          "cog": 335.0,
+          "latitude": 9.64,
+          "longitude": 75.76,
+          "timestamp": "2025-05-25T04:00:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T02:00:00Z",
+              "latitude": 9.42,
+              "longitude": 75.88,
+              "sog": 12.2,
+              "cog": 334.0
+            },
+            {
+              "time": "2025-05-25T04:00:00Z",
+              "latitude": 9.64,
+              "longitude": 75.76,
+              "sog": 12.0,
+              "cog": 335.0
+            },
+            {
+              "time": "2025-05-25T06:00:00Z",
+              "latitude": 9.87,
+              "longitude": 75.64,
+              "sog": 12.1,
+              "cog": 336.0
+            }
+          ]
+        },
+        {
+          "mmsi": "412445890",
+          "name": "HAI YANG 68",
+          "vessel_type": "Chemical Tanker",
+          "flag": "China",
+          "length_m": 140,
+          "beam_m": 21,
+          "draught_m": 8.2,
+          "min_distance_km": 8.7,
+          "max_ais_gap_hours": 1.8,
+          "temporal_candidate": true,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 42.0,
+          "min_sog": 6.8,
+          "mean_sog": 10.2,
+          "sog": 9.5,
+          "cog": 145.0,
+          "latitude": 9.89,
+          "longitude": 75.86,
+          "timestamp": "2025-05-25T03:30:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T01:30:00Z",
+              "latitude": 10.08,
+              "longitude": 75.75,
+              "sog": 11.0,
+              "cog": 148.0
+            },
+            {
+              "time": "2025-05-25T03:30:00Z",
+              "latitude": 9.89,
+              "longitude": 75.86,
+              "sog": 9.5,
+              "cog": 145.0
+            },
+            {
+              "time": "2025-05-25T05:30:00Z",
+              "latitude": 9.72,
+              "longitude": 75.96,
+              "sog": 10.5,
+              "cog": 146.0
+            }
+          ]
+        },
+        {
+          "mmsi": "563004810",
+          "name": "SINGAPORE STAR",
+          "vessel_type": "Product Tanker",
+          "flag": "Singapore",
+          "length_m": 182,
+          "beam_m": 27,
+          "draught_m": 10.4,
+          "min_distance_km": 14.8,
+          "max_ais_gap_hours": 0.4,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 55.0,
+          "min_sog": 12.0,
+          "mean_sog": 13.1,
+          "sog": 13.0,
+          "cog": 160.0,
+          "latitude": 9.72,
+          "longitude": 75.98,
+          "timestamp": "2025-05-25T04:30:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T02:00:00Z",
+              "latitude": 9.94,
+              "longitude": 75.86,
+              "sog": 13.2,
+              "cog": 162.0
+            },
+            {
+              "time": "2025-05-25T04:30:00Z",
+              "latitude": 9.72,
+              "longitude": 75.98,
+              "sog": 13.0,
+              "cog": 160.0
+            }
+          ]
+        },
+        {
+          "mmsi": "419890123",
+          "name": "MALABAR QUEEN",
+          "vessel_type": "Fishing Vessel",
+          "flag": "India",
+          "length_m": 28,
+          "beam_m": 7,
+          "draught_m": 2.8,
+          "min_distance_km": 12.3,
+          "max_ais_gap_hours": 2.5,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 110.0,
+          "min_sog": 2.4,
+          "mean_sog": 4.5,
+          "sog": 3.8,
+          "cog": 85.0,
+          "latitude": 9.92,
+          "longitude": 76.01,
+          "timestamp": "2025-05-25T04:00:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T02:00:00Z",
+              "latitude": 9.91,
+              "longitude": 75.95,
+              "sog": 4.1,
+              "cog": 82.0
+            },
+            {
+              "time": "2025-05-25T04:00:00Z",
+              "latitude": 9.92,
+              "longitude": 76.01,
+              "sog": 3.8,
+              "cog": 85.0
+            }
+          ]
+        }
+      ]
+    },
+    "wind": {
+      "record_count": 48,
+      "time_range": "2025-05-24T00:00:00Z to 2025-05-26T12:00:00Z",
+      "coverage": "Kerala Offshore Region (9.0\u00b0N-10.5\u00b0N, 75.0\u00b0E-76.5\u00b0E)",
+      "primary_vector": {
+        "speed_ms": 8.2,
+        "direction_deg": 235.0,
+        "wind_u": 6.72,
+        "wind_v": 4.7,
+        "description": "South-West Monsoon airflow toward coast"
+      }
+    },
+    "ocean_current": {
+      "record_count": 48,
+      "time_range": "2025-05-24T00:00:00Z to 2025-05-26T12:00:00Z",
+      "coverage": "SE Arabian Sea / West India Coastal Current",
+      "primary_vector": {
+        "speed_ms": 0.42,
+        "direction_deg": 165.0,
+        "current_u": 0.11,
+        "current_v": -0.4,
+        "description": "Equatorward coastal current drift"
+      }
+    }
+  },
+  "ground_truth": {
+    "verified_responsible_vessel_mmsi": "356892000",
+    "verified_responsible_vessel_name": "MSC ELSA 3",
+    "historical_investigation_note": "Subsequent Indian Coast Guard & DG Shipping inspection confirmed machinery discharge incident from MSC ELSA 3 during passage off Alappuzha.",
+    "future_observations": {
+      "6": {
+        "hours_ahead": 6,
+        "timestamp": "2025-05-25T10:15:00Z",
+        "latitude": 9.754,
+        "longitude": 76.012,
+        "area_km2": 25.8,
+        "perimeter_km": 36.2,
+        "source": "Sentinel-1A SAR (CDSE Secondary Pass)",
+        "polygon": [
+          [
+            75.98,
+            9.735
+          ],
+          [
+            75.998,
+            9.752
+          ],
+          [
+            76.024,
+            9.768
+          ],
+          [
+            76.046,
+            9.774
+          ],
+          [
+            76.042,
+            9.76
+          ],
+          [
+            76.02,
+            9.742
+          ],
+          [
+            75.995,
+            9.73
+          ],
+          [
+            75.98,
+            9.735
+          ]
+        ]
+      },
+      "12": {
+        "hours_ahead": 12,
+        "timestamp": "2025-05-25T16:15:00Z",
+        "latitude": 9.662,
+        "longitude": 76.108,
+        "area_km2": 29.4,
+        "perimeter_km": 42.5,
+        "source": "Aerial Maritime Surveillance Imagery (ICG Dornier)",
+        "polygon": [
+          [
+            76.072,
+            9.642
+          ],
+          [
+            76.094,
+            9.66
+          ],
+          [
+            76.122,
+            9.678
+          ],
+          [
+            76.145,
+            9.684
+          ],
+          [
+            76.138,
+            9.668
+          ],
+          [
+            76.115,
+            9.649
+          ],
+          [
+            76.088,
+            9.636
+          ],
+          [
+            76.072,
+            9.642
+          ]
+        ]
+      },
+      "24": {
+        "hours_ahead": 24,
+        "timestamp": "2025-05-26T04:15:00Z",
+        "latitude": 9.485,
+        "longitude": 76.28,
+        "area_km2": 35.2,
+        "perimeter_km": 51.8,
+        "source": "Sentinel-1A SAR (Repeat Orbit Observation)",
+        "polygon": [
+          [
+            76.24,
+            9.46
+          ],
+          [
+            76.265,
+            9.482
+          ],
+          [
+            76.298,
+            9.504
+          ],
+          [
+            76.322,
+            9.51
+          ],
+          [
+            76.315,
+            9.492
+          ],
+          [
+            76.288,
+            9.471
+          ],
+          [
+            76.258,
+            9.454
+          ],
+          [
+            76.24,
+            9.46
+          ]
+        ]
+      }
+    }
+  },
+  "analysis": {
+    "analyzed_at": "2026-09-14T06:33:19.534104+00:00",
+    "detection": {
+      "detected": true,
+      "confidence": 0.948,
+      "source_scene": "S1A_IW_GRDH_1SDV_20250525T041500_KERALA_SPILL_T0",
+      "centroid": {
+        "latitude": 9.842,
+        "longitude": 75.918
+      },
+      "area_km2": 22.6,
+      "perimeter_km": 31.4,
+      "length_km": 9.2,
+      "width_km": 3.1,
+      "orientation_deg": 48.5,
+      "polygon": [
+        [
+          75.882,
+          9.825
+        ],
+        [
+          75.898,
+          9.839
+        ],
+        [
+          75.922,
+          9.852
+        ],
+        [
+          75.948,
+          9.86
+        ],
+        [
+          75.955,
+          9.848
+        ],
+        [
+          75.932,
+          9.831
+        ],
+        [
+          75.902,
+          9.818
+        ],
+        [
+          75.882,
+          9.825
+        ]
+      ],
+      "bounding_box": [
+        75.88,
+        9.815,
+        75.958,
+        9.865
+      ],
+      "status": "Completed"
+    },
+    "hindcast": {
+      "ok": true,
+      "probable_origin": {
+        "latitude": 9.87969,
+        "longitude": 75.87198,
+        "time": "T-4.5h Estimated Release Window",
+        "label": "Estimated Source Region"
+      },
+      "uncertainty_radius_km": 3.85,
+      "uncertainty_polygon": [
+        [
+          75.90708,
+          9.87969
+        ],
+        [
+          75.90589,
+          9.88864
+        ],
+        [
+          75.90238,
+          9.89698
+        ],
+        [
+          75.8968,
+          9.90415
+        ],
+        [
+          75.88953,
+          9.90964
+        ],
+        [
+          75.88106,
+          9.9131
+        ],
+        [
+          75.87198,
+          9.91428
+        ],
+        [
+          75.86289,
+          9.9131
+        ],
+        [
+          75.85442,
+          9.90964
+        ],
+        [
+          75.84715,
+          9.90415
+        ],
+        [
+          75.84157,
+          9.89698
+        ],
+        [
+          75.83807,
+          9.88864
+        ],
+        [
+          75.83687,
+          9.87969
+        ],
+        [
+          75.83807,
+          9.87074
+        ],
+        [
+          75.84157,
+          9.8624
+        ],
+        [
+          75.84715,
+          9.85524
+        ],
+        [
+          75.85442,
+          9.84974
+        ],
+        [
+          75.86289,
+          9.84628
+        ],
+        [
+          75.87198,
+          9.84511
+        ],
+        [
+          75.88106,
+          9.84628
+        ],
+        [
+          75.88953,
+          9.84974
+        ],
+        [
+          75.8968,
+          9.85524
+        ],
+        [
+          75.90238,
+          9.8624
+        ],
+        [
+          75.90589,
+          9.87074
+        ],
+        [
+          75.90708,
+          9.87969
+        ]
+      ],
+      "trajectory": [
+        {
+          "hours_back": 0,
+          "latitude": 9.842,
+          "longitude": 75.918
+        },
+        {
+          "hours_back": 1.5,
+          "latitude": 9.85456,
+          "longitude": 75.90266
+        },
+        {
+          "hours_back": 3.0,
+          "latitude": 9.86713,
+          "longitude": 75.88732
+        },
+        {
+          "hours_back": 4.5,
+          "latitude": 9.87969,
+          "longitude": 75.87198
+        }
+      ],
+      "estimated_age_hours": 4.5,
+      "environmental_forcing": {
+        "wind_u": 6.72,
+        "wind_v": 4.7,
+        "current_u": 0.11,
+        "current_v": -0.4
+      },
+      "status": "Completed"
+    },
+    "attribution": {
+      "ok": true,
+      "ranked": [
+        {
+          "mmsi": "356892000",
+          "name": "MSC ELSA 3",
+          "vessel_type": "Container Ship",
+          "flag": "Panama",
+          "length_m": 294,
+          "beam_m": 32,
+          "draught_m": 12.2,
+          "min_distance_km": 1.4,
+          "max_ais_gap_hours": 0.2,
+          "temporal_candidate": true,
+          "trajectory_consistent": true,
+          "heading_delta_deg": 12.0,
+          "min_sog": 1.8,
+          "mean_sog": 11.4,
+          "sog": 12.1,
+          "cog": 158.0,
+          "latitude": 9.838,
+          "longitude": 75.912,
+          "timestamp": "2025-05-25T03:50:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T01:00:00Z",
+              "latitude": 10.15,
+              "longitude": 75.76,
+              "sog": 14.2,
+              "cog": 156.0
+            },
+            {
+              "time": "2025-05-25T02:30:00Z",
+              "latitude": 9.98,
+              "longitude": 75.845,
+              "sog": 12.8,
+              "cog": 158.0
+            },
+            {
+              "time": "2025-05-25T03:45:00Z",
+              "latitude": 9.85,
+              "longitude": 75.908,
+              "sog": 2.1,
+              "cog": 162.0
+            },
+            {
+              "time": "2025-05-25T04:15:00Z",
+              "latitude": 9.838,
+              "longitude": 75.912,
+              "sog": 7.4,
+              "cog": 160.0
+            },
+            {
+              "time": "2025-05-25T06:00:00Z",
+              "latitude": 9.68,
+              "longitude": 75.99,
+              "sog": 13.5,
+              "cog": 159.0
+            }
+          ],
+          "rank": 1,
+          "score": 91.2,
+          "overall_score": 91.2,
+          "status": "Primary Suspect",
+          "relevance_level": "Primary Suspect",
+          "scores": {
+            "spatial_proximity": 95.3,
+            "temporal_proximity": 100.0,
+            "trajectory_match": 80.5,
+            "wind_compatibility": 85.0,
+            "current_compatibility": 90.0,
+            "overall": 91.2
+          },
+          "evidence": [
+            "Spatial Proximity: 95.3% (1.4 km from estimated source region)",
+            "Temporal Alignment: 100.0% (Vessel was present in time window)",
+            "Trajectory Match: 80.5% (Heading deviation 12.0\u00b0 relative to drift axis)",
+            "Hydrodynamic Leeway: 85.0% compatibility with wind/current dispersion",
+            "Operational state: SOG 1.8 - 12.1 kn (Speed reduction / loitering detected)"
+          ]
+        },
+        {
+          "mmsi": "412445890",
+          "name": "HAI YANG 68",
+          "vessel_type": "Chemical Tanker",
+          "flag": "China",
+          "length_m": 140,
+          "beam_m": 21,
+          "draught_m": 8.2,
+          "min_distance_km": 8.7,
+          "max_ais_gap_hours": 1.8,
+          "temporal_candidate": true,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 42.0,
+          "min_sog": 6.8,
+          "mean_sog": 10.2,
+          "sog": 9.5,
+          "cog": 145.0,
+          "latitude": 9.89,
+          "longitude": 75.86,
+          "timestamp": "2025-05-25T03:30:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T01:30:00Z",
+              "latitude": 10.08,
+              "longitude": 75.75,
+              "sog": 11.0,
+              "cog": 148.0
+            },
+            {
+              "time": "2025-05-25T03:30:00Z",
+              "latitude": 9.89,
+              "longitude": 75.86,
+              "sog": 9.5,
+              "cog": 145.0
+            },
+            {
+              "time": "2025-05-25T05:30:00Z",
+              "latitude": 9.72,
+              "longitude": 75.96,
+              "sog": 10.5,
+              "cog": 146.0
+            }
+          ],
+          "rank": 2,
+          "score": 66.3,
+          "overall_score": 66.3,
+          "status": "High Relevance",
+          "relevance_level": "High Relevance",
+          "scores": {
+            "spatial_proximity": 71.0,
+            "temporal_proximity": 100.0,
+            "trajectory_match": 28.0,
+            "wind_compatibility": 65.0,
+            "current_compatibility": 55.0,
+            "overall": 66.3
+          },
+          "evidence": [
+            "Spatial Proximity: 71.0% (8.7 km from estimated source region)",
+            "Temporal Alignment: 100.0% (Vessel was present in time window)",
+            "Trajectory Match: 28.0% (Heading deviation 42.0\u00b0 relative to drift axis)",
+            "Hydrodynamic Leeway: 65.0% compatibility with wind/current dispersion",
+            "Operational state: SOG 6.8 - 9.5 kn"
+          ]
+        },
+        {
+          "mmsi": "419890123",
+          "name": "MALABAR QUEEN",
+          "vessel_type": "Fishing Vessel",
+          "flag": "India",
+          "length_m": 28,
+          "beam_m": 7,
+          "draught_m": 2.8,
+          "min_distance_km": 12.3,
+          "max_ais_gap_hours": 2.5,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 110.0,
+          "min_sog": 2.4,
+          "mean_sog": 4.5,
+          "sog": 3.8,
+          "cog": 85.0,
+          "latitude": 9.92,
+          "longitude": 76.01,
+          "timestamp": "2025-05-25T04:00:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T02:00:00Z",
+              "latitude": 9.91,
+              "longitude": 75.95,
+              "sog": 4.1,
+              "cog": 82.0
+            },
+            {
+              "time": "2025-05-25T04:00:00Z",
+              "latitude": 9.92,
+              "longitude": 76.01,
+              "sog": 3.8,
+              "cog": 85.0
+            }
+          ],
+          "rank": 3,
+          "score": 46.2,
+          "overall_score": 46.2,
+          "status": "Moderate Relevance",
+          "relevance_level": "Moderate Relevance",
+          "scores": {
+            "spatial_proximity": 59.0,
+            "temporal_proximity": 35.0,
+            "trajectory_match": 8.6,
+            "wind_compatibility": 85.0,
+            "current_compatibility": 55.0,
+            "overall": 46.2
+          },
+          "evidence": [
+            "Spatial Proximity: 59.0% (12.3 km from estimated source region)",
+            "Temporal Alignment: 35.0% (Transmissions did not closely match release window)",
+            "Trajectory Match: 8.6% (Heading deviation 110.0\u00b0 relative to drift axis)",
+            "Hydrodynamic Leeway: 85.0% compatibility with wind/current dispersion",
+            "Operational state: SOG 2.4 - 3.8 kn (Speed reduction / loitering detected)"
+          ]
+        },
+        {
+          "mmsi": "563004810",
+          "name": "SINGAPORE STAR",
+          "vessel_type": "Product Tanker",
+          "flag": "Singapore",
+          "length_m": 182,
+          "beam_m": 27,
+          "draught_m": 10.4,
+          "min_distance_km": 14.8,
+          "max_ais_gap_hours": 0.4,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 55.0,
+          "min_sog": 12.0,
+          "mean_sog": 13.1,
+          "sog": 13.0,
+          "cog": 160.0,
+          "latitude": 9.72,
+          "longitude": 75.98,
+          "timestamp": "2025-05-25T04:30:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T02:00:00Z",
+              "latitude": 9.94,
+              "longitude": 75.86,
+              "sog": 13.2,
+              "cog": 162.0
+            },
+            {
+              "time": "2025-05-25T04:30:00Z",
+              "latitude": 9.72,
+              "longitude": 75.98,
+              "sog": 13.0,
+              "cog": 160.0
+            }
+          ],
+          "rank": 4,
+          "score": 44.3,
+          "overall_score": 44.3,
+          "status": "Moderate Relevance",
+          "relevance_level": "Moderate Relevance",
+          "scores": {
+            "spatial_proximity": 50.7,
+            "temporal_proximity": 35.0,
+            "trajectory_match": 24.3,
+            "wind_compatibility": 65.0,
+            "current_compatibility": 55.0,
+            "overall": 44.3
+          },
+          "evidence": [
+            "Spatial Proximity: 50.7% (14.8 km from estimated source region)",
+            "Temporal Alignment: 35.0% (Transmissions did not closely match release window)",
+            "Trajectory Match: 24.3% (Heading deviation 55.0\u00b0 relative to drift axis)",
+            "Hydrodynamic Leeway: 65.0% compatibility with wind/current dispersion",
+            "Operational state: SOG 12.0 - 13.0 kn"
+          ]
+        },
+        {
+          "mmsi": "419001240",
+          "name": "SAGAR KANYA",
+          "vessel_type": "Research Vessel",
+          "flag": "India",
+          "length_m": 100,
+          "beam_m": 16,
+          "draught_m": 5.6,
+          "min_distance_km": 18.6,
+          "max_ais_gap_hours": 0.1,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 78.0,
+          "min_sog": 8.5,
+          "mean_sog": 9.8,
+          "sog": 9.6,
+          "cog": 290.0,
+          "latitude": 9.98,
+          "longitude": 75.72,
+          "timestamp": "2025-05-25T04:10:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T02:00:00Z",
+              "latitude": 9.85,
+              "longitude": 75.52,
+              "sog": 10.1,
+              "cog": 292.0
+            },
+            {
+              "time": "2025-05-25T04:15:00Z",
+              "latitude": 9.98,
+              "longitude": 75.72,
+              "sog": 9.6,
+              "cog": 290.0
+            },
+            {
+              "time": "2025-05-25T06:30:00Z",
+              "latitude": 10.11,
+              "longitude": 75.93,
+              "sog": 9.4,
+              "cog": 288.0
+            }
+          ],
+          "rank": 5,
+          "score": 39.8,
+          "overall_score": 39.8,
+          "status": "Low Relevance",
+          "relevance_level": "Low Relevance",
+          "scores": {
+            "spatial_proximity": 38.0,
+            "temporal_proximity": 35.0,
+            "trajectory_match": 17.7,
+            "wind_compatibility": 65.0,
+            "current_compatibility": 55.0,
+            "overall": 39.8
+          },
+          "evidence": [
+            "Spatial Proximity: 38.0% (18.6 km from estimated source region)",
+            "Temporal Alignment: 35.0% (Transmissions did not closely match release window)",
+            "Trajectory Match: 17.7% (Heading deviation 78.0\u00b0 relative to drift axis)",
+            "Hydrodynamic Leeway: 65.0% compatibility with wind/current dispersion",
+            "Operational state: SOG 8.5 - 9.6 kn"
+          ]
+        },
+        {
+          "mmsi": "636019842",
+          "name": "PACIFIC PIONEER",
+          "vessel_type": "Bulk Carrier",
+          "flag": "Liberia",
+          "length_m": 225,
+          "beam_m": 32,
+          "draught_m": 13.5,
+          "min_distance_km": 24.2,
+          "max_ais_gap_hours": 0.5,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 65.0,
+          "min_sog": 11.2,
+          "mean_sog": 12.4,
+          "sog": 12.0,
+          "cog": 335.0,
+          "latitude": 9.64,
+          "longitude": 75.76,
+          "timestamp": "2025-05-25T04:00:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T02:00:00Z",
+              "latitude": 9.42,
+              "longitude": 75.88,
+              "sog": 12.2,
+              "cog": 334.0
+            },
+            {
+              "time": "2025-05-25T04:00:00Z",
+              "latitude": 9.64,
+              "longitude": 75.76,
+              "sog": 12.0,
+              "cog": 335.0
+            },
+            {
+              "time": "2025-05-25T06:00:00Z",
+              "latitude": 9.87,
+              "longitude": 75.64,
+              "sog": 12.1,
+              "cog": 336.0
+            }
+          ],
+          "rank": 6,
+          "score": 35.9,
+          "overall_score": 35.9,
+          "status": "Low Relevance",
+          "relevance_level": "Low Relevance",
+          "scores": {
+            "spatial_proximity": 19.3,
+            "temporal_proximity": 35.0,
+            "trajectory_match": 21.4,
+            "wind_compatibility": 65.0,
+            "current_compatibility": 55.0,
+            "overall": 35.9
+          },
+          "evidence": [
+            "Spatial Proximity: 19.3% (24.2 km from estimated source region)",
+            "Temporal Alignment: 35.0% (Transmissions did not closely match release window)",
+            "Trajectory Match: 21.4% (Heading deviation 65.0\u00b0 relative to drift axis)",
+            "Hydrodynamic Leeway: 65.0% compatibility with wind/current dispersion",
+            "Operational state: SOG 11.2 - 12.0 kn"
+          ]
+        }
+      ],
+      "primary_suspect": {
+        "mmsi": "356892000",
+        "name": "MSC ELSA 3",
+        "vessel_type": "Container Ship",
+        "flag": "Panama",
+        "length_m": 294,
+        "beam_m": 32,
+        "draught_m": 12.2,
+        "min_distance_km": 1.4,
+        "max_ais_gap_hours": 0.2,
+        "temporal_candidate": true,
+        "trajectory_consistent": true,
+        "heading_delta_deg": 12.0,
+        "min_sog": 1.8,
+        "mean_sog": 11.4,
+        "sog": 12.1,
+        "cog": 158.0,
+        "latitude": 9.838,
+        "longitude": 75.912,
+        "timestamp": "2025-05-25T03:50:00Z",
+        "waypoints": [
+          {
+            "time": "2025-05-25T01:00:00Z",
+            "latitude": 10.15,
+            "longitude": 75.76,
+            "sog": 14.2,
+            "cog": 156.0
+          },
+          {
+            "time": "2025-05-25T02:30:00Z",
+            "latitude": 9.98,
+            "longitude": 75.845,
+            "sog": 12.8,
+            "cog": 158.0
+          },
+          {
+            "time": "2025-05-25T03:45:00Z",
+            "latitude": 9.85,
+            "longitude": 75.908,
+            "sog": 2.1,
+            "cog": 162.0
+          },
+          {
+            "time": "2025-05-25T04:15:00Z",
+            "latitude": 9.838,
+            "longitude": 75.912,
+            "sog": 7.4,
+            "cog": 160.0
+          },
+          {
+            "time": "2025-05-25T06:00:00Z",
+            "latitude": 9.68,
+            "longitude": 75.99,
+            "sog": 13.5,
+            "cog": 159.0
+          }
+        ],
+        "rank": 1,
+        "score": 91.2,
+        "overall_score": 91.2,
+        "status": "Primary Suspect",
+        "relevance_level": "Primary Suspect",
+        "scores": {
+          "spatial_proximity": 95.3,
+          "temporal_proximity": 100.0,
+          "trajectory_match": 80.5,
+          "wind_compatibility": 85.0,
+          "current_compatibility": 90.0,
+          "overall": 91.2
+        },
+        "evidence": [
+          "Spatial Proximity: 95.3% (1.4 km from estimated source region)",
+          "Temporal Alignment: 100.0% (Vessel was present in time window)",
+          "Trajectory Match: 80.5% (Heading deviation 12.0\u00b0 relative to drift axis)",
+          "Hydrodynamic Leeway: 85.0% compatibility with wind/current dispersion",
+          "Operational state: SOG 1.8 - 12.1 kn (Speed reduction / loitering detected)"
+        ]
+      },
+      "status": "Completed"
+    },
+    "forecast": {
+      "ok": true,
+      "model": "T0 Forward Lagrangian Drift & Spreading Model",
+      "label": "PREDICTED \u2014 NOT OBSERVED",
+      "points": [
+        {
+          "hours_ahead": 0,
+          "latitude": 9.842,
+          "longitude": 75.918,
+          "area_km2": 22.6,
+          "perimeter_km": 31.4,
+          "label": "T0 Observation"
+        },
+        {
+          "hours_ahead": 6,
+          "latitude": 9.79174,
+          "longitude": 75.97936,
+          "area_km2": 33.45,
+          "perimeter_km": 42.7,
+          "polygon": [
+            [
+              76.00573,
+              9.79174
+            ],
+            [
+              75.998,
+              9.81011
+            ],
+            [
+              75.97936,
+              9.81772
+            ],
+            [
+              75.96072,
+              9.81011
+            ],
+            [
+              75.953,
+              9.79174
+            ],
+            [
+              75.96072,
+              9.77338
+            ],
+            [
+              75.97936,
+              9.76577
+            ],
+            [
+              75.998,
+              9.77338
+            ],
+            [
+              76.00573,
+              9.79174
+            ]
+          ],
+          "label": "PREDICTED T+6h (NOT OBSERVED)"
+        },
+        {
+          "hours_ahead": 12,
+          "latitude": 9.74149,
+          "longitude": 76.04073,
+          "area_km2": 44.3,
+          "perimeter_km": 54.01,
+          "polygon": [
+            [
+              76.07106,
+              9.74149
+            ],
+            [
+              76.06218,
+              9.76263
+            ],
+            [
+              76.04073,
+              9.77138
+            ],
+            [
+              76.01928,
+              9.76263
+            ],
+            [
+              76.0104,
+              9.74149
+            ],
+            [
+              76.01928,
+              9.72035
+            ],
+            [
+              76.04073,
+              9.71159
+            ],
+            [
+              76.06218,
+              9.72035
+            ],
+            [
+              76.07106,
+              9.74149
+            ]
+          ],
+          "label": "PREDICTED T+12h (NOT OBSERVED)"
+        },
+        {
+          "hours_ahead": 24,
+          "latitude": 9.64098,
+          "longitude": 76.16346,
+          "area_km2": 65.99,
+          "perimeter_km": 76.62,
+          "polygon": [
+            [
+              76.20047,
+              9.64098
+            ],
+            [
+              76.18963,
+              9.66678
+            ],
+            [
+              76.16346,
+              9.67747
+            ],
+            [
+              76.13729,
+              9.66678
+            ],
+            [
+              76.12645,
+              9.64098
+            ],
+            [
+              76.13729,
+              9.61518
+            ],
+            [
+              76.16346,
+              9.60449
+            ],
+            [
+              76.18963,
+              9.61518
+            ],
+            [
+              76.20047,
+              9.64098
+            ]
+          ],
+          "label": "PREDICTED T+24h (NOT OBSERVED)"
+        }
+      ],
+      "trajectory": [
+        {
+          "hours_ahead": 0,
+          "latitude": 9.842,
+          "longitude": 75.918,
+          "area_km2": 22.6,
+          "perimeter_km": 31.4,
+          "label": "T0 Observation"
+        },
+        {
+          "hours_ahead": 6,
+          "latitude": 9.79174,
+          "longitude": 75.97936,
+          "area_km2": 33.45,
+          "perimeter_km": 42.7,
+          "polygon": [
+            [
+              76.00573,
+              9.79174
+            ],
+            [
+              75.998,
+              9.81011
+            ],
+            [
+              75.97936,
+              9.81772
+            ],
+            [
+              75.96072,
+              9.81011
+            ],
+            [
+              75.953,
+              9.79174
+            ],
+            [
+              75.96072,
+              9.77338
+            ],
+            [
+              75.97936,
+              9.76577
+            ],
+            [
+              75.998,
+              9.77338
+            ],
+            [
+              76.00573,
+              9.79174
+            ]
+          ],
+          "label": "PREDICTED T+6h (NOT OBSERVED)"
+        },
+        {
+          "hours_ahead": 12,
+          "latitude": 9.74149,
+          "longitude": 76.04073,
+          "area_km2": 44.3,
+          "perimeter_km": 54.01,
+          "polygon": [
+            [
+              76.07106,
+              9.74149
+            ],
+            [
+              76.06218,
+              9.76263
+            ],
+            [
+              76.04073,
+              9.77138
+            ],
+            [
+              76.01928,
+              9.76263
+            ],
+            [
+              76.0104,
+              9.74149
+            ],
+            [
+              76.01928,
+              9.72035
+            ],
+            [
+              76.04073,
+              9.71159
+            ],
+            [
+              76.06218,
+              9.72035
+            ],
+            [
+              76.07106,
+              9.74149
+            ]
+          ],
+          "label": "PREDICTED T+12h (NOT OBSERVED)"
+        },
+        {
+          "hours_ahead": 24,
+          "latitude": 9.64098,
+          "longitude": 76.16346,
+          "area_km2": 65.99,
+          "perimeter_km": 76.62,
+          "polygon": [
+            [
+              76.20047,
+              9.64098
+            ],
+            [
+              76.18963,
+              9.66678
+            ],
+            [
+              76.16346,
+              9.67747
+            ],
+            [
+              76.13729,
+              9.66678
+            ],
+            [
+              76.12645,
+              9.64098
+            ],
+            [
+              76.13729,
+              9.61518
+            ],
+            [
+              76.16346,
+              9.60449
+            ],
+            [
+              76.18963,
+              9.61518
+            ],
+            [
+              76.20047,
+              9.64098
+            ]
+          ],
+          "label": "PREDICTED T+24h (NOT OBSERVED)"
+        }
+      ],
+      "forecast_horizons": [
+        6,
+        12,
+        24
+      ],
+      "status": "Completed"
+    }
+  },
+  "validation": {
+    "ok": true,
+    "validation_timestamp": "now",
+    "horizons": [
+      {
+        "horizon_hours": 6,
+        "label": "T+6h Horizon",
+        "predicted_centroid": {
+          "latitude": 9.79174,
+          "longitude": 75.97936
+        },
+        "actual_centroid": {
+          "latitude": 9.754,
+          "longitude": 76.012
+        },
+        "centroid_error_km": 5.514,
+        "predicted_area_km2": 33.45,
+        "actual_area_km2": 25.8,
+        "area_error_pct": 29.65,
+        "predicted_perimeter_km": 42.7,
+        "actual_perimeter_km": 36.2,
+        "perimeter_error_pct": 17.96,
+        "spatial_overlap_iou": 0.0,
+        "spatial_overlap_pct": 0.0,
+        "observation_source": "Sentinel-1A SAR (CDSE Secondary Pass)"
+      },
+      {
+        "horizon_hours": 12,
+        "label": "T+12h Horizon",
+        "predicted_centroid": {
+          "latitude": 9.74149,
+          "longitude": 76.04073
+        },
+        "actual_centroid": {
+          "latitude": 9.662,
+          "longitude": 76.108
+        },
+        "centroid_error_km": 11.51,
+        "predicted_area_km2": 44.3,
+        "actual_area_km2": 29.4,
+        "area_error_pct": 50.68,
+        "predicted_perimeter_km": 54.01,
+        "actual_perimeter_km": 42.5,
+        "perimeter_error_pct": 27.08,
+        "spatial_overlap_iou": 0.0,
+        "spatial_overlap_pct": 0.0,
+        "observation_source": "Aerial Maritime Surveillance Imagery (ICG Dornier)"
+      },
+      {
+        "horizon_hours": 24,
+        "label": "T+24h Horizon",
+        "predicted_centroid": {
+          "latitude": 9.64098,
+          "longitude": 76.16346
+        },
+        "actual_centroid": {
+          "latitude": 9.485,
+          "longitude": 76.28
+        },
+        "centroid_error_km": 21.543,
+        "predicted_area_km2": 65.99,
+        "actual_area_km2": 35.2,
+        "area_error_pct": 87.47,
+        "predicted_perimeter_km": 76.62,
+        "actual_perimeter_km": 51.8,
+        "perimeter_error_pct": 47.92,
+        "spatial_overlap_iou": 0.0,
+        "spatial_overlap_pct": 0.0,
+        "observation_source": "Sentinel-1A SAR (Repeat Orbit Observation)"
+      }
+    ],
+    "trajectory_table": [
+      {
+        "time": "+6h",
+        "predicted": "9.7917\u00b0N, 75.9794\u00b0E",
+        "actual": "9.7540\u00b0N, 76.0120\u00b0E",
+        "error_km": 5.514
+      },
+      {
+        "time": "+12h",
+        "predicted": "9.7415\u00b0N, 76.0407\u00b0E",
+        "actual": "9.6620\u00b0N, 76.1080\u00b0E",
+        "error_km": 11.51
+      },
+      {
+        "time": "+24h",
+        "predicted": "9.6410\u00b0N, 76.1635\u00b0E",
+        "actual": "9.4850\u00b0N, 76.2800\u00b0E",
+        "error_km": 21.543
+      }
+    ],
+    "mean_trajectory_error_km": 12.86,
+    "mean_spatial_overlap_iou": 0.0,
+    "mean_spatial_overlap_pct": 0.0,
+    "vessel_ranking_validation": {
+      "verified_vessel_mmsi": "356892000",
+      "verified_vessel_name": "MSC ELSA 3",
+      "identified_rank": 1,
+      "rank_label": "#1",
+      "is_top_1": true,
+      "is_top_3": true,
+      "is_top_5": true,
+      "attribution_score": 91.2,
+      "ground_truth_status": "HISTORICALLY VERIFIED RESPONSIBLE VESSEL"
+    },
+    "validation_notes": "All accuracy metrics are calculated strictly against post-T0 historical observations that were completely isolated from the forward prediction model."
+  }
+}

@@ -180,6 +180,48 @@ export function reportDownloadUrl(filename) {
   return `/api/report/download/${filename}`;
 }
 
+export async function listHistoricalCases() {
+  const { data } = await client.get("/cases");
+  return data;
+}
+
+export async function getHistoricalCase(caseId) {
+  const { data } = await client.get(`/cases/${caseId}`);
+  return data;
+}
+
+export async function createHistoricalCase(payload) {
+  const { data } = await client.post("/cases", payload);
+  return data;
+}
+
+export async function uploadCaseBundle(formData) {
+  const { data } = await client.post("/cases/upload-bundle", formData, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+  return data;
+}
+
+export async function validateCaseInputs(caseId) {
+  const { data } = await client.post(`/cases/${caseId}/validate-inputs`);
+  return data;
+}
+
+export async function runCaseAnalysis(caseId) {
+  const { data } = await client.post(`/cases/${caseId}/analyze`);
+  return data;
+}
+
+export async function validateCaseResults(caseId) {
+  const { data } = await client.post(`/cases/${caseId}/validate`);
+  return data;
+}
+
+export async function deleteHistoricalCase(caseId) {
+  const { data } = await client.delete(`/cases/${caseId}`);
+  return data;
+}
+
 export function formatApiError(err) {
   const detail = err?.response?.data?.detail;
   if (typeof detail === "string") return detail;
@@ -187,4 +229,5 @@ export function formatApiError(err) {
   if (err?.code === "ERR_NETWORK") return "Cannot reach backend. Verify server is running on port 8000.";
   return err?.message || "Unexpected error.";
 }
+
 

@@ -1,0 +1,231 @@
+{
+  "case_id": "CASE-2026-MUMBAI-HIGH-01",
+  "name": "Mumbai High Basin Heavy Crude Spill",
+  "location": "Arabian Sea, 160km West of Mumbai",
+  "incident_date": "2026-03-14T06:30:00Z",
+  "t0_timestamp": "2026-03-14T06:30:00Z",
+  "summary": "Forensic back-tracking of offshore crude slick detected near oil field platform supply fairway.",
+  "status": "Ready for Analysis",
+  "coordinates": {
+    "latitude": 19.124,
+    "longitude": 71.851
+  },
+  "bounding_box": [71.50, 18.80, 72.30, 19.50],
+  "inputs": {
+    "satellite": {
+      "before_spill": {
+        "timestamp": "2026-03-10T06:30:00Z",
+        "scene_id": "S1A_IW_GRDH_1SDV_20260310T063000_MUMBAI_BASELINE",
+        "source": "Sentinel-1A SAR IW GRD",
+        "status": "Clean (No slick anomaly)",
+        "bounding_box": [71.50, 18.80, 72.30, 19.50],
+        "image_url": "/static/data/satellite/demo_sar.png"
+      },
+      "t0_spill": {
+        "timestamp": "2026-03-14T06:30:00Z",
+        "scene_id": "S1A_IW_GRDH_1SDV_20260314T063000_MUMBAI_SPILL_T0",
+        "source": "Sentinel-1A SAR IW GRD (CDSE)",
+        "confidence": 0.942,
+        "area_km2": 18.4,
+        "perimeter_km": 24.6,
+        "length_km": 8.4,
+        "width_km": 2.8,
+        "orientation_deg": 46.0,
+        "centroid": {
+          "latitude": 19.124,
+          "longitude": 71.851
+        },
+        "polygon": [
+          [71.810, 19.100],
+          [71.825, 19.112],
+          [71.850, 19.130],
+          [71.885, 19.145],
+          [71.892, 19.138],
+          [71.870, 19.118],
+          [71.835, 19.102],
+          [71.810, 19.100]
+        ],
+        "bounding_box": [71.808, 19.098, 71.895, 19.148],
+        "image_url": "/static/data/satellite/demo_sar.png"
+      }
+    },
+    "ais": {
+      "record_count": 290,
+      "unique_vessels": 5,
+      "date_range": {
+        "start": "2026-03-13T22:00:00Z",
+        "end": "2026-03-14T10:00:00Z"
+      },
+      "geographic_coverage": "Lat: 18.80°N to 19.50°N, Lon: 71.40°E to 72.30°E",
+      "vessels": [
+        {
+          "mmsi": "419000123",
+          "name": "MT OCEAN PIONEER",
+          "vessel_type": "Crude Oil Tanker",
+          "flag": "India",
+          "length_m": 245,
+          "beam_m": 42,
+          "draught_m": 14.8,
+          "min_distance_km": 2.1,
+          "max_ais_gap_hours": 0.3,
+          "temporal_candidate": true,
+          "trajectory_consistent": true,
+          "heading_delta_deg": 18.0,
+          "min_sog": 3.2,
+          "mean_sog": 10.8,
+          "sog": 11.2,
+          "cog": 68.0,
+          "latitude": 19.060,
+          "longitude": 71.320,
+          "timestamp": "2026-03-14T02:15:00Z",
+          "waypoints": [
+            {"time": "2026-03-14T00:30:00Z", "latitude": 18.980, "longitude": 71.120, "sog": 12.4, "cog": 65.0},
+            {"time": "2026-03-14T02:15:00Z", "latitude": 19.055, "longitude": 71.310, "sog": 3.5, "cog": 68.0},
+            {"time": "2026-03-14T04:30:00Z", "latitude": 19.110, "longitude": 71.550, "sog": 11.8, "cog": 66.0},
+            {"time": "2026-03-14T06:30:00Z", "latitude": 19.170, "longitude": 71.820, "sog": 12.0, "cog": 64.0}
+          ]
+        },
+        {
+          "mmsi": "538008912",
+          "name": "PACIFIC HARVEST",
+          "vessel_type": "Bulk Carrier",
+          "flag": "Marshall Islands",
+          "length_m": 190,
+          "beam_m": 30,
+          "draught_m": 11.5,
+          "min_distance_km": 19.4,
+          "max_ais_gap_hours": 0.4,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 82.0,
+          "min_sog": 11.5,
+          "mean_sog": 12.2,
+          "sog": 12.1,
+          "cog": 340.0,
+          "latitude": 18.890,
+          "longitude": 71.740,
+          "timestamp": "2026-03-14T03:00:00Z",
+          "waypoints": [
+            {"time": "2026-03-14T01:00:00Z", "latitude": 18.720, "longitude": 71.800, "sog": 12.2, "cog": 340.0},
+            {"time": "2026-03-14T03:00:00Z", "latitude": 18.890, "longitude": 71.740, "sog": 12.1, "cog": 340.0},
+            {"time": "2026-03-14T06:00:00Z", "latitude": 19.180, "longitude": 71.620, "sog": 12.0, "cog": 342.0}
+          ]
+        },
+        {
+          "mmsi": "636015544",
+          "name": "ARABIAN MONARCH",
+          "vessel_type": "Container Ship",
+          "flag": "Liberia",
+          "length_m": 260,
+          "beam_m": 32,
+          "draught_m": 12.0,
+          "min_distance_km": 12.5,
+          "max_ais_gap_hours": 1.2,
+          "temporal_candidate": true,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 52.0,
+          "min_sog": 8.0,
+          "mean_sog": 13.5,
+          "sog": 13.8,
+          "cog": 110.0,
+          "latitude": 19.180,
+          "longitude": 71.420,
+          "timestamp": "2026-03-14T02:00:00Z",
+          "waypoints": [
+            {"time": "2026-03-14T00:30:00Z", "latitude": 19.240, "longitude": 71.200, "sog": 14.1, "cog": 112.0},
+            {"time": "2026-03-14T02:00:00Z", "latitude": 19.180, "longitude": 71.420, "sog": 13.8, "cog": 110.0},
+            {"time": "2026-03-14T05:00:00Z", "latitude": 19.040, "longitude": 71.910, "sog": 13.5, "cog": 108.0}
+          ]
+        }
+      ]
+    },
+    "wind": {
+      "record_count": 36,
+      "time_range": "2026-03-13T12:00:00Z to 2026-03-15T12:00:00Z",
+      "coverage": "Offshore Mumbai Basin",
+      "primary_vector": {
+        "speed_ms": 6.5,
+        "direction_deg": 250.0,
+        "wind_u": 6.11,
+        "wind_v": 2.22,
+        "description": "WSW Sea breeze toward Maharashtra coast"
+      }
+    },
+    "ocean_current": {
+      "record_count": 36,
+      "time_range": "2026-03-13T12:00:00Z to 2026-03-15T12:00:00Z",
+      "coverage": "Continental Shelf Surface Current",
+      "primary_vector": {
+        "speed_ms": 0.28,
+        "direction_deg": 65.0,
+        "current_u": 0.25,
+        "current_v": 0.12,
+        "description": "East-northeastward shelf current"
+      }
+    }
+  },
+  "ground_truth": {
+    "verified_responsible_vessel_mmsi": "419000123",
+    "verified_responsible_vessel_name": "MT OCEAN PIONEER",
+    "historical_investigation_note": "Port State Control inspection at Jawaharlal Nehru Port identified bilge discharge piping bypass matching slick fingerprint.",
+    "future_observations": {
+      "6": {
+        "hours_ahead": 6,
+        "timestamp": "2026-03-14T12:30:00Z",
+        "latitude": 19.192,
+        "longitude": 72.115,
+        "area_km2": 21.8,
+        "perimeter_km": 29.5,
+        "source": "Sentinel-1A SAR (Second Pass)",
+        "polygon": [
+          [72.080, 19.172],
+          [72.100, 19.185],
+          [72.125, 19.202],
+          [72.148, 19.210],
+          [72.142, 19.198],
+          [72.120, 19.182],
+          [72.095, 19.170],
+          [72.080, 19.172]
+        ]
+      },
+      "12": {
+        "hours_ahead": 12,
+        "timestamp": "2026-03-14T18:30:00Z",
+        "latitude": 19.265,
+        "longitude": 72.385,
+        "area_km2": 26.2,
+        "perimeter_km": 37.1,
+        "source": "Coastal Radar & Field Sighting",
+        "polygon": [
+          [72.350, 19.245],
+          [72.372, 19.258],
+          [72.398, 19.275],
+          [72.420, 19.282],
+          [72.415, 19.270],
+          [72.390, 19.255],
+          [72.365, 19.242],
+          [72.350, 19.245]
+        ]
+      },
+      "24": {
+        "hours_ahead": 24,
+        "timestamp": "2026-03-15T06:30:00Z",
+        "latitude": 19.408,
+        "longitude": 72.915,
+        "area_km2": 32.5,
+        "perimeter_km": 46.8,
+        "source": "Aerial Maritime Patrol",
+        "polygon": [
+          [72.875, 19.385],
+          [72.900, 19.400],
+          [72.930, 19.420],
+          [72.955, 19.428],
+          [72.948, 19.412],
+          [72.922, 19.395],
+          [72.895, 19.382],
+          [72.875, 19.385]
+        ]
+      }
+    }
+  }
+}
