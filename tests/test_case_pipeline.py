@@ -61,10 +61,26 @@ def test_run_validation():
     assert val["vessel_ranking_validation"]["is_top_1"] is True
     print(f"PASS: run_validation (MTE: {val['mean_trajectory_error_km']} km, Top-1 match: {val['vessel_ranking_validation']['is_top_1']})")
 
+def test_case_report_pdf():
+    res_gen = client.post("/api/cases/CASE-2025-MSC-ELSA-3/report/generate")
+    assert res_gen.status_code == 200
+    data = res_gen.json()["data"]
+    assert data["ok"] is True
+    assert data["filename"].endswith(".pdf")
+
+    res_pdf = client.get("/api/cases/CASE-2025-MSC-ELSA-3/report/pdf")
+    assert res_pdf.status_code == 200
+    assert res_pdf.headers["content-type"] == "application/pdf"
+    assert len(res_pdf.content) > 1000
+    assert res_pdf.content[:4] == b"%PDF"
+    print("PASS: case_report_pdf (valid PDF generated and downloaded)")
+
 if __name__ == "__main__":
     test_cases_list()
     test_case_detail()
     test_validate_inputs()
     test_run_analysis()
     test_run_validation()
+    test_case_report_pdf()
     print("ALL TESTS PASSED SUCCESSFULLY!")
+

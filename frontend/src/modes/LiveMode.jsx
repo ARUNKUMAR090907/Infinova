@@ -15,6 +15,9 @@ import {
   Info,
   Layers,
   ChevronRight,
+  Download,
+  FileText,
+  Map,
 } from "lucide-react";
 
 import { BasemapLayer, AISVesselsLayer } from "../components/MapLayers.jsx";
@@ -31,7 +34,7 @@ export default function LiveMode() {
   const [showWind, setShowWind] = useState(true);
   const [showCurrent, setShowCurrent] = useState(true);
   const [showVessels, setShowVessels] = useState(true);
-  const [basemap, setBasemap] = useState("dark");
+  const [basemap, setBasemap] = useState("satellite");
 
   const fetchData = useCallback(async () => {
     try {
@@ -146,9 +149,9 @@ export default function LiveMode() {
               onChange={(e) => setBasemap(e.target.value)}
               className="bg-[#0e1b36] text-slate-300 border border-[#1e345e] rounded px-2 py-1 text-xs outline-none cursor-pointer"
             >
-              <option value="dark">Carto Dark</option>
-              <option value="satellite">ESRI Satellite</option>
-              <option value="osm">OpenStreetMap</option>
+              <option value="satellite">🛰 ESRI Satellite</option>
+              <option value="dark">🌑 Carto Dark</option>
+              <option value="osm">🗺 OpenStreetMap</option>
             </select>
           </div>
 

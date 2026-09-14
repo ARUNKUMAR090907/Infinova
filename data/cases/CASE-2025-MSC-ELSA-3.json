@@ -5,7 +5,7 @@
   "incident_date": "2025-05-25T04:15:00Z",
   "t0_timestamp": "2025-05-25T04:15:00Z",
   "summary": "Forensic investigation of suspected bunker fuel discharge detected off the coast of Kochi/Alappuzha, Kerala during early South-West monsoon season.",
-  "status": "Validated",
+  "status": "Analysis Completed",
   "coordinates": {
     "latitude": 9.842,
     "longitude": 75.918
@@ -360,6 +360,340 @@
               "cog": 85.0
             }
           ]
+        },
+        {
+          "mmsi": "419123456",
+          "name": "ICG SHAURYA",
+          "vessel_type": "Coast Guard Patrol",
+          "flag": "India",
+          "length_m": 96,
+          "beam_m": 12,
+          "draught_m": 3.2,
+          "min_distance_km": 6.2,
+          "max_ais_gap_hours": 0.0,
+          "temporal_candidate": true,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 82.0,
+          "min_sog": 3.1,
+          "mean_sog": 14.8,
+          "sog": 16.2,
+          "cog": 265.0,
+          "latitude": 9.87,
+          "longitude": 75.84,
+          "timestamp": "2025-05-25T04:20:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-24T22:00:00Z",
+              "latitude": 9.95,
+              "longitude": 76.22,
+              "sog": 16.5,
+              "cog": 270.0
+            },
+            {
+              "time": "2025-05-25T00:00:00Z",
+              "latitude": 9.93,
+              "longitude": 76.05,
+              "sog": 15.8,
+              "cog": 268.0
+            },
+            {
+              "time": "2025-05-25T02:00:00Z",
+              "latitude": 9.9,
+              "longitude": 75.88,
+              "sog": 14.2,
+              "cog": 264.0
+            },
+            {
+              "time": "2025-05-25T04:00:00Z",
+              "latitude": 9.87,
+              "longitude": 75.84,
+              "sog": 3.1,
+              "cog": 265.0
+            },
+            {
+              "time": "2025-05-25T04:20:00Z",
+              "latitude": 9.87,
+              "longitude": 75.84,
+              "sog": 16.2,
+              "cog": 265.0
+            },
+            {
+              "time": "2025-05-25T06:30:00Z",
+              "latitude": 9.84,
+              "longitude": 75.62,
+              "sog": 17.0,
+              "cog": 262.0
+            }
+          ]
+        },
+        {
+          "mmsi": "355912340",
+          "name": "AL WAJBA LPG",
+          "vessel_type": "LPG Carrier",
+          "flag": "Qatar",
+          "length_m": 163,
+          "beam_m": 26,
+          "draught_m": 9.8,
+          "min_distance_km": 31.5,
+          "max_ais_gap_hours": 0.3,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 120.0,
+          "min_sog": 13.2,
+          "mean_sog": 14.0,
+          "sog": 13.8,
+          "cog": 55.0,
+          "latitude": 9.52,
+          "longitude": 75.68,
+          "timestamp": "2025-05-25T04:00:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-24T20:00:00Z",
+              "latitude": 9.28,
+              "longitude": 75.15,
+              "sog": 14.2,
+              "cog": 58.0
+            },
+            {
+              "time": "2025-05-25T00:00:00Z",
+              "latitude": 9.42,
+              "longitude": 75.43,
+              "sog": 13.8,
+              "cog": 56.0
+            },
+            {
+              "time": "2025-05-25T04:00:00Z",
+              "latitude": 9.52,
+              "longitude": 75.68,
+              "sog": 13.8,
+              "cog": 55.0
+            },
+            {
+              "time": "2025-05-25T08:00:00Z",
+              "latitude": 9.65,
+              "longitude": 75.96,
+              "sog": 14.1,
+              "cog": 54.0
+            }
+          ]
+        },
+        {
+          "mmsi": "538006712",
+          "name": "ARABELLA BREEZE",
+          "vessel_type": "Bulk Carrier",
+          "flag": "Marshall Islands",
+          "length_m": 190,
+          "beam_m": 28,
+          "draught_m": 11.8,
+          "min_distance_km": 19.4,
+          "max_ais_gap_hours": 0.8,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 72.0,
+          "min_sog": 9.8,
+          "mean_sog": 11.2,
+          "sog": 11.0,
+          "cog": 22.0,
+          "latitude": 9.78,
+          "longitude": 75.54,
+          "timestamp": "2025-05-25T04:00:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-24T22:00:00Z",
+              "latitude": 9.52,
+              "longitude": 75.48,
+              "sog": 11.5,
+              "cog": 24.0
+            },
+            {
+              "time": "2025-05-25T01:00:00Z",
+              "latitude": 9.64,
+              "longitude": 75.5,
+              "sog": 10.8,
+              "cog": 22.0
+            },
+            {
+              "time": "2025-05-25T04:00:00Z",
+              "latitude": 9.78,
+              "longitude": 75.54,
+              "sog": 11.0,
+              "cog": 22.0
+            },
+            {
+              "time": "2025-05-25T07:00:00Z",
+              "latitude": 9.92,
+              "longitude": 75.58,
+              "sog": 11.2,
+              "cog": 20.0
+            },
+            {
+              "time": "2025-05-25T10:00:00Z",
+              "latitude": 10.08,
+              "longitude": 75.62,
+              "sog": 11.0,
+              "cog": 21.0
+            }
+          ]
+        },
+        {
+          "mmsi": "419001889",
+          "name": "KV THIRUVANANTHAPURAM",
+          "vessel_type": "Fisheries Patrol Vessel",
+          "flag": "India",
+          "length_m": 55,
+          "beam_m": 9,
+          "draught_m": 2.6,
+          "min_distance_km": 9.8,
+          "max_ais_gap_hours": 0.2,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 95.0,
+          "min_sog": 6.5,
+          "mean_sog": 9.4,
+          "sog": 9.8,
+          "cog": 350.0,
+          "latitude": 9.74,
+          "longitude": 75.88,
+          "timestamp": "2025-05-25T04:00:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T00:00:00Z",
+              "latitude": 9.58,
+              "longitude": 75.92,
+              "sog": 9.2,
+              "cog": 348.0
+            },
+            {
+              "time": "2025-05-25T02:00:00Z",
+              "latitude": 9.66,
+              "longitude": 75.9,
+              "sog": 9.6,
+              "cog": 350.0
+            },
+            {
+              "time": "2025-05-25T04:00:00Z",
+              "latitude": 9.74,
+              "longitude": 75.88,
+              "sog": 9.8,
+              "cog": 350.0
+            },
+            {
+              "time": "2025-05-25T06:00:00Z",
+              "latitude": 9.84,
+              "longitude": 75.86,
+              "sog": 9.5,
+              "cog": 352.0
+            }
+          ]
+        },
+        {
+          "mmsi": "477988210",
+          "name": "ORIENT BEAUTY VLCC",
+          "vessel_type": "Crude Oil Tanker (VLCC)",
+          "flag": "Hong Kong",
+          "length_m": 328,
+          "beam_m": 60,
+          "draught_m": 18.2,
+          "min_distance_km": 38.8,
+          "max_ais_gap_hours": 0.2,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 148.0,
+          "min_sog": 14.2,
+          "mean_sog": 14.8,
+          "sog": 15.1,
+          "cog": 198.0,
+          "latitude": 9.44,
+          "longitude": 76.08,
+          "timestamp": "2025-05-25T04:00:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-24T20:00:00Z",
+              "latitude": 10.08,
+              "longitude": 75.82,
+              "sog": 15.2,
+              "cog": 198.0
+            },
+            {
+              "time": "2025-05-25T00:00:00Z",
+              "latitude": 9.72,
+              "longitude": 75.97,
+              "sog": 14.8,
+              "cog": 198.0
+            },
+            {
+              "time": "2025-05-25T04:00:00Z",
+              "latitude": 9.44,
+              "longitude": 76.08,
+              "sog": 15.1,
+              "cog": 198.0
+            },
+            {
+              "time": "2025-05-25T08:00:00Z",
+              "latitude": 9.14,
+              "longitude": 76.22,
+              "sog": 14.9,
+              "cog": 198.0
+            }
+          ]
+        },
+        {
+          "mmsi": "566184420",
+          "name": "MAERSK KOCHI FEEDER",
+          "vessel_type": "Container Feeder",
+          "flag": "Singapore",
+          "length_m": 118,
+          "beam_m": 19,
+          "draught_m": 6.8,
+          "min_distance_km": 16.1,
+          "max_ais_gap_hours": 0.1,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 58.0,
+          "min_sog": 11.8,
+          "mean_sog": 12.5,
+          "sog": 12.4,
+          "cog": 342.0,
+          "latitude": 9.66,
+          "longitude": 76.04,
+          "timestamp": "2025-05-25T04:15:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T00:00:00Z",
+              "latitude": 9.38,
+              "longitude": 76.12,
+              "sog": 12.8,
+              "cog": 340.0
+            },
+            {
+              "time": "2025-05-25T02:00:00Z",
+              "latitude": 9.52,
+              "longitude": 76.08,
+              "sog": 12.5,
+              "cog": 342.0
+            },
+            {
+              "time": "2025-05-25T04:15:00Z",
+              "latitude": 9.66,
+              "longitude": 76.04,
+              "sog": 12.4,
+              "cog": 342.0
+            },
+            {
+              "time": "2025-05-25T06:00:00Z",
+              "latitude": 9.78,
+              "longitude": 76.0,
+              "sog": 12.2,
+              "cog": 344.0
+            },
+            {
+              "time": "2025-05-25T08:00:00Z",
+              "latitude": 9.96,
+              "longitude": 75.95,
+              "sog": 12.6,
+              "cog": 342.0
+            }
+          ]
         }
       ]
     },
@@ -525,7 +859,7 @@
     }
   },
   "analysis": {
-    "analyzed_at": "2026-09-14T16:42:10.535531+00:00",
+    "analyzed_at": "2026-09-14T20:19:42.226964+00:00",
     "detection": {
       "detected": true,
       "confidence": 0.948,
@@ -805,6 +1139,91 @@
           ]
         },
         {
+          "mmsi": "419123456",
+          "name": "ICG SHAURYA",
+          "vessel_type": "Coast Guard Patrol",
+          "flag": "India",
+          "length_m": 96,
+          "beam_m": 12,
+          "draught_m": 3.2,
+          "min_distance_km": 6.2,
+          "max_ais_gap_hours": 0.0,
+          "temporal_candidate": true,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 82.0,
+          "min_sog": 3.1,
+          "mean_sog": 14.8,
+          "sog": 16.2,
+          "cog": 265.0,
+          "latitude": 9.87,
+          "longitude": 75.84,
+          "timestamp": "2025-05-25T04:20:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-24T22:00:00Z",
+              "latitude": 9.95,
+              "longitude": 76.22,
+              "sog": 16.5,
+              "cog": 270.0
+            },
+            {
+              "time": "2025-05-25T00:00:00Z",
+              "latitude": 9.93,
+              "longitude": 76.05,
+              "sog": 15.8,
+              "cog": 268.0
+            },
+            {
+              "time": "2025-05-25T02:00:00Z",
+              "latitude": 9.9,
+              "longitude": 75.88,
+              "sog": 14.2,
+              "cog": 264.0
+            },
+            {
+              "time": "2025-05-25T04:00:00Z",
+              "latitude": 9.87,
+              "longitude": 75.84,
+              "sog": 3.1,
+              "cog": 265.0
+            },
+            {
+              "time": "2025-05-25T04:20:00Z",
+              "latitude": 9.87,
+              "longitude": 75.84,
+              "sog": 16.2,
+              "cog": 265.0
+            },
+            {
+              "time": "2025-05-25T06:30:00Z",
+              "latitude": 9.84,
+              "longitude": 75.62,
+              "sog": 17.0,
+              "cog": 262.0
+            }
+          ],
+          "rank": 2,
+          "score": 69.1,
+          "overall_score": 69.1,
+          "status": "High Relevance",
+          "relevance_level": "High Relevance",
+          "scores": {
+            "spatial_proximity": 79.3,
+            "temporal_proximity": 100.0,
+            "trajectory_match": 16.6,
+            "wind_compatibility": 85.0,
+            "current_compatibility": 55.0,
+            "overall": 69.1
+          },
+          "evidence": [
+            "Spatial Proximity: 79.3% (6.2 km from estimated source region)",
+            "Temporal Alignment: 100.0% (Vessel was present in time window)",
+            "Trajectory Match: 16.6% (Heading deviation 82.0\u00b0 relative to drift axis)",
+            "Hydrodynamic Leeway: 85.0% compatibility with wind/current dispersion",
+            "Operational state: SOG 3.1 - 16.2 kn"
+          ]
+        },
+        {
           "mmsi": "412445890",
           "name": "HAI YANG 68",
           "vessel_type": "Chemical Tanker",
@@ -847,7 +1266,7 @@
               "cog": 146.0
             }
           ],
-          "rank": 2,
+          "rank": 3,
           "score": 66.3,
           "overall_score": 66.3,
           "status": "High Relevance",
@@ -904,7 +1323,7 @@
               "cog": 85.0
             }
           ],
-          "rank": 3,
+          "rank": 4,
           "score": 46.2,
           "overall_score": 46.2,
           "status": "Moderate Relevance",
@@ -923,6 +1342,77 @@
             "Trajectory Match: 8.6% (Heading deviation 110.0\u00b0 relative to drift axis)",
             "Hydrodynamic Leeway: 85.0% compatibility with wind/current dispersion",
             "Operational state: SOG 2.4 - 3.8 kn (Speed reduction / loitering detected)"
+          ]
+        },
+        {
+          "mmsi": "419001889",
+          "name": "KV THIRUVANANTHAPURAM",
+          "vessel_type": "Fisheries Patrol Vessel",
+          "flag": "India",
+          "length_m": 55,
+          "beam_m": 9,
+          "draught_m": 2.6,
+          "min_distance_km": 9.8,
+          "max_ais_gap_hours": 0.2,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 95.0,
+          "min_sog": 6.5,
+          "mean_sog": 9.4,
+          "sog": 9.8,
+          "cog": 350.0,
+          "latitude": 9.74,
+          "longitude": 75.88,
+          "timestamp": "2025-05-25T04:00:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T00:00:00Z",
+              "latitude": 9.58,
+              "longitude": 75.92,
+              "sog": 9.2,
+              "cog": 348.0
+            },
+            {
+              "time": "2025-05-25T02:00:00Z",
+              "latitude": 9.66,
+              "longitude": 75.9,
+              "sog": 9.6,
+              "cog": 350.0
+            },
+            {
+              "time": "2025-05-25T04:00:00Z",
+              "latitude": 9.74,
+              "longitude": 75.88,
+              "sog": 9.8,
+              "cog": 350.0
+            },
+            {
+              "time": "2025-05-25T06:00:00Z",
+              "latitude": 9.84,
+              "longitude": 75.86,
+              "sog": 9.5,
+              "cog": 352.0
+            }
+          ],
+          "rank": 5,
+          "score": 46.2,
+          "overall_score": 46.2,
+          "status": "Moderate Relevance",
+          "relevance_level": "Moderate Relevance",
+          "scores": {
+            "spatial_proximity": 67.3,
+            "temporal_proximity": 35.0,
+            "trajectory_match": 12.9,
+            "wind_compatibility": 65.0,
+            "current_compatibility": 55.0,
+            "overall": 46.2
+          },
+          "evidence": [
+            "Spatial Proximity: 67.3% (9.8 km from estimated source region)",
+            "Temporal Alignment: 35.0% (Transmissions did not closely match release window)",
+            "Trajectory Match: 12.9% (Heading deviation 95.0\u00b0 relative to drift axis)",
+            "Hydrodynamic Leeway: 65.0% compatibility with wind/current dispersion",
+            "Operational state: SOG 6.5 - 9.8 kn"
           ]
         },
         {
@@ -961,7 +1451,7 @@
               "cog": 160.0
             }
           ],
-          "rank": 4,
+          "rank": 6,
           "score": 44.3,
           "overall_score": 44.3,
           "status": "Moderate Relevance",
@@ -980,6 +1470,84 @@
             "Trajectory Match: 24.3% (Heading deviation 55.0\u00b0 relative to drift axis)",
             "Hydrodynamic Leeway: 65.0% compatibility with wind/current dispersion",
             "Operational state: SOG 12.0 - 13.0 kn"
+          ]
+        },
+        {
+          "mmsi": "566184420",
+          "name": "MAERSK KOCHI FEEDER",
+          "vessel_type": "Container Feeder",
+          "flag": "Singapore",
+          "length_m": 118,
+          "beam_m": 19,
+          "draught_m": 6.8,
+          "min_distance_km": 16.1,
+          "max_ais_gap_hours": 0.1,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 58.0,
+          "min_sog": 11.8,
+          "mean_sog": 12.5,
+          "sog": 12.4,
+          "cog": 342.0,
+          "latitude": 9.66,
+          "longitude": 76.04,
+          "timestamp": "2025-05-25T04:15:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-25T00:00:00Z",
+              "latitude": 9.38,
+              "longitude": 76.12,
+              "sog": 12.8,
+              "cog": 340.0
+            },
+            {
+              "time": "2025-05-25T02:00:00Z",
+              "latitude": 9.52,
+              "longitude": 76.08,
+              "sog": 12.5,
+              "cog": 342.0
+            },
+            {
+              "time": "2025-05-25T04:15:00Z",
+              "latitude": 9.66,
+              "longitude": 76.04,
+              "sog": 12.4,
+              "cog": 342.0
+            },
+            {
+              "time": "2025-05-25T06:00:00Z",
+              "latitude": 9.78,
+              "longitude": 76.0,
+              "sog": 12.2,
+              "cog": 344.0
+            },
+            {
+              "time": "2025-05-25T08:00:00Z",
+              "latitude": 9.96,
+              "longitude": 75.95,
+              "sog": 12.6,
+              "cog": 342.0
+            }
+          ],
+          "rank": 7,
+          "score": 43.0,
+          "overall_score": 43.0,
+          "status": "Moderate Relevance",
+          "relevance_level": "Moderate Relevance",
+          "scores": {
+            "spatial_proximity": 46.3,
+            "temporal_proximity": 35.0,
+            "trajectory_match": 23.4,
+            "wind_compatibility": 65.0,
+            "current_compatibility": 55.0,
+            "overall": 43.0
+          },
+          "evidence": [
+            "Spatial Proximity: 46.3% (16.1 km from estimated source region)",
+            "Temporal Alignment: 35.0% (Transmissions did not closely match release window)",
+            "Trajectory Match: 23.4% (Heading deviation 58.0\u00b0 relative to drift axis)",
+            "Hydrodynamic Leeway: 65.0% compatibility with wind/current dispersion",
+            "Operational state: SOG 11.8 - 12.4 kn"
           ]
         },
         {
@@ -1025,7 +1593,7 @@
               "cog": 288.0
             }
           ],
-          "rank": 5,
+          "rank": 8,
           "score": 39.8,
           "overall_score": 39.8,
           "status": "Low Relevance",
@@ -1044,6 +1612,84 @@
             "Trajectory Match: 17.7% (Heading deviation 78.0\u00b0 relative to drift axis)",
             "Hydrodynamic Leeway: 65.0% compatibility with wind/current dispersion",
             "Operational state: SOG 8.5 - 9.6 kn"
+          ]
+        },
+        {
+          "mmsi": "538006712",
+          "name": "ARABELLA BREEZE",
+          "vessel_type": "Bulk Carrier",
+          "flag": "Marshall Islands",
+          "length_m": 190,
+          "beam_m": 28,
+          "draught_m": 11.8,
+          "min_distance_km": 19.4,
+          "max_ais_gap_hours": 0.8,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 72.0,
+          "min_sog": 9.8,
+          "mean_sog": 11.2,
+          "sog": 11.0,
+          "cog": 22.0,
+          "latitude": 9.78,
+          "longitude": 75.54,
+          "timestamp": "2025-05-25T04:00:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-24T22:00:00Z",
+              "latitude": 9.52,
+              "longitude": 75.48,
+              "sog": 11.5,
+              "cog": 24.0
+            },
+            {
+              "time": "2025-05-25T01:00:00Z",
+              "latitude": 9.64,
+              "longitude": 75.5,
+              "sog": 10.8,
+              "cog": 22.0
+            },
+            {
+              "time": "2025-05-25T04:00:00Z",
+              "latitude": 9.78,
+              "longitude": 75.54,
+              "sog": 11.0,
+              "cog": 22.0
+            },
+            {
+              "time": "2025-05-25T07:00:00Z",
+              "latitude": 9.92,
+              "longitude": 75.58,
+              "sog": 11.2,
+              "cog": 20.0
+            },
+            {
+              "time": "2025-05-25T10:00:00Z",
+              "latitude": 10.08,
+              "longitude": 75.62,
+              "sog": 11.0,
+              "cog": 21.0
+            }
+          ],
+          "rank": 9,
+          "score": 39.5,
+          "overall_score": 39.5,
+          "status": "Low Relevance",
+          "relevance_level": "Low Relevance",
+          "scores": {
+            "spatial_proximity": 35.3,
+            "temporal_proximity": 35.0,
+            "trajectory_match": 19.4,
+            "wind_compatibility": 65.0,
+            "current_compatibility": 55.0,
+            "overall": 39.5
+          },
+          "evidence": [
+            "Spatial Proximity: 35.3% (19.4 km from estimated source region)",
+            "Temporal Alignment: 35.0% (Transmissions did not closely match release window)",
+            "Trajectory Match: 19.4% (Heading deviation 72.0\u00b0 relative to drift axis)",
+            "Hydrodynamic Leeway: 65.0% compatibility with wind/current dispersion",
+            "Operational state: SOG 9.8 - 11.0 kn"
           ]
         },
         {
@@ -1089,7 +1735,7 @@
               "cog": 336.0
             }
           ],
-          "rank": 6,
+          "rank": 10,
           "score": 35.9,
           "overall_score": 35.9,
           "status": "Low Relevance",
@@ -1108,6 +1754,148 @@
             "Trajectory Match: 21.4% (Heading deviation 65.0\u00b0 relative to drift axis)",
             "Hydrodynamic Leeway: 65.0% compatibility with wind/current dispersion",
             "Operational state: SOG 11.2 - 12.0 kn"
+          ]
+        },
+        {
+          "mmsi": "355912340",
+          "name": "AL WAJBA LPG",
+          "vessel_type": "LPG Carrier",
+          "flag": "Qatar",
+          "length_m": 163,
+          "beam_m": 26,
+          "draught_m": 9.8,
+          "min_distance_km": 31.5,
+          "max_ais_gap_hours": 0.3,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 120.0,
+          "min_sog": 13.2,
+          "mean_sog": 14.0,
+          "sog": 13.8,
+          "cog": 55.0,
+          "latitude": 9.52,
+          "longitude": 75.68,
+          "timestamp": "2025-05-25T04:00:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-24T20:00:00Z",
+              "latitude": 9.28,
+              "longitude": 75.15,
+              "sog": 14.2,
+              "cog": 58.0
+            },
+            {
+              "time": "2025-05-25T00:00:00Z",
+              "latitude": 9.42,
+              "longitude": 75.43,
+              "sog": 13.8,
+              "cog": 56.0
+            },
+            {
+              "time": "2025-05-25T04:00:00Z",
+              "latitude": 9.52,
+              "longitude": 75.68,
+              "sog": 13.8,
+              "cog": 55.0
+            },
+            {
+              "time": "2025-05-25T08:00:00Z",
+              "latitude": 9.65,
+              "longitude": 75.96,
+              "sog": 14.1,
+              "cog": 54.0
+            }
+          ],
+          "rank": 11,
+          "score": 28.4,
+          "overall_score": 28.4,
+          "status": "Low Relevance",
+          "relevance_level": "Low Relevance",
+          "scores": {
+            "spatial_proximity": 0.0,
+            "temporal_proximity": 35.0,
+            "trajectory_match": 8.0,
+            "wind_compatibility": 65.0,
+            "current_compatibility": 55.0,
+            "overall": 28.4
+          },
+          "evidence": [
+            "Spatial Proximity: 0.0% (31.5 km from estimated source region)",
+            "Temporal Alignment: 35.0% (Transmissions did not closely match release window)",
+            "Trajectory Match: 8.0% (Heading deviation 120.0\u00b0 relative to drift axis)",
+            "Hydrodynamic Leeway: 65.0% compatibility with wind/current dispersion",
+            "Operational state: SOG 13.2 - 13.8 kn"
+          ]
+        },
+        {
+          "mmsi": "477988210",
+          "name": "ORIENT BEAUTY VLCC",
+          "vessel_type": "Crude Oil Tanker (VLCC)",
+          "flag": "Hong Kong",
+          "length_m": 328,
+          "beam_m": 60,
+          "draught_m": 18.2,
+          "min_distance_km": 38.8,
+          "max_ais_gap_hours": 0.2,
+          "temporal_candidate": false,
+          "trajectory_consistent": false,
+          "heading_delta_deg": 148.0,
+          "min_sog": 14.2,
+          "mean_sog": 14.8,
+          "sog": 15.1,
+          "cog": 198.0,
+          "latitude": 9.44,
+          "longitude": 76.08,
+          "timestamp": "2025-05-25T04:00:00Z",
+          "waypoints": [
+            {
+              "time": "2025-05-24T20:00:00Z",
+              "latitude": 10.08,
+              "longitude": 75.82,
+              "sog": 15.2,
+              "cog": 198.0
+            },
+            {
+              "time": "2025-05-25T00:00:00Z",
+              "latitude": 9.72,
+              "longitude": 75.97,
+              "sog": 14.8,
+              "cog": 198.0
+            },
+            {
+              "time": "2025-05-25T04:00:00Z",
+              "latitude": 9.44,
+              "longitude": 76.08,
+              "sog": 15.1,
+              "cog": 198.0
+            },
+            {
+              "time": "2025-05-25T08:00:00Z",
+              "latitude": 9.14,
+              "longitude": 76.22,
+              "sog": 14.9,
+              "cog": 198.0
+            }
+          ],
+          "rank": 12,
+          "score": 28.4,
+          "overall_score": 28.4,
+          "status": "Low Relevance",
+          "relevance_level": "Low Relevance",
+          "scores": {
+            "spatial_proximity": 0.0,
+            "temporal_proximity": 35.0,
+            "trajectory_match": 8.0,
+            "wind_compatibility": 65.0,
+            "current_compatibility": 55.0,
+            "overall": 28.4
+          },
+          "evidence": [
+            "Spatial Proximity: 0.0% (38.8 km from estimated source region)",
+            "Temporal Alignment: 35.0% (Transmissions did not closely match release window)",
+            "Trajectory Match: 8.0% (Heading deviation 148.0\u00b0 relative to drift axis)",
+            "Hydrodynamic Leeway: 65.0% compatibility with wind/current dispersion",
+            "Operational state: SOG 14.2 - 15.1 kn"
           ]
         }
       ],

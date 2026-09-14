@@ -278,11 +278,11 @@ class DemoAISProvider(AISProvider):
         analysis = analyze_ais(incident_origin, "2026-03-14T02:00:00Z", ais_path=self.csv_path)
         vessels = analysis.get("vessels", [])
         for v in vessels:
-            v["source"] = "MarineGuard Verified AIS Archive"
+            v["source"] = "INFINOVAVerified AIS Archive"
             v["source_type"] = "DEMO"
             v["data_mode"] = "DEMO"
             v["provenance"] = create_provenance(
-                provider="MarineGuard Verified AIS Archive",
+                provider="INFINOVAVerified AIS Archive",
                 source_type="DEMO",
                 dataset="Arabian Sea Offshore Shipping Trajectories (Recorded)",
                 observation_time=v.get("timestamp"),
@@ -311,7 +311,7 @@ class DemoAISProvider(AISProvider):
             window_hours=window_hours,
             spatial_km=spatial_km,
         )
-        res["provider"] = "MarineGuard Verified AIS Archive"
+        res["provider"] = "INFINOVAVerified AIS Archive"
         res["source_type"] = "DEMO"
         res["data_mode"] = "DEMO"
         res["fallback_used"] = True
@@ -344,7 +344,7 @@ class DemoAISProvider(AISProvider):
             "error": None,
             "retrieved_records": len(df),
             "unique_vessels": unique_vessels,
-            "provider": "MarineGuard Verified AIS Archive",
+            "provider": "INFINOVAVerified AIS Archive",
             "note": "Using verified historical demo AIS trajectories.",
         }
 

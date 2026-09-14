@@ -205,7 +205,7 @@ export default function TechnicalProofModal({ isOpen, onClose }) {
         >
           {[
             { step: "1. CLIENT", desc: "React Dashboard", detail: "GET /api/environment/grid" },
-            { step: "2. BACKEND API", desc: "FastAPI Gateway", detail: "MarineGuard Provider Registry" },
+            { step: "2. BACKEND API", desc: "FastAPI Gateway", detail: "INFINOVAProvider Registry" },
             { step: "3. DATA SOURCE", desc: "Copernicus / INCOIS", detail: "OData / Open-Meteo / OON" },
             { step: "4. NORMALIZATION", desc: "Geospatial Adapter", detail: "Canonical Coordinate Frame" },
             { step: "5. LAYER RENDERING", desc: "Leaflet & Canvas 2D", detail: "Vector Field & Particles" },

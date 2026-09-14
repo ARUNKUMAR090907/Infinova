@@ -731,7 +731,7 @@ def _generate_demo_corridor_vessels(bbox: Tuple[float, float, float, float]) -> 
 
         latest = track[-1]
         prov = create_provenance(
-            provider="MarineGuard Demo Corridor Replay",
+            provider="INFINOVADemo Corridor Replay",
             source_type="DEMO_REPLAY",
             dataset="Arabian Sea Shipping Benchmark Corridor (Historical Replay)",
             observation_time=latest["timestamp"],
@@ -756,7 +756,7 @@ def _generate_demo_corridor_vessels(bbox: Tuple[float, float, float, float]) -> 
             "destination": s["dest"],
             "timestamp": latest["timestamp"],
             "track": track,
-            "source": "MarineGuard Demo Corridor Replay",
+            "source": "INFINOVADemo Corridor Replay",
             "source_type": "DEMO_REPLAY",
             "provenance": prov,
         })

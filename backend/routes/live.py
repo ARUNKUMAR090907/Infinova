@@ -1,4 +1,4 @@
-"""Normalized Live Coordinator & Monitoring Router for MarineGuard AI.
+"""Normalized Live Coordinator & Monitoring Router for INFINOVAAI.
 
 Follows strict scientific data contracts for:
 - CDSE Sentinel-1 SAR
@@ -25,7 +25,7 @@ _EVENT_LOG: List[Dict[str, Any]] = [
         "id": "evt-init-01",
         "timestamp": datetime.now(timezone.utc).strftime("%H:%M:%S UTC"),
         "source": "SYSTEM",
-        "message": "MarineGuard live observation pipeline initialized",
+        "message": "INFINOVAlive observation pipeline initialized",
         "level": "INFO",
     },
     {

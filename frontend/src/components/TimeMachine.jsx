@@ -364,13 +364,14 @@ export default function TimeMachine({ detectionTime, selectedTime, onTimeChange 
         {/* Slider */}
         <input
           type="range"
-          className="timeline-slider"
+          className="timeline-slider w-full"
           min={0}
           max={1}
           step={0.00005}
           value={sliderFrac}
           onChange={handleSlider}
-          style={{ "--t0-pos": `${t0Frac * 100}%` }}
+          onInput={handleSlider}
+          style={{ width: "100%", display: "block", cursor: "pointer", "--t0-pos": `${t0Frac * 100}%` }}
         />
 
         {/* T0 vertical tick mark */}

@@ -20,27 +20,39 @@ import {
 // ════════════════════════════════════════════════════════════════════════════
 // BASEMAP LAYER — dynamic URL switch without recreating MapContainer
 // ════════════════════════════════════════════════════════════════════════════
-export function BasemapLayer({ basemap = "dark" }) {
+export function BasemapLayer({ basemap = "satellite" }) {
   const TILES = {
     satellite: {
       url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-      attr: "Tiles © Esri — DigitalGlobe, GeoEye, Earthstar Geographics",
-    },
-    osm: {
-      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-      attr: "© OpenStreetMap contributors",
+      attr: "Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community",
+      maxNativeZoom: 18,
     },
     dark: {
       url: "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
       attr: "© CARTO",
+      maxNativeZoom: 19,
+    },
+    osm: {
+      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      attr: "© OpenStreetMap contributors",
+      maxNativeZoom: 19,
     },
     nautical: {
       url: "https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png",
       attr: "© OpenSeaMap",
+      maxNativeZoom: 18,
     },
   };
-  const t = TILES[basemap] || TILES.dark;
-  return <TileLayer url={t.url} attribution={t.attr} maxZoom={19} />;
+  const t = TILES[basemap] || TILES.satellite;
+  return (
+    <TileLayer
+      key={basemap}
+      url={t.url}
+      attribution={t.attr}
+      maxZoom={19}
+      maxNativeZoom={t.maxNativeZoom || 18}
+    />
+  );
 }
 
 // ════════════════════════════════════════════════════════════════════════════
@@ -100,13 +112,14 @@ export function interpolateVesselPosition(vessel, selectedTime) {
 
   if (!selectedTime) {
     return {
-      lat: !isNaN(rootLat) ? rootLat : 19.12,
-      lon: !isNaN(rootLon) ? rootLon : 71.85,
+      lat: !isNaN(rootLat) ? rootLat : 9.84,
+      lon: !isNaN(rootLon) ? rootLon : 75.92,
       heading: rootCog,
     };
   }
 
-  const pts = (vessel.track || [])
+  const rawTrack = vessel.track || vessel.waypoints || vessel.positions || [];
+  const pts = rawTrack
     .filter((p) => (p.latitude != null || p.lat != null) && (p.longitude != null || p.lon != null) && (p.timestamp || p.time))
     .map((p) => {
       const lat = Number(p.latitude ?? p.lat);
@@ -120,8 +133,8 @@ export function interpolateVesselPosition(vessel, selectedTime) {
 
   if (!pts.length) {
     return {
-      lat: !isNaN(rootLat) ? rootLat : 19.12,
-      lon: !isNaN(rootLon) ? rootLon : 71.85,
+      lat: !isNaN(rootLat) ? rootLat : 9.84,
+      lon: !isNaN(rootLon) ? rootLon : 75.92,
       heading: rootCog,
     };
   }
@@ -143,12 +156,12 @@ export function interpolateVesselPosition(vessel, selectedTime) {
       const dLat = pts[i + 1].lat - pts[i].lat;
       const dLon = pts[i + 1].lon - pts[i].lon;
       const heading = ((Math.atan2(dLon, dLat) * 180) / Math.PI + 360) % 360;
-      return { lat, lon, heading };
+      return { lat, lon, heading: isNaN(heading) ? (pts[i].heading ?? rootCog) : heading };
     }
   }
   return {
-    lat: !isNaN(rootLat) ? rootLat : 19.12,
-    lon: !isNaN(rootLon) ? rootLon : 71.85,
+    lat: !isNaN(rootLat) ? rootLat : 9.84,
+    lon: !isNaN(rootLon) ? rootLon : 75.92,
     heading: rootCog,
   };
 }
@@ -440,12 +453,21 @@ export function AISVesselsLayer({ vessels = [], selectedMmsi, onSelectVessel, se
         const trackColor = isHigh ? "#f43f5e" : isMed ? "#f59e0b" : isSelected ? "#22d3ee" : "#3f4f6a";
 
         // Segment track into past trail and future route relative to selectedTime
-        const validTrack = (v.track || []).filter((p) => p.latitude != null && p.longitude != null);
+        const rawTrack = v.track || v.waypoints || v.positions || [];
+        const validTrack = rawTrack
+          .filter((p) => (p.latitude != null || p.lat != null) && (p.longitude != null || p.lon != null))
+          .map((p) => ({
+            latitude: Number(p.latitude ?? p.lat),
+            longitude: Number(p.longitude ?? p.lon),
+            timestamp: p.timestamp || p.time,
+            sog: p.sog,
+            cog: p.cog ?? p.heading,
+          }));
         
         const pastPoints = [];
         const futurePoints = [];
         
-        if (currentMs != null) {
+        if (currentMs != null && validTrack.length > 0) {
           for (const pt of validTrack) {
             const ptMs = pt.timestamp ? new Date(pt.timestamp).getTime() : 0;
             if (ptMs <= currentMs) {

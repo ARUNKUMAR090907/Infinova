@@ -24,6 +24,9 @@ import {
   FileCheck2,
   Sliders,
   Award,
+  Download,
+  FileText,
+  Satellite,
 } from "lucide-react";
 
 import { useCase } from "../context/CaseContext.jsx";
@@ -61,7 +64,9 @@ export default function DemoMode() {
   const [showCurrent, setShowCurrent] = useState(false);
   const [showVessels, setShowVessels] = useState(true);
   const [showTracks, setShowTracks] = useState(true);
-  const [basemap, setBasemap] = useState("dark");
+  const [basemap, setBasemap] = useState("satellite");
+  const [isGeneratingReport, setIsGeneratingReport] = useState(false);
+  const [reportMsg, setReportMsg] = useState("");
 
   // Detection timestamp & Time Machine cursor
   const detectionDate = useMemo(() => {
@@ -126,7 +131,7 @@ export default function DemoMode() {
         </div>
 
         {/* Pipeline Actions */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
           {/* Run Analysis button */}
           <button
             onClick={runAnalysis}
@@ -162,6 +167,39 @@ export default function DemoMode() {
           >
             <FileCheck2 size={14} className="text-sky-400" />
             <span>Audit Proof</span>
+          </button>
+
+          {/* Download PDF Report button */}
+          <button
+            onClick={async () => {
+              if (!currentCase?.case_id) return;
+              setIsGeneratingReport(true);
+              setReportMsg("Generating forensic dossier...");
+              try {
+                const url = `/api/cases/${currentCase.case_id}/report/pdf`;
+                const res = await fetch(url);
+                if (!res.ok) throw new Error("Report generation failed");
+                const blob = await res.blob();
+                const link = document.createElement("a");
+                link.href = URL.createObjectURL(blob);
+                link.download = `${currentCase.case_id}_forensic_report.pdf`;
+                link.click();
+                URL.revokeObjectURL(link.href);
+                setReportMsg("PDF downloaded!");
+              } catch (e) {
+                setReportMsg("Report error — try Re-Run Pipeline first");
+              } finally {
+                setIsGeneratingReport(false);
+                setTimeout(() => setReportMsg(""), 3500);
+              }
+            }}
+            disabled={isGeneratingReport || isLoading}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-emerald-600/80 to-teal-600/80 hover:from-emerald-500 hover:to-teal-500 border border-emerald-500/40 text-white text-xs font-semibold shadow-lg shadow-emerald-950/40 transition disabled:opacity-50"
+            title="Download Full Forensic PDF Report"
+          >
+            {isGeneratingReport ? <Sparkles size={14} className="animate-spin" /> : <Download size={14} />}
+            <span className="hidden lg:inline">{reportMsg || "Download Report PDF"}</span>
+            <span className="lg:hidden">{isGeneratingReport ? "..." : "PDF"}</span>
           </button>
         </div>
       </div>
@@ -258,10 +296,17 @@ export default function DemoMode() {
               onChange={(e) => setBasemap(e.target.value)}
               className="bg-[#0e1b36] text-slate-300 border border-[#1e345e] rounded px-2 py-1 text-xs outline-none cursor-pointer"
             >
-              <option value="dark">Carto Dark</option>
-              <option value="satellite">ESRI Satellite</option>
-              <option value="osm">OpenStreetMap</option>
+              <option value="satellite">🛰 ESRI Satellite</option>
+              <option value="dark">🌑 Carto Dark</option>
+              <option value="osm">🗺 OpenStreetMap</option>
             </select>
+            <div className="h-4 w-px bg-slate-700 mx-1" />
+            <button
+              onClick={() => setShowVessels(!showVessels)}
+              className={`px-2.5 py-1 rounded text-xs transition ${showVessels ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30" : "text-slate-400 hover:text-white"}`}
+            >
+              Vessels
+            </button>
           </div>
 
           {/* TIME MACHINE (Bottom of Map) */}

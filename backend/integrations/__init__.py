@@ -1,1 +1,1 @@
-"""MarineGuard External Integration Adapters."""
+"""INFINOVAExternal Integration Adapters."""

@@ -18,7 +18,7 @@ from backend.services.data_fetcher import fetch_all_live_data
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Fetch live data across all 4 MarineGuard providers.")
+    parser = argparse.ArgumentParser(description="Fetch live data across all 4 INFINOVAproviders.")
     parser.add_argument("--source", choices=["all", "cdse", "marine", "weather", "vesselfinder"], default="all")
     parser.add_argument("--aoi", nargs=4, type=float, default=[71.50, 18.80, 72.20, 19.45],
                         help="AOI bbox: min_lon min_lat max_lon max_lat")

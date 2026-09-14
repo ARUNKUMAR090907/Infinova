@@ -1,5 +1,5 @@
 {
-  "model": "MarineGuard U-Net Segmentation",
+  "model": "INFINOVAU-Net Segmentation",
   "checkpoint": "ml\\weights\\unet_oilspill.pt",
   "test_samples_evaluated": 21,
   "total_dataset_size": 140,

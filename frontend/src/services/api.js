@@ -222,6 +222,15 @@ export async function deleteHistoricalCase(caseId) {
   return data;
 }
 
+export async function generateCaseReport(caseId) {
+  const { data } = await client.post(`/cases/${caseId}/report/generate`);
+  return data?.data || data;
+}
+
+export function getCaseReportPdfUrl(caseId) {
+  return `/api/cases/${caseId}/report/pdf`;
+}
+
 export async function getLiveState() {
   const { data } = await client.get("/live/state");
   return data?.data || data;

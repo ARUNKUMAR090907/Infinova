@@ -100,7 +100,7 @@ class AISDataAdapter:
         return {
             "data": all_records,
             "metadata": {
-                "source": source_name if not fallback_used else "MarineGuard Verified AIS Archive + INCOIS OON",
+                "source": source_name if not fallback_used else "INFINOVAVerified AIS Archive + INCOIS OON",
                 "source_type": source_type,
                 "timestamp": datetime.now(timezone.utc).isoformat(),
                 "latency_seconds": latency,
@@ -134,7 +134,7 @@ class AISDataAdapter:
         return {
             "data": v,
             "metadata": {
-                "source": "MarineGuard Verified AIS Archive",
+                "source": "INFINOVAVerified AIS Archive",
                 "source_type": "HISTORICAL",
                 "timestamp": datetime.now(timezone.utc).isoformat(),
                 "latency_seconds": latency,

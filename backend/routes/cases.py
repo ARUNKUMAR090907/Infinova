@@ -7,12 +7,14 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from fastapi import APIRouter, File, HTTPException, UploadFile
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
 from backend.config import DATA_DIR
 from backend.services.envelope import with_envelope
 from backend.services.forecast import run_forecast
 from backend.services.hindcast import run_hindcast
+from backend.services.report_builder import generate_case_investigation_pdf
 from backend.services.validation_engine import validate_prediction_against_ground_truth
 from backend.services.vessel_scoring import score_vessels
 
@@ -459,3 +461,38 @@ def validate_case_results(case_id: str):
     _save_case_file(case)
 
     return with_envelope(val_result)
+
+
+@router.post("/cases/{case_id}/report/generate")
+def generate_case_report(case_id: str):
+    """Generates a comprehensive forensic case PDF report containing full history and evidence."""
+    case = _load_case_file(case_id)
+    # Ensure analysis exists
+    if not case.get("analysis"):
+        analyze_case(case_id)
+        case = _load_case_file(case_id)
+
+    res = generate_case_investigation_pdf(case)
+    return with_envelope(res)
+
+
+@router.get("/cases/{case_id}/report/pdf")
+def download_case_report_pdf(case_id: str):
+    """Generates on-the-fly and downloads the forensic case investigation PDF directly."""
+    case = _load_case_file(case_id)
+    if not case.get("analysis"):
+        analyze_case(case_id)
+        case = _load_case_file(case_id)
+
+    res = generate_case_investigation_pdf(case)
+    pdf_path = Path(res["path"])
+    if not pdf_path.exists():
+        raise HTTPException(status_code=500, detail="Report generation failed.")
+
+    return FileResponse(
+        pdf_path,
+        media_type="application/pdf",
+        filename=res["filename"],
+        headers={"Content-Disposition": f'attachment; filename="{res["filename"]}"'},
+    )
+

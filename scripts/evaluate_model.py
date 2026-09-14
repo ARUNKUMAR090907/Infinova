@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Evaluate the trained MarineGuard U-Net model on the held-out test split.
+Evaluate the trained INFINOVAU-Net model on the held-out test split.
 Calculates Accuracy, Precision, Recall, F1 score, IoU, and Dice coefficient.
 """
 from __future__ import annotations
@@ -118,7 +118,7 @@ def main():
     metrics = compute_metrics(torch.cat(test_preds, dim=0), torch.cat(test_targets, dim=0))
 
     report = {
-        "model": "MarineGuard U-Net Segmentation",
+        "model": "INFINOVAU-Net Segmentation",
         "checkpoint": str(weights_path.relative_to(ROOT)),
         "test_samples_evaluated": len(test_pairs),
         "total_dataset_size": len(pairs),
