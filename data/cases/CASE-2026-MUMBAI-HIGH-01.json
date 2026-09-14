@@ -5,7 +5,7 @@
   "incident_date": "2026-03-14T06:30:00Z",
   "t0_timestamp": "2026-03-14T06:30:00Z",
   "summary": "Forensic back-tracking of offshore crude slick detected near oil field platform supply fairway.",
-  "status": "Analysis Completed",
+  "status": "Validated",
   "coordinates": {
     "latitude": 19.124,
     "longitude": 71.851
@@ -400,7 +400,7 @@
     }
   },
   "analysis": {
-    "analyzed_at": "2026-09-14T07:04:13.638105+00:00",
+    "analyzed_at": "2026-09-14T19:08:38.507669+00:00",
     "detection": {
       "detected": true,
       "confidence": 0.942,

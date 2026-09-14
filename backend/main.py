@@ -28,6 +28,7 @@ from backend.routes import (
     report,
     satellite,
     cases,
+    live,
 )
 from backend.schemas import InvestigationRequest
 from backend.services.pipeline import run_investigation
@@ -73,6 +74,7 @@ app.include_router(characterization.router, prefix="/api", tags=["characterizati
 app.include_router(drift.router, prefix="/api", tags=["drift"])
 app.include_router(report.router, prefix="/api", tags=["report"])
 app.include_router(cases.router, prefix="/api", tags=["cases"])
+app.include_router(live.router, prefix="/api", tags=["live"])
 
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)

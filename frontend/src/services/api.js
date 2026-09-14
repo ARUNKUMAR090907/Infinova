@@ -222,6 +222,16 @@ export async function deleteHistoricalCase(caseId) {
   return data;
 }
 
+export async function getLiveState() {
+  const { data } = await client.get("/live/state");
+  return data?.data || data;
+}
+
+export async function getLiveEvents() {
+  const { data } = await client.get("/live/events");
+  return data?.data || data;
+}
+
 export function formatApiError(err) {
   const detail = err?.response?.data?.detail;
   if (typeof detail === "string") return detail;
@@ -229,5 +239,6 @@ export function formatApiError(err) {
   if (err?.code === "ERR_NETWORK") return "Cannot reach backend. Verify server is running on port 8000.";
   return err?.message || "Unexpected error.";
 }
+
 
 

@@ -39,6 +39,12 @@ temp/
 *.zip
 *.7z
 
+# Runtime reports
+reports/*.pdf
+!reports/*SAMPLE.pdf
+!reports/.gitkeep
+
+
 # Raster/data dumps
 *.tif
 *.tiff

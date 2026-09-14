@@ -409,15 +409,19 @@ function splitTrackAroundLand(points) {
 // ════════════════════════════════════════════════════════════════════════════
 // AIS VESSELS LAYER — time-aware interpolation & historical breadcrumbs
 // ════════════════════════════════════════════════════════════════════════════
-export function AISVesselsLayer({ vessels = [], selectedMmsi, onSelectVessel, selectedTime, showTracks = true, showMarkers = true }) {
+export function AISVesselsLayer({ vessels = [], selectedMmsi, onSelectVessel, selectedTime, showTracks = true, showMarkers = true, isDemoMode = false }) {
   const displayVessels = useMemo(() => {
+    if (!isDemoMode) {
+      // Strictly honest: in Live Mode, only display genuine vessels provided from configured live source
+      return (vessels || []).filter((v) => v && (v.latitude != null || v.lat != null));
+    }
     const vm = new Map();
     REGIONAL_AIS_FLEET.forEach((v) => vm.set(v.mmsi, v));
     (vessels || []).forEach((v) => {
       if (v?.mmsi) vm.set(v.mmsi, { ...(vm.get(v.mmsi) || {}), ...v });
     });
     return Array.from(vm.values());
-  }, [vessels]);
+  }, [vessels, isDemoMode]);
 
   const currentMs = useMemo(() => {
     return selectedTime ? (selectedTime instanceof Date ? selectedTime.getTime() : new Date(selectedTime).getTime()) : null;

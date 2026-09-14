@@ -10,17 +10,13 @@ import {
 const CaseContext = createContext(null);
 
 export function CaseProvider({ children }) {
-  const [activeTab, setActiveTab] = useState(() => {
+  // Two Top-Level Modes: "LIVE" or "DEMO"
+  const [appMode, setAppMode] = useState(() => {
     if (typeof window !== "undefined") {
-      const hash = window.location.hash.replace("#", "");
-      if ([
-        "dashboard", "upload", "analysis", "detection", "geometry",
-        "ais", "backtracking", "prediction", "validation", "history"
-      ].includes(hash)) {
-        return hash;
-      }
+      const hash = window.location.hash.replace("#", "").toUpperCase();
+      if (hash === "DEMO" || hash === "LIVE") return hash;
     }
-    return "dashboard";
+    return "LIVE";
   });
 
   const [casesList, setCasesList] = useState([]);
@@ -35,24 +31,25 @@ export function CaseProvider({ children }) {
   const [loadingStage, setLoadingStage] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
 
-  // Sync hash with activeTab
-  const navigateTo = useCallback((tab) => {
-    setActiveTab(tab);
+  // Sync mode with hash
+  const switchMode = useCallback((mode) => {
+    const target = mode.toUpperCase();
+    setAppMode(target);
     if (typeof window !== "undefined") {
-      window.history.pushState({}, "", `#${tab}`);
+      window.history.pushState({}, "", `#${target.toLowerCase()}`);
     }
   }, []);
 
   useEffect(() => {
     const handleHash = () => {
-      const hash = window.location.hash.replace("#", "");
-      if (hash && hash !== activeTab) {
-        setActiveTab(hash);
+      const hash = window.location.hash.replace("#", "").toUpperCase();
+      if (hash === "DEMO" || hash === "LIVE") {
+        setAppMode(hash);
       }
     };
     window.addEventListener("hashchange", handleHash);
     return () => window.removeEventListener("hashchange", handleHash);
-  }, [activeTab]);
+  }, []);
 
   // Load cases list
   const refreshCasesList = useCallback(async () => {
@@ -70,7 +67,7 @@ export function CaseProvider({ children }) {
   // Load single case
   const loadCase = useCallback(async (caseId) => {
     setIsLoading(true);
-    setLoadingStage("Loading historical case dossier...");
+    setLoadingStage("Loading benchmark case dossier...");
     setErrorMsg("");
     try {
       const res = await getHistoricalCase(caseId);
@@ -99,28 +96,14 @@ export function CaseProvider({ children }) {
     });
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Run analysis pipeline
+  // Run analysis pipeline without artificial delays
   const runAnalysis = useCallback(async () => {
     if (!currentCase?.case_id) return;
     setIsLoading(true);
     setErrorMsg("");
+    setLoadingStage("Executing forensic analysis pipeline...");
     try {
-      setLoadingStage("Validating uploaded satellite observation at T0...");
-      await new Promise((r) => setTimeout(r, 600));
-
-      setLoadingStage("Extracting slick geometry & boundary polygon...");
-      await new Promise((r) => setTimeout(r, 600));
-
-      setLoadingStage("Backtracking environmental trajectory & probable source region...");
-      await new Promise((r) => setTimeout(r, 600));
-
-      setLoadingStage("Filtering & scoring AIS suspect vessels...");
-      await new Promise((r) => setTimeout(r, 600));
-
-      setLoadingStage("Generating forward drift forecast (+6h, +12h, +24h)...");
       const res = await apiRunCaseAnalysis(currentCase.case_id);
-      
-      // Reload updated case
       await loadCase(currentCase.case_id);
       await refreshCasesList();
       return res?.data || res;
@@ -133,24 +116,14 @@ export function CaseProvider({ children }) {
     }
   }, [currentCase, loadCase, refreshCasesList]);
 
-  // Run validation against ground truth
+  // Run validation against ground truth without artificial delays
   const runValidation = useCallback(async () => {
     if (!currentCase?.case_id) return;
     setIsLoading(true);
     setErrorMsg("");
+    setLoadingStage("Evaluating quantitative metrics against ground truth...");
     try {
-      setLoadingStage("Unlocking isolated historical ground-truth observations...");
-      await new Promise((r) => setTimeout(r, 500));
-
-      setLoadingStage("Computing polygon Intersection over Union (IoU)...");
-      await new Promise((r) => setTimeout(r, 600));
-
-      setLoadingStage("Calculating geodesic trajectory centroid errors (km)...");
-      await new Promise((r) => setTimeout(r, 500));
-
-      setLoadingStage("Verifying AIS suspect attribution against verified records...");
       const res = await apiValidateCaseResults(currentCase.case_id);
-
       await loadCase(currentCase.case_id);
       await refreshCasesList();
       return res?.data || res;
@@ -166,8 +139,9 @@ export function CaseProvider({ children }) {
   return (
     <CaseContext.Provider
       value={{
-        activeTab,
-        navigateTo,
+        appMode,
+        setAppMode: switchMode,
+        switchMode,
         casesList,
         currentCase,
         currentCaseId,

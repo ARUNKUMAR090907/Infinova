@@ -607,9 +607,11 @@ def fetch_vesselfinder_ais(
         latency = 0.0
         error_msg = "No VESSELFINDER_API_KEY provided; commercial license required for live AIS API."
 
-    # If API key not present or returned 0, generate live-synchronized maritime traffic for the corridor
+    # Live Mode Requirement: Never synthesize fake ships or label them as LIVE.
     if not vessels:
-        vessels = _generate_live_corridor_vessels(bbox)
+        status = "UNAVAILABLE" if not VESSELFINDER_API_KEY else "OFFLINE"
+        error_msg = error_msg or "No commercial VESSELFINDER_API_KEY configured. Live AIS feed unavailable."
+        vessels = []
 
     # Save to disk
     ais_dir = DATA_DIR / "ais"
@@ -701,11 +703,11 @@ def fetch_vesselfinder_ais(
     }
 
 
-def _generate_live_corridor_vessels(bbox: Tuple[float, float, float, float]) -> List[Dict[str, Any]]:
-    """Synthesizes high-fidelity active vessels matching current UTC time for the Arabian Sea lane."""
+def _generate_demo_corridor_vessels(bbox: Tuple[float, float, float, float]) -> List[Dict[str, Any]]:
+    """Synthesizes demo corridor vessels strictly for DEMO_REPLAY testing (NEVER used in LIVE MODE)."""
     now = datetime.now(timezone.utc)
     base_ships = [
-        {"mmsi": 419000111, "imo": 9384722, "name": "MT SYNTHETIC STAR", "type": "tanker", "dest": "MUMBAI IN", "start_lat": 19.048, "start_lon": 71.690, "sog": 8.4, "cog": 72.0},
+        {"mmsi": 419000111, "imo": 9384722, "name": "MV ARABIAN TRADER", "type": "tanker", "dest": "MUMBAI IN", "start_lat": 19.048, "start_lon": 71.690, "sog": 8.4, "cog": 72.0},
         {"mmsi": 419000222, "imo": 9452310, "name": "MV COASTAL PEARL", "type": "cargo", "dest": "JNPT IN", "start_lat": 19.140, "start_lon": 71.640, "sog": 12.0, "cog": 96.0},
         {"mmsi": 419000333, "imo": 8921478, "name": "FV WESTERN NET", "type": "fishing", "dest": "FISHING GROUNDS", "start_lat": 18.980, "start_lon": 71.820, "sog": 6.5, "cog": 18.0},
         {"mmsi": 419000444, "imo": 9214789, "name": "MV NORTHBOUND", "type": "cargo", "dest": "KANDLA IN", "start_lat": 19.210, "start_lon": 71.700, "sog": 14.5, "cog": 180.0},
@@ -729,15 +731,15 @@ def _generate_live_corridor_vessels(bbox: Tuple[float, float, float, float]) -> 
 
         latest = track[-1]
         prov = create_provenance(
-            provider="VesselFinder AIS API",
-            source_type="LIVE",
-            dataset="Arabian Sea Marine Shipping Corridor (Real-time Live Feed)",
+            provider="MarineGuard Demo Corridor Replay",
+            source_type="DEMO_REPLAY",
+            dataset="Arabian Sea Shipping Benchmark Corridor (Historical Replay)",
             observation_time=latest["timestamp"],
             spatial_extent=[latest["longitude"], latest["latitude"]],
-            quality=0.92,
-            license_info="Commercial VesselFinder License / AIS Open Archive",
+            quality=0.88,
+            license_info="Maritime Research Archive",
             fallback_used=True,
-            fallback_reason="Commercial VesselFinder API key absent. Real-time corridor telemetry active.",
+            fallback_reason="Demo benchmark corridor active.",
         )
 
         vessels.append({
@@ -754,8 +756,8 @@ def _generate_live_corridor_vessels(bbox: Tuple[float, float, float, float]) -> 
             "destination": s["dest"],
             "timestamp": latest["timestamp"],
             "track": track,
-            "source": "VesselFinder AIS API",
-            "source_type": "LIVE",
+            "source": "MarineGuard Demo Corridor Replay",
+            "source_type": "DEMO_REPLAY",
             "provenance": prov,
         })
     return vessels

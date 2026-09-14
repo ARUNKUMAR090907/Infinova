@@ -1,40 +1,40 @@
 {
-  "fetched_at": "2026-09-10T04:53:51.425110+00:00",
+  "fetched_at": "2026-09-14T16:34:50.079900+00:00",
   "provider": "Copernicus Data Space Ecosystem (CDSE)",
   "status": "ONLINE",
-  "latency_ms": 1564.1,
+  "latency_ms": 1915.2,
   "scene_count": 5,
   "scenes": [
     {
-      "scene_id": "S1C_IW_GRDH_1SDV_20260910T025021_20260910T025052_009379_012A7D_1ACB.SAFE",
-      "product_id": "d765df74-3f4a-4682-a224-2e58416d7edc",
+      "scene_id": "S1C_IW_GRDH_1SDV_20260914T151020_20260914T151053_009445_012C9B_5E9D.SAFE",
+      "product_id": "3ede4ccd-7703-4647-b250-57f027cfaa7d",
       "platform": "Sentinel-1C",
       "product_type": "GRD",
-      "sensing_time": "2026-09-10T02:50:21.724108Z",
-      "end_time": "2026-09-10T02:50:52.555609Z",
+      "sensing_time": "2026-09-14T15:10:20.611569Z",
+      "end_time": "2026-09-14T15:10:53.179529Z",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              50.512127,
-              43.429214
+              25.198357,
+              74.203201
             ],
             [
-              51.01997,
-              45.277824
+              27.420179,
+              72.335297
             ],
             [
-              47.748207,
-              45.67717
+              34.83234,
+              72.904465
             ],
             [
-              47.342369,
-              43.828835
+              33.439896,
+              74.823601
             ],
             [
-              50.512127,
-              43.429214
+              25.198357,
+              74.203201
             ]
           ]
         ]
@@ -55,9 +55,9 @@
         "resolution_m": 10.0
       },
       "asset_info": {
-        "download_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(d765df74-3f4a-4682-a224-2e58416d7edc)/$value",
-        "quicklook_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(d765df74-3f4a-4682-a224-2e58416d7edc)/$value",
-        "size_mb": 2044.3,
+        "download_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(3ede4ccd-7703-4647-b250-57f027cfaa7d)/$value",
+        "quicklook_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(3ede4ccd-7703-4647-b250-57f027cfaa7d)/$value",
+        "size_mb": 2118.6,
         "online": true
       },
       "provider": "Copernicus Data Space Ecosystem (CDSE)",
@@ -66,78 +66,78 @@
       "provenance": {
         "provider": "Copernicus Data Space Ecosystem (CDSE)",
         "source_type": "LIVE",
-        "retrieved_at": "2026-09-10T04:53:51.423200+00:00",
-        "observation_time": "2026-09-10T02:50:21.724108Z",
-        "request_id": "req-13597389",
+        "retrieved_at": "2026-09-14T16:34:50.077728+00:00",
+        "observation_time": "2026-09-14T15:10:20.611569Z",
+        "request_id": "req-2c3d761d",
         "dataset": "Sentinel-1 SAR GRD (Level-1 Ground Range Detected)",
         "spatial_extent": {
           "type": "Polygon",
           "coordinates": [
             [
               [
-                50.512127,
-                43.429214
+                25.198357,
+                74.203201
               ],
               [
-                51.01997,
-                45.277824
+                27.420179,
+                72.335297
               ],
               [
-                47.748207,
-                45.67717
+                34.83234,
+                72.904465
               ],
               [
-                47.342369,
-                43.828835
+                33.439896,
+                74.823601
               ],
               [
-                50.512127,
-                43.429214
+                25.198357,
+                74.203201
               ]
             ]
           ]
         },
         "temporal_extent": [
-          "2026-09-10T02:50:21.724108Z",
-          "2026-09-10T02:50:52.555609Z"
+          "2026-09-14T15:10:20.611569Z",
+          "2026-09-14T15:10:53.179529Z"
         ],
         "quality": 0.98,
         "license": "Copernicus Open Access / European Space Agency",
         "fallback_used": false,
         "fallback_reason": null
       },
-      "retrieved_at": "2026-09-10T04:53:51.423322+00:00"
+      "retrieved_at": "2026-09-14T16:34:50.077784+00:00"
     },
     {
-      "scene_id": "S1C_IW_GRDH_1SDV_20260910T024931_20260910T024956_009379_012A7D_0970.SAFE",
-      "product_id": "efd3db13-7186-4fc4-b400-e8f9666f5fbd",
+      "scene_id": "S1C_IW_GRDH_1SDV_20260914T151020_20260914T151053_009445_012C9B_194F_COG.SAFE",
+      "product_id": "614222a1-1749-4067-8b2d-645d99653377",
       "platform": "Sentinel-1C",
       "product_type": "GRD",
-      "sensing_time": "2026-09-10T02:49:31.724443Z",
-      "end_time": "2026-09-10T02:49:56.722799Z",
+      "sensing_time": "2026-09-14T15:10:20.611569Z",
+      "end_time": "2026-09-14T15:10:53.179529Z",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              51.446648,
-              46.77565
+              25.198357,
+              74.203201
             ],
             [
-              51.887627,
-              48.272213
+              27.420179,
+              72.335297
             ],
             [
-              48.425217,
-              48.672779
+              34.83234,
+              72.904465
             ],
             [
-              48.081852,
-              47.175529
+              33.439896,
+              74.823601
             ],
             [
-              51.446648,
-              46.77565
+              25.198357,
+              74.203201
             ]
           ]
         ]
@@ -158,9 +158,9 @@
         "resolution_m": 10.0
       },
       "asset_info": {
-        "download_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(efd3db13-7186-4fc4-b400-e8f9666f5fbd)/$value",
-        "quicklook_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(efd3db13-7186-4fc4-b400-e8f9666f5fbd)/$value",
-        "size_mb": 1659.2,
+        "download_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(614222a1-1749-4067-8b2d-645d99653377)/$value",
+        "quicklook_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(614222a1-1749-4067-8b2d-645d99653377)/$value",
+        "size_mb": 1139.0,
         "online": true
       },
       "provider": "Copernicus Data Space Ecosystem (CDSE)",
@@ -169,78 +169,78 @@
       "provenance": {
         "provider": "Copernicus Data Space Ecosystem (CDSE)",
         "source_type": "LIVE",
-        "retrieved_at": "2026-09-10T04:53:51.423360+00:00",
-        "observation_time": "2026-09-10T02:49:31.724443Z",
-        "request_id": "req-a504679e",
+        "retrieved_at": "2026-09-14T16:34:50.077809+00:00",
+        "observation_time": "2026-09-14T15:10:20.611569Z",
+        "request_id": "req-1b58eeaa",
         "dataset": "Sentinel-1 SAR GRD (Level-1 Ground Range Detected)",
         "spatial_extent": {
           "type": "Polygon",
           "coordinates": [
             [
               [
-                51.446648,
-                46.77565
+                25.198357,
+                74.203201
               ],
               [
-                51.887627,
-                48.272213
+                27.420179,
+                72.335297
               ],
               [
-                48.425217,
-                48.672779
+                34.83234,
+                72.904465
               ],
               [
-                48.081852,
-                47.175529
+                33.439896,
+                74.823601
               ],
               [
-                51.446648,
-                46.77565
+                25.198357,
+                74.203201
               ]
             ]
           ]
         },
         "temporal_extent": [
-          "2026-09-10T02:49:31.724443Z",
-          "2026-09-10T02:49:56.722799Z"
+          "2026-09-14T15:10:20.611569Z",
+          "2026-09-14T15:10:53.179529Z"
         ],
         "quality": 0.98,
         "license": "Copernicus Open Access / European Space Agency",
         "fallback_used": false,
         "fallback_reason": null
       },
-      "retrieved_at": "2026-09-10T04:53:51.423403+00:00"
+      "retrieved_at": "2026-09-14T16:34:50.077836+00:00"
     },
     {
-      "scene_id": "S1C_IW_GRDH_1SDV_20260910T024906_20260910T024931_009379_012A7D_71E3.SAFE",
-      "product_id": "516bb2a4-9789-4b65-b881-91205a61edc1",
+      "scene_id": "S1C_IW_GRDH_1SDV_20260914T150955_20260914T151020_009445_012C9B_F34F.SAFE",
+      "product_id": "4ad333fe-a2ab-4ba6-b82b-ff88052cd15b",
       "platform": "Sentinel-1C",
       "product_type": "GRD",
-      "sensing_time": "2026-09-10T02:49:06.724588Z",
-      "end_time": "2026-09-10T02:49:31.722943Z",
+      "sensing_time": "2026-09-14T15:09:55.611649Z",
+      "end_time": "2026-09-14T15:10:20.610067Z",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              51.887653,
-              48.272305
+              27.420273,
+              72.335205
             ],
             [
-              52.346504,
-              49.767487
+              28.864601,
+              70.889496
             ],
             [
-              48.776772,
-              50.169437
+              35.740517,
+              71.427132
             ],
             [
-              48.423759,
-              48.673016
+              34.828506,
+              72.90416
             ],
             [
-              51.887653,
-              48.272305
+              27.420273,
+              72.335205
             ]
           ]
         ]
@@ -261,9 +261,9 @@
         "resolution_m": 10.0
       },
       "asset_info": {
-        "download_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(516bb2a4-9789-4b65-b881-91205a61edc1)/$value",
-        "quicklook_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(516bb2a4-9789-4b65-b881-91205a61edc1)/$value",
-        "size_mb": 1659.9,
+        "download_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(4ad333fe-a2ab-4ba6-b82b-ff88052cd15b)/$value",
+        "quicklook_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(4ad333fe-a2ab-4ba6-b82b-ff88052cd15b)/$value",
+        "size_mb": 1625.7,
         "online": true
       },
       "provider": "Copernicus Data Space Ecosystem (CDSE)",
@@ -272,78 +272,78 @@
       "provenance": {
         "provider": "Copernicus Data Space Ecosystem (CDSE)",
         "source_type": "LIVE",
-        "retrieved_at": "2026-09-10T04:53:51.423426+00:00",
-        "observation_time": "2026-09-10T02:49:06.724588Z",
-        "request_id": "req-e038dcf1",
+        "retrieved_at": "2026-09-14T16:34:50.077849+00:00",
+        "observation_time": "2026-09-14T15:09:55.611649Z",
+        "request_id": "req-f5586419",
         "dataset": "Sentinel-1 SAR GRD (Level-1 Ground Range Detected)",
         "spatial_extent": {
           "type": "Polygon",
           "coordinates": [
             [
               [
-                51.887653,
-                48.272305
+                27.420273,
+                72.335205
               ],
               [
-                52.346504,
-                49.767487
+                28.864601,
+                70.889496
               ],
               [
-                48.776772,
-                50.169437
+                35.740517,
+                71.427132
               ],
               [
-                48.423759,
-                48.673016
+                34.828506,
+                72.90416
               ],
               [
-                51.887653,
-                48.272305
+                27.420273,
+                72.335205
               ]
             ]
           ]
         },
         "temporal_extent": [
-          "2026-09-10T02:49:06.724588Z",
-          "2026-09-10T02:49:31.722943Z"
+          "2026-09-14T15:09:55.611649Z",
+          "2026-09-14T15:10:20.610067Z"
         ],
         "quality": 0.98,
         "license": "Copernicus Open Access / European Space Agency",
         "fallback_used": false,
         "fallback_reason": null
       },
-      "retrieved_at": "2026-09-10T04:53:51.423459+00:00"
+      "retrieved_at": "2026-09-14T16:34:50.077863+00:00"
     },
     {
-      "scene_id": "S1C_IW_GRDH_1SDV_20260910T024726_20260910T024751_009379_012A7D_FA22.SAFE",
-      "product_id": "e19bddc5-1ebe-4ba2-85d1-6d0744906701",
+      "scene_id": "S1C_IW_GRDH_1SDV_20260914T150955_20260914T151020_009445_012C9B_307B_COG.SAFE",
+      "product_id": "e2f61ea9-3fe8-4ce4-8bcf-ecda80baafe5",
       "platform": "Sentinel-1C",
       "product_type": "GRD",
-      "sensing_time": "2026-09-10T02:47:26.723663Z",
-      "end_time": "2026-09-10T02:47:51.723519Z",
+      "sensing_time": "2026-09-14T15:09:55.611649Z",
+      "end_time": "2026-09-14T15:10:20.610067Z",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              53.838516,
-              54.245968
+              27.420273,
+              72.335205
             ],
             [
-              54.39114,
-              55.734978
+              28.864601,
+              70.889496
             ],
             [
-              50.289688,
-              56.148891
+              35.740517,
+              71.427132
             ],
             [
-              49.886318,
-              54.655724
+              34.828506,
+              72.90416
             ],
             [
-              53.838516,
-              54.245968
+              27.420273,
+              72.335205
             ]
           ]
         ]
@@ -364,9 +364,9 @@
         "resolution_m": 10.0
       },
       "asset_info": {
-        "download_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(e19bddc5-1ebe-4ba2-85d1-6d0744906701)/$value",
-        "quicklook_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(e19bddc5-1ebe-4ba2-85d1-6d0744906701)/$value",
-        "size_mb": 1662.7,
+        "download_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(e2f61ea9-3fe8-4ce4-8bcf-ecda80baafe5)/$value",
+        "quicklook_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(e2f61ea9-3fe8-4ce4-8bcf-ecda80baafe5)/$value",
+        "size_mb": 863.1,
         "online": true
       },
       "provider": "Copernicus Data Space Ecosystem (CDSE)",
@@ -375,78 +375,78 @@
       "provenance": {
         "provider": "Copernicus Data Space Ecosystem (CDSE)",
         "source_type": "LIVE",
-        "retrieved_at": "2026-09-10T04:53:51.423479+00:00",
-        "observation_time": "2026-09-10T02:47:26.723663Z",
-        "request_id": "req-c10939a9",
+        "retrieved_at": "2026-09-14T16:34:50.077874+00:00",
+        "observation_time": "2026-09-14T15:09:55.611649Z",
+        "request_id": "req-2f76aa54",
         "dataset": "Sentinel-1 SAR GRD (Level-1 Ground Range Detected)",
         "spatial_extent": {
           "type": "Polygon",
           "coordinates": [
             [
               [
-                53.838516,
-                54.245968
+                27.420273,
+                72.335205
               ],
               [
-                54.39114,
-                55.734978
+                28.864601,
+                70.889496
               ],
               [
-                50.289688,
-                56.148891
+                35.740517,
+                71.427132
               ],
               [
-                49.886318,
-                54.655724
+                34.828506,
+                72.90416
               ],
               [
-                53.838516,
-                54.245968
+                27.420273,
+                72.335205
               ]
             ]
           ]
         },
         "temporal_extent": [
-          "2026-09-10T02:47:26.723663Z",
-          "2026-09-10T02:47:51.723519Z"
+          "2026-09-14T15:09:55.611649Z",
+          "2026-09-14T15:10:20.610067Z"
         ],
         "quality": 0.98,
         "license": "Copernicus Open Access / European Space Agency",
         "fallback_used": false,
         "fallback_reason": null
       },
-      "retrieved_at": "2026-09-10T04:53:51.423506+00:00"
+      "retrieved_at": "2026-09-14T16:34:50.077885+00:00"
     },
     {
-      "scene_id": "S1C_IW_GRDH_1SDV_20260910T024701_20260910T024726_009379_012A7D_8C03.SAFE",
-      "product_id": "c62509d6-6fa6-4935-8091-ff5a49221af9",
+      "scene_id": "S1C_IW_GRDH_1SDV_20260914T150930_20260914T150955_009445_012C9B_1C40.SAFE",
+      "product_id": "7f26ecaf-d954-47a8-98c7-c58404a01e75",
       "platform": "Sentinel-1C",
       "product_type": "GRD",
-      "sensing_time": "2026-09-10T02:47:01.723806Z",
-      "end_time": "2026-09-10T02:47:26.722162Z",
+      "sensing_time": "2026-09-14T15:09:30.611723Z",
+      "end_time": "2026-09-14T15:09:55.610141Z",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              54.391174,
-              55.735069
+              28.864679,
+              70.889412
             ],
             [
-              54.969673,
-              57.222767
+              30.139917,
+              69.436272
             ],
             [
-              50.702946,
-              57.641747
+              36.553913,
+              69.947609
             ],
             [
-              50.28812,
-              56.149113
+              35.738628,
+              71.426933
             ],
             [
-              54.391174,
-              55.735069
+              28.864679,
+              70.889412
             ]
           ]
         ]
@@ -467,9 +467,9 @@
         "resolution_m": 10.0
       },
       "asset_info": {
-        "download_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(c62509d6-6fa6-4935-8091-ff5a49221af9)/$value",
-        "quicklook_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(c62509d6-6fa6-4935-8091-ff5a49221af9)/$value",
-        "size_mb": 1663.2,
+        "download_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(7f26ecaf-d954-47a8-98c7-c58404a01e75)/$value",
+        "quicklook_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(7f26ecaf-d954-47a8-98c7-c58404a01e75)/$value",
+        "size_mb": 1625.4,
         "online": true
       },
       "provider": "Copernicus Data Space Ecosystem (CDSE)",
@@ -478,47 +478,47 @@
       "provenance": {
         "provider": "Copernicus Data Space Ecosystem (CDSE)",
         "source_type": "LIVE",
-        "retrieved_at": "2026-09-10T04:53:51.423525+00:00",
-        "observation_time": "2026-09-10T02:47:01.723806Z",
-        "request_id": "req-c40ee5bc",
+        "retrieved_at": "2026-09-14T16:34:50.077896+00:00",
+        "observation_time": "2026-09-14T15:09:30.611723Z",
+        "request_id": "req-3c7b7fb1",
         "dataset": "Sentinel-1 SAR GRD (Level-1 Ground Range Detected)",
         "spatial_extent": {
           "type": "Polygon",
           "coordinates": [
             [
               [
-                54.391174,
-                55.735069
+                28.864679,
+                70.889412
               ],
               [
-                54.969673,
-                57.222767
+                30.139917,
+                69.436272
               ],
               [
-                50.702946,
-                57.641747
+                36.553913,
+                69.947609
               ],
               [
-                50.28812,
-                56.149113
+                35.738628,
+                71.426933
               ],
               [
-                54.391174,
-                55.735069
+                28.864679,
+                70.889412
               ]
             ]
           ]
         },
         "temporal_extent": [
-          "2026-09-10T02:47:01.723806Z",
-          "2026-09-10T02:47:26.722162Z"
+          "2026-09-14T15:09:30.611723Z",
+          "2026-09-14T15:09:55.610141Z"
         ],
         "quality": 0.98,
         "license": "Copernicus Open Access / European Space Agency",
         "fallback_used": false,
         "fallback_reason": null
       },
-      "retrieved_at": "2026-09-10T04:53:51.423553+00:00"
+      "retrieved_at": "2026-09-14T16:34:50.077907+00:00"
     }
   ]
 }
