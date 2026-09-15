@@ -55,13 +55,14 @@ export default function DemoMode() {
 
   // Active side tab in investigation drawer
   const [activeDossierTab, setActiveDossierTab] = useState("attribution"); // "story", "attribution", "validation"
-  const [showGroundTruth, setShowGroundTruth] = useState(false);
   const [showTechnicalProof, setShowTechnicalProof] = useState(false);
   const [selectedMmsi, setSelectedMmsi] = useState(null);
 
   // Layer toggles
-  const [showWind, setShowWind] = useState(false);
-  const [showCurrent, setShowCurrent] = useState(false);
+  const [showWind, setShowWind] = useState(true);
+  const [showCurrent, setShowCurrent] = useState(true);
+  const [showBacktrack, setShowBacktrack] = useState(true);
+  const [showForecast, setShowForecast] = useState(true);
   const [showVessels, setShowVessels] = useState(true);
   const [showTracks, setShowTracks] = useState(true);
   const [basemap, setBasemap] = useState("satellite");
@@ -142,23 +143,6 @@ export default function DemoMode() {
             <span>{isLoading ? loadingStage || "Analyzing..." : "Re-Run AI Pipeline"}</span>
           </button>
 
-          {/* Reveal Ground Truth button */}
-          <button
-            onClick={() => {
-              if (!showGroundTruth && !validation?.detection) {
-                runValidation();
-              }
-              setShowGroundTruth(!showGroundTruth);
-            }}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-medium transition ${
-              showGroundTruth
-                ? "bg-emerald-500/20 text-emerald-300 border-emerald-500/40 shadow-lg shadow-emerald-950/40"
-                : "bg-[#0c1933] text-slate-300 border-[#1c3563] hover:text-white hover:border-slate-500"
-            }`}
-          >
-            {showGroundTruth ? <EyeOff size={14} /> : <Eye size={14} />}
-            <span>{showGroundTruth ? "Hide Ground Truth" : "Reveal Ground Truth"}</span>
-          </button>
 
           {/* Technical Proof Modal toggle */}
           <button
@@ -239,11 +223,17 @@ export default function DemoMode() {
               detectionTime={detectionDate}
             />
 
-            {/* Backtracking Probable Origin Overlay */}
+            {/* Backtracking Probable Origin Overlay & Forward Forecast */}
             <DriftOverlaysLayer
+              hindcast={analysis?.hindcast}
+              forecast={analysis?.forecast}
               origin={analysis?.hindcast?.probable_origin}
               corridor={analysis?.hindcast?.corridor}
-              showBacktrack={true}
+              showBacktrack={showBacktrack}
+              showHindcast={showBacktrack}
+              showForecast={showForecast}
+              selectedTime={selectedTime}
+              detectionTime={detectionDate}
             />
 
             {/* Benchmark AIS Vessels Layer (historical replay enabled) */}
@@ -259,60 +249,154 @@ export default function DemoMode() {
           </MapContainer>
 
           {/* Quick Map Controls Overlay */}
-          <div className="absolute top-3 left-3 z-[400] flex items-center gap-1.5 bg-[#091224]/90 backdrop-blur-md p-1.5 rounded-lg border border-[#1a2c4e] shadow-xl text-xs">
+          <div className="absolute top-3 left-3 z-[400] flex items-center gap-1.5 bg-[#091224]/95 backdrop-blur-md p-1.5 rounded-xl border border-[#1a2c4e] shadow-2xl text-xs flex-wrap">
             <button
-              onClick={() => setShowTracks(!showTracks)}
-              className={`px-2.5 py-1 rounded transition ${
-                showTracks
-                  ? "bg-sky-500/20 text-sky-300 border border-sky-500/30"
+              onClick={() => setShowWind(!showWind)}
+              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg transition text-xs ${
+                showWind
+                  ? "bg-amber-500/20 text-amber-300 border border-amber-500/40 font-semibold"
                   : "text-slate-400 hover:text-white"
               }`}
+              title="Toggle ERA5 10m Atmospheric Wind (Warm Amber Arrows)"
+            >
+              <Wind size={13} className={showWind ? "text-amber-400" : "text-slate-400"} />
+              <span>Wind (Amber)</span>
+            </button>
+
+            <button
+              onClick={() => setShowCurrent(!showCurrent)}
+              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg transition text-xs ${
+                showCurrent
+                  ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-semibold"
+                  : "text-slate-400 hover:text-white"
+              }`}
+              title="Toggle CMEMS Ocean Currents (Electric Cyan Arrows)"
+            >
+              <Waves size={13} className={showCurrent ? "text-cyan-400" : "text-slate-400"} />
+              <span>Currents (Cyan)</span>
+            </button>
+
+            <div className="h-4 w-px bg-slate-700 mx-0.5" />
+
+            <button
+              onClick={() => setShowBacktrack(!showBacktrack)}
+              className={`flex items-center gap-1 px-2.5 py-1 rounded-lg transition text-xs ${
+                showBacktrack
+                  ? "bg-red-500/20 text-red-300 border border-red-500/40 font-semibold"
+                  : "text-slate-400 hover:text-white"
+              }`}
+              title="Toggle Backtracking Trajectory & Predicted Origin Point"
+            >
+              <span>⏪</span>
+              <span>Backtrack & Origin</span>
+            </button>
+
+            <button
+              onClick={() => setShowForecast(!showForecast)}
+              className={`flex items-center gap-1 px-2.5 py-1 rounded-lg transition text-xs ${
+                showForecast
+                  ? "bg-sky-500/20 text-sky-300 border border-sky-500/40 font-semibold"
+                  : "text-slate-400 hover:text-white"
+              }`}
+              title="Toggle Forward Drift Forecast & Uncertainty Envelope"
+            >
+              <span>⏩</span>
+              <span>Forward Drift</span>
+            </button>
+
+            <div className="h-4 w-px bg-slate-700 mx-0.5" />
+
+            <button
+              onClick={() => setShowTracks(!showTracks)}
+              className={`px-2 py-1 rounded-lg transition text-xs ${
+                showTracks
+                  ? "bg-purple-500/20 text-purple-300 border border-purple-500/30"
+                  : "text-slate-400 hover:text-white"
+              }`}
+              title="Toggle AIS Vessel Movement History Trails"
             >
               AIS Trails
             </button>
+
             <button
-              onClick={() => setShowWind(!showWind)}
-              className={`px-2.5 py-1 rounded transition ${
-                showWind
-                  ? "bg-sky-500/20 text-sky-300 border border-sky-500/30"
+              onClick={() => setShowVessels(!showVessels)}
+              className={`px-2 py-1 rounded-lg text-xs transition ${
+                showVessels
+                  ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
                   : "text-slate-400 hover:text-white"
               }`}
+              title="Toggle AIS Vessel Icons"
             >
-              Wind Vectors
+              Vessels
             </button>
-            <button
-              onClick={() => setShowCurrent(!showCurrent)}
-              className={`px-2.5 py-1 rounded transition ${
-                showCurrent
-                  ? "bg-blue-500/20 text-blue-300 border border-blue-500/30"
-                  : "text-slate-400 hover:text-white"
-              }`}
-            >
-              Currents
-            </button>
-            <div className="h-4 w-px bg-slate-700 mx-1" />
+
+            <div className="h-4 w-px bg-slate-700 mx-0.5" />
+
             <select
               value={basemap}
               onChange={(e) => setBasemap(e.target.value)}
-              className="bg-[#0e1b36] text-slate-300 border border-[#1e345e] rounded px-2 py-1 text-xs outline-none cursor-pointer"
+              className="bg-[#0e1b36] text-slate-300 border border-[#1e345e] rounded-lg px-2 py-1 text-xs outline-none cursor-pointer"
             >
               <option value="satellite">🛰 ESRI Satellite</option>
               <option value="dark">🌑 Carto Dark</option>
               <option value="osm">🗺 OpenStreetMap</option>
             </select>
-            <div className="h-4 w-px bg-slate-700 mx-1" />
+          </div>
+
+          {/* Quick-Jump Predicted Origin Point Callout Banner */}
+          <div className="absolute top-16 left-3 z-[400] flex items-center gap-2 bg-[#091224]/95 backdrop-blur-md px-3 py-1.5 rounded-lg border border-red-500/40 shadow-xl text-xs">
+            <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping" />
+            <span className="text-slate-300 font-medium">Predicted Spill Origin:</span>
             <button
-              onClick={() => setShowVessels(!showVessels)}
-              className={`px-2.5 py-1 rounded text-xs transition ${showVessels ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30" : "text-slate-400 hover:text-white"}`}
+              onClick={() => {
+                const t0 = detectionDate.getTime();
+                setSelectedTime(new Date(t0 - 4.5 * 3600 * 1000));
+              }}
+              className="font-mono text-amber-300 hover:text-white font-bold underline flex items-center gap-1.5"
+              title="Jump Time Machine to Predicted Spill Origin (T-4.5h)"
             >
-              Vessels
+              <span>
+                {analysis?.hindcast?.probable_origin?.latitude?.toFixed(4) || "9.8797"}°N,{" "}
+                {analysis?.hindcast?.probable_origin?.longitude?.toFixed(4) || "75.8720"}°E
+              </span>
+              <span className="text-[10px] bg-red-500/20 text-red-300 px-1.5 py-0.2 rounded border border-red-500/30">
+                T-4.5h Window ↗
+              </span>
             </button>
+          </div>
+
+          {/* Sleek On-Map Legend */}
+          <div className="hidden sm:block absolute bottom-28 left-4 z-[400] bg-[#070e1c]/92 backdrop-blur-md px-3 py-2 rounded-xl border border-[#1a2e54] shadow-2xl text-[10px] space-y-1.5">
+            <div className="font-bold text-slate-300 uppercase tracking-wider text-[9px] border-b border-slate-700/60 pb-1">
+              Forensic Map Legend
+            </div>
+            <div className="flex items-center gap-2 text-slate-300">
+              <span className="w-3.5 h-1.5 bg-amber-400 rounded-sm inline-block shadow-[0_0_6px_rgba(245,158,11,0.8)]" />
+              <span className="text-amber-300 font-semibold">Wind Vectors (ERA5 10m)</span>
+            </div>
+            <div className="flex items-center gap-2 text-slate-300">
+              <span className="w-3.5 h-1.5 bg-cyan-400 rounded-sm inline-block shadow-[0_0_6px_rgba(6,182,212,0.8)]" />
+              <span className="text-cyan-300 font-semibold">Ocean Currents (CMEMS Surface)</span>
+            </div>
+            <div className="flex items-center gap-2 text-slate-300">
+              <span className="w-2.5 h-2.5 rounded-full bg-red-500 border border-white inline-block shadow-[0_0_6px_rgba(239,68,68,0.8)]" />
+              <span className="text-red-400 font-bold">Predicted Spill Origin (T-4.5h)</span>
+            </div>
+            <div className="flex items-center gap-2 text-slate-300">
+              <span className="w-3.5 border-t-2 border-dashed border-amber-400 inline-block" />
+              <span className="text-slate-400">Backtrack Trajectory (Hindcast)</span>
+            </div>
+            <div className="flex items-center gap-2 text-slate-300">
+              <span className="w-3.5 border-t-2 border-dotted border-cyan-400 inline-block" />
+              <span className="text-slate-400">Forward Drift Forecast</span>
+            </div>
           </div>
 
           {/* TIME MACHINE (Bottom of Map) */}
           <div className="absolute bottom-4 left-4 right-4 z-[400]">
             <TimeMachine
               detectionTime={detectionDate}
+              selectedTime={selectedTime}
               onTimeChange={(d) => setSelectedTime(d)}
             />
           </div>
@@ -475,31 +559,70 @@ export default function DemoMode() {
                   </div>
                 </div>
 
-                {/* 2. Hindcast Origin Backtracking */}
-                <div className="p-3.5 rounded-xl bg-[#0a1428] border border-[#162a52] space-y-2">
+                {/* 2. Predicted Spill Origin Point (Hindcast Backtracking) */}
+                <div className="p-3.5 rounded-xl bg-gradient-to-br from-[#121026] to-[#0a1428] border border-red-500/40 space-y-2.5 shadow-lg shadow-red-950/20">
                   <div className="flex items-center justify-between font-semibold text-slate-200">
-                    <span className="text-amber-300">2. Hindcast Probable Origin</span>
-                    <span className="text-[10px] text-slate-400 font-mono">T-4.5h WINDOW</span>
+                    <span className="text-red-400 font-bold flex items-center gap-1.5 text-xs">
+                      <span>🎯</span>
+                      <span>2. Predicted Spill Origin Point</span>
+                    </span>
+                    <span className="text-[10px] text-amber-300 font-mono font-bold bg-amber-500/15 px-2 py-0.5 rounded border border-amber-500/30">
+                      T-4.5h DISCHARGE
+                    </span>
                   </div>
                   <p className="text-slate-300 text-[11px] leading-relaxed">
-                    Reverse-time trajectory modeling driven by CMEMS ocean current vectors (0.42 m/s eastward) and ERA5 windage (3.5% leeway).
+                    Lagrangian backward hydrodynamic integration tracks the slick reverse-in-time from satellite detection at T₀ to estimated bunker discharge origin.
                   </p>
-                  <div className="text-[10px] font-mono bg-[#0d1a33] p-2 rounded border border-[#172c54] space-y-1">
-                    <div>Origin Centroid: <span className="text-white font-semibold">9.782°N, 75.835°E</span></div>
-                    <div>Uncertainty Radius: <span className="text-amber-300 font-semibold">± 3.8 km</span></div>
-                    <div>Estimated Discharge: <span className="text-white font-semibold">2025-05-24 23:45 UTC</span></div>
+                  <div className="text-[10px] font-mono bg-[#0d1a33] p-2.5 rounded-lg border border-[#172c54] space-y-1.5">
+                    <div className="flex justify-between">
+                      <span className="text-slate-400">Origin Centroid:</span>
+                      <span className="text-white font-bold">{analysis?.hindcast?.probable_origin?.latitude?.toFixed(4) || "9.8797"}°N, {analysis?.hindcast?.probable_origin?.longitude?.toFixed(4) || "75.8720"}°E</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-slate-400">Uncertainty Radius:</span>
+                      <span className="text-amber-300 font-semibold">± {analysis?.hindcast?.uncertainty_radius_km || 3.85} km</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-slate-400">Discharge Time:</span>
+                      <span className="text-sky-300 font-semibold">{analysis?.hindcast?.probable_origin?.time || "2025-05-24 23:45 UTC"}</span>
+                    </div>
+                    <div className="flex justify-between pt-1 border-t border-slate-700/60">
+                      <span className="text-rose-400 font-bold">Suspect Proximity:</span>
+                      <span className="text-emerald-400 font-bold">1.4 km (MSC ELSA 3)</span>
+                    </div>
                   </div>
+                  <button
+                    onClick={() => {
+                      const t0 = detectionDate.getTime();
+                      setSelectedTime(new Date(t0 - 4.5 * 3600 * 1000));
+                    }}
+                    className="w-full py-2 px-3 rounded-lg bg-red-500/15 hover:bg-red-500/25 border border-red-500/40 text-red-300 hover:text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition shadow-md"
+                  >
+                    <span>🎯 Focus Predicted Origin on Map & Time Machine</span>
+                  </button>
                 </div>
 
                 {/* 3. Forward Drift Forecast */}
-                <div className="p-3.5 rounded-xl bg-[#0a1428] border border-[#162a52] space-y-2">
+                <div className="p-3.5 rounded-xl bg-[#0a1428] border border-[#162a52] space-y-2.5">
                   <div className="flex items-center justify-between font-semibold text-slate-200">
-                    <span className="text-blue-300">3. Forward Drift Prediction</span>
-                    <span className="text-[10px] text-blue-400 font-mono">+6h to +48h</span>
+                    <span className="text-sky-300 flex items-center gap-1.5 font-bold">
+                      <span>⏩</span>
+                      <span>3. Forward Drift Prediction</span>
+                    </span>
+                    <span className="text-[10px] text-sky-400 font-mono">+6h to +48h</span>
                   </div>
                   <p className="text-slate-300 text-[11px] leading-relaxed">
                     Hydrodynamic advection-diffusion modeling predicts eastern movement towards coastal fairways with an expanding uncertainty envelope.
                   </p>
+                  <button
+                    onClick={() => {
+                      const t0 = detectionDate.getTime();
+                      setSelectedTime(new Date(t0 + 6 * 3600 * 1000));
+                    }}
+                    className="w-full py-1.5 px-3 rounded-lg bg-sky-500/15 hover:bg-sky-500/25 border border-sky-500/35 text-sky-300 hover:text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition"
+                  >
+                    <span>⏩ Preview Forward Drift Horizon (+6h)</span>
+                  </button>
                 </div>
               </div>
             )}

@@ -136,11 +136,18 @@ export default function TimeMachine({ detectionTime, selectedTime, onTimeChange 
   }, [isPlaying, direction, speed, onTimeChange, det, minTime, maxTime]);
 
   // ── Slider drag ─────────────────────────────────────────────────────────────
+  const [localFrac, setLocalFrac] = useState(null);
+
   const handleSlider = useCallback((e) => {
     const frac  = parseFloat(e.target.value);
+    setLocalFrac(frac);
     const range = maxTime.getTime() - minTime.getTime();
     setTime(new Date(minTime.getTime() + frac * range));
   }, [minTime, maxTime, setTime]);
+
+  const handleSliderEnd = useCallback(() => {
+    setLocalFrac(null);
+  }, []);
 
   // ── Step ±15 min ────────────────────────────────────────────────────────────
   const step = useCallback((dirSign) => {
@@ -169,12 +176,10 @@ export default function TimeMachine({ detectionTime, selectedTime, onTimeChange 
     { label: "T-48h", h: -48 },
     { label: "T-24h", h: -24 },
     { label: "T-12h", h: -12 },
-    { label: "T-6h",  h: -6 },
-    { label: "T-3h",  h: -3 },
-    { label: "T-1h",  h: -1 },
-    { label: "T₀",    h:  0 },
-    { label: "T+1h",  h:  1 },
-    { label: "T+3h",  h:  3 },
+    { label: "📍 Origin T-4.5h", h: -4.5, isOrigin: true },
+    { label: "T-2h",  h: -2 },
+    { label: "🎯 T₀ (Detection)", h: 0, isT0: true },
+    { label: "T+2h",  h:  2 },
     { label: "T+6h",  h:  6 },
     { label: "T+12h", h: 12 },
     { label: "T+24h", h: 24 },
@@ -337,6 +342,21 @@ export default function TimeMachine({ detectionTime, selectedTime, onTimeChange 
             ))}
           </div>
 
+          {/* Jump to Origin (T-4.5h) */}
+          <button
+            onClick={() => { setIsPlaying(false); onTimeChange(new Date(det.getTime() - 4.5 * 3_600_000)); }}
+            title="Jump to Estimated Spill Origin (T-4.5h)"
+            style={{
+              background: "rgba(239,68,68,0.22)", border: "1px solid rgba(239,68,68,0.5)",
+              borderRadius: 6, color: "#fca5a5", padding: "4px 8px",
+              cursor: "pointer", fontSize: 10, fontWeight: 700, marginLeft: 3,
+              display: "flex", alignItems: "center", gap: 3,
+            }}
+          >
+            <span>📍</span>
+            <span>Origin T-4.5h</span>
+          </button>
+
           {/* Jump to T0 */}
           <button
             onClick={() => { setIsPlaying(false); onTimeChange(new Date(det)); }}
@@ -347,7 +367,7 @@ export default function TimeMachine({ detectionTime, selectedTime, onTimeChange 
               cursor: "pointer", fontSize: 10, fontWeight: 700, marginLeft: 2,
             }}
           >
-            T₀
+            🎯 T₀
           </button>
         </div>
       </div>
@@ -368,9 +388,11 @@ export default function TimeMachine({ detectionTime, selectedTime, onTimeChange 
           min={0}
           max={1}
           step={0.00005}
-          value={sliderFrac}
+          value={localFrac !== null ? localFrac : sliderFrac}
           onChange={handleSlider}
           onInput={handleSlider}
+          onMouseUp={handleSliderEnd}
+          onTouchEnd={handleSliderEnd}
           style={{ width: "100%", display: "block", cursor: "pointer", "--t0-pos": `${t0Frac * 100}%` }}
         />
 
@@ -390,19 +412,22 @@ export default function TimeMachine({ detectionTime, selectedTime, onTimeChange 
         {/* Jump markers row */}
         <div style={{ display: "flex", justifyContent: "space-between", marginTop: 2 }}>
           {jumps.map((j) => {
-            const frac = (j.h - MIN_OFFSET_H) / (MAX_OFFSET_H - MIN_OFFSET_H);
             const isActive = Math.abs(offsetH - j.h) < 0.5;
             return (
               <button
                 key={j.h}
                 onClick={() => { setIsPlaying(false); onTimeChange(new Date(det.getTime() + j.h * 3_600_000)); }}
                 style={{
-                  background: "none", border: "none", cursor: "pointer",
-                  fontSize: 9, fontFamily: "monospace",
-                  color: j.h === 0 ? "#f43f5e" : j.h < 0 ? "#a78bfa" : "#38bdf8",
-                  fontWeight: isActive ? 700 : 400,
-                  opacity: isActive ? 1 : 0.65,
-                  padding: "0 2px",
+                  background: j.isOrigin ? "rgba(239,68,68,0.25)" : j.isT0 ? "rgba(244,63,94,0.2)" : "none",
+                  border: j.isOrigin ? "1px solid rgba(239,68,68,0.5)" : j.isT0 ? "1px solid rgba(244,63,94,0.4)" : "none",
+                  borderRadius: 4,
+                  cursor: "pointer",
+                  fontSize: 9,
+                  fontFamily: "monospace",
+                  color: j.isOrigin ? "#fca5a5" : j.isT0 ? "#fda4af" : j.h < 0 ? "#a78bfa" : "#38bdf8",
+                  fontWeight: isActive || j.isOrigin ? 700 : 400,
+                  opacity: isActive || j.isOrigin || j.isT0 ? 1 : 0.65,
+                  padding: j.isOrigin || j.isT0 ? "1px 5px" : "0 2px",
                 }}
               >
                 {j.label}

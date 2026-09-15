@@ -1,42 +1,42 @@
 /**
  * CanvasVectorLayer.jsx — High-Performance Indian Ocean Environmental Flow
  *
- * Provides smooth, zoom-adaptive particle animation for:
- * 1. ECMWF / ERA5 10m Atmospheric Wind
- * 2. Copernicus Marine Ocean Surface Currents
+ * Provides smooth, zoom-adaptive vector arrows & particle animation:
+ * 1. ECMWF / ERA5 10m Atmospheric Wind — Warm Amber / Golden Glow arrows
+ * 2. Copernicus Marine Ocean Surface Currents — Electric Cyan / Deep Marine Blue arrows
  *
  * Optimizations:
  * - Cancels RAF loop immediately when layers are toggled off
- * - Pre-computes and caches vector field grid points on map moveend/zoomend,
- *   never projecting lat/lon coordinates inside the 60 FPS render loop
+ * - Pre-computes and caches vector field grid points on map moveend/zoomend
+ * - Distinct arrowheads with contrasting colors for wind and ocean currents
  * - Adaptive particle counts (120-240 particles) to maintain 60 FPS on any hardware
- * - Zero React state updates per frame; uses mutable canvas-local state
  */
 import { useEffect, useRef } from "react";
 import { useMap } from "react-leaflet";
 
-// ─── Color ramps ─────────────────────────────────────────────────────────────
+// ─── Color ramps (Warm Amber for Wind vs Electric Cyan for Currents) ──────────
 function getWindStyle(spd) {
-  if (spd < 3) return "rgba(186,230,253,0.75)";  // light breeze — pale cyan
-  if (spd < 6) return "rgba(56,189,248,0.85)";   // moderate — sky blue
-  if (spd < 10) return "rgba(251,146,60,0.85)";  // fresh — amber
-  return "rgba(244,63,94,0.9)";                  // strong — crimson
+  if (spd < 4) return "rgba(253,224,71,0.90)";  // Light breeze — Yellow-300
+  if (spd < 8) return "rgba(245,158,11,0.95)";  // Moderate — Amber-500
+  return "rgba(234,88,12,0.95)";                // Fresh/Strong — Orange-600
 }
 
 function getCurrentStyle(spd) {
-  if (spd < 0.25) return "rgba(96,165,250,0.70)";
-  if (spd < 0.5)  return "rgba(59,130,246,0.85)";
-  return "rgba(37,99,235,0.90)";
+  if (spd < 0.25) return "rgba(56,189,248,0.85)"; // Light drift — Sky-400
+  if (spd < 0.50) return "rgba(6,182,212,0.95)";  // Moderate current — Cyan-500
+  return "rgba(2,132,199,0.98)";                  // Strong coastal jet — Sky-600
 }
 
 // ─── Physical vectors ────────────────────────────────────────────────────────
 function getWindVector(lat, lon) {
+  // Predominant SW monsoon / Arabian Sea atmospheric circulation
   const dir = (65 + Math.sin(lat * 0.18 + lon * 0.15) * 22 + (lat > 15 ? 15 : -10) + 360) % 360;
   const spd = Math.max(2.5, 5.5 + Math.cos(lat * 0.22) * 2.2 + Math.sin(lon * 0.18) * 1.1);
   return { speed: spd, bearing: dir };
 }
 
 function getCurrentVector(lat, lon) {
+  // Eastern Arabian Sea & West India Coastal Current (WICC)
   let dir = 135;
   let spd = 0.40;
   if (lat >= 8.0 && lat <= 22.0 && lon >= 68.0 && lon <= 75.0) {
@@ -125,57 +125,74 @@ export function CanvasVectorLayer({
       const size = map.getSize();
 
       // Adaptive grid step depending on zoom
-      const step = zoom <= 5 ? 2.5 : zoom <= 7 ? 1.4 : zoom <= 9 ? 0.75 : 0.40;
+      const step = zoom <= 5 ? 2.6 : zoom <= 7 ? 1.5 : zoom <= 9 ? 0.8 : 0.45;
       const S = Math.max(-10, bounds.getSouth());
       const N = Math.min(28, bounds.getNorth());
       const W = Math.max(50, bounds.getWest());
       const E = Math.min(95, bounds.getEast());
 
       const arrows = [];
+      let rowIdx = 0;
       for (let lat = S; lat <= N; lat += step) {
+        rowIdx++;
+        let colIdx = 0;
         for (let lon = W; lon <= E; lon += step) {
+          colIdx++;
           if (isSubcontinentLand(lat, lon)) continue;
           const pt = map.latLngToContainerPoint([lat, lon]);
           if (pt.x < -20 || pt.x > size.x + 20 || pt.y < -20 || pt.y > size.y + 20) continue;
 
+          // 1. WIND ARROWS (Golden Amber)
           if (isW) {
             const w = getWindVector(lat, lon);
             const rad = (w.bearing * Math.PI) / 180;
+            // When both are visible, slightly offset to avoid complete overlap
+            const offX = isC ? -4 : 0;
+            const offY = isC ? -4 : 0;
             arrows.push({
-              x: pt.x,
-              y: pt.y,
+              x: pt.x + offX,
+              y: pt.y + offY,
               rad,
-              len: Math.min(18, 7 + w.speed * 1.2),
+              len: Math.min(18, 9 + w.speed * 1.1),
               color: getWindStyle(w.speed),
+              type: "wind",
             });
-          } else if (isC) {
+          }
+
+          // 2. OCEAN CURRENT ARROWS (Electric Cyan)
+          if (isC) {
             const c = getCurrentVector(lat, lon);
             const rad = (c.direction * Math.PI) / 180;
+            const offX = isW ? 4 : 0;
+            const offY = isW ? 4 : 0;
             arrows.push({
-              x: pt.x,
-              y: pt.y,
+              x: pt.x + offX,
+              y: pt.y + offY,
               rad,
-              len: Math.min(16, 6 + c.speed * 15),
+              len: Math.min(17, 8 + c.speed * 14),
               color: getCurrentStyle(c.speed),
+              type: "current",
             });
           }
         }
       }
       st.staticArrows = arrows;
 
-      // Seed particles
-      const count = isW ? (zoom <= 6 ? 140 : 220) : (zoom <= 6 ? 90 : 160);
+      // Seed particles for flowing animation
+      const count = isW && isC ? 220 : isW ? 150 : 130;
       const newParticles = [];
       for (let i = 0; i < count; i++) {
         const lat = S + Math.random() * (N - S);
         const lon = W + Math.random() * (E - W);
         if (!isSubcontinentLand(lat, lon)) {
+          // If both enabled, alternate wind and current particles
+          const isCurrentParticle = isC && (!isW || i % 2 === 1);
           newParticles.push({
             lat,
             lon,
             age: Math.floor(Math.random() * 60),
-            maxAge: 50 + Math.floor(Math.random() * 40),
-            isCurrent: isC && !isW,
+            maxAge: 45 + Math.floor(Math.random() * 45),
+            isCurrent: isCurrentParticle,
           });
         }
       }
@@ -210,26 +227,41 @@ export function CanvasVectorLayer({
       const ctx = canvas.getContext("2d");
       const st = stateRef.current;
 
-      // Subtle trail fade
+      // Subtle trail fade for particles
       ctx.globalCompositeOperation = "destination-in";
-      ctx.fillStyle = "rgba(0,0,0,0.85)";
+      ctx.fillStyle = "rgba(0,0,0,0.86)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.globalCompositeOperation = "source-over";
 
-      // 1. Draw pre-projected static directional arrows
+      // 1. Draw static directional arrows with genuine arrowheads
       for (let i = 0; i < st.staticArrows.length; i++) {
         const a = st.staticArrows[i];
-        ctx.beginPath();
-        ctx.strokeStyle = a.color;
-        ctx.lineWidth = 1.1;
-        ctx.moveTo(a.x, a.y);
         const tox = a.x + Math.cos(a.rad) * a.len;
         const toy = a.y + Math.sin(a.rad) * a.len;
+
+        // Arrow line
+        ctx.beginPath();
+        ctx.strokeStyle = a.color;
+        ctx.lineWidth = a.type === "wind" ? 1.4 : 1.6;
+        ctx.moveTo(a.x, a.y);
         ctx.lineTo(tox, toy);
         ctx.stroke();
+
+        // Arrowhead
+        const headLen = Math.max(4.5, a.len * 0.35);
+        const a1 = a.rad - Math.PI / 6.5;
+        const a2 = a.rad + Math.PI / 6.5;
+
+        ctx.beginPath();
+        ctx.moveTo(tox, toy);
+        ctx.lineTo(tox - headLen * Math.cos(a1), toy - headLen * Math.sin(a1));
+        ctx.lineTo(tox - headLen * Math.cos(a2), toy - headLen * Math.sin(a2));
+        ctx.closePath();
+        ctx.fillStyle = a.color;
+        ctx.fill();
       }
 
-      // 2. Advance and render active particles
+      // 2. Advance and render active flow particles
       const bounds = map.getBounds();
       const S = Math.max(-10, bounds.getSouth());
       const N = Math.min(28, bounds.getNorth());
@@ -249,6 +281,7 @@ export function CanvasVectorLayer({
 
         // Advance physically
         if (p.isCurrent) {
+          // Ocean current particle (Cyan)
           const cur = getCurrentVector(p.lat, p.lon);
           const rad = (cur.direction * Math.PI) / 180;
           p.lat += Math.cos(rad) * 0.005;
@@ -259,13 +292,14 @@ export function CanvasVectorLayer({
           ctx.fillStyle = getCurrentStyle(cur.speed);
           ctx.fill();
         } else {
+          // Wind particle (Amber)
           const w = getWindVector(p.lat, p.lon);
           const rad = (w.bearing * Math.PI) / 180;
           p.lat += Math.cos(rad) * 0.009;
           p.lon += Math.sin(rad) * 0.009;
           const pt = map.latLngToContainerPoint([p.lat, p.lon]);
           ctx.beginPath();
-          ctx.arc(pt.x, pt.y, 1.3, 0, Math.PI * 2);
+          ctx.arc(pt.x, pt.y, 1.4, 0, Math.PI * 2);
           ctx.fillStyle = getWindStyle(w.speed);
           ctx.fill();
         }
@@ -283,7 +317,6 @@ export function CanvasVectorLayer({
       isCancelled = true;
       if (rafRef.current) {
         cancelAnimationFrame(rafRef.current);
-        rafRef.current = null;
       }
     };
   }, [map, showWind, showCurrent]);
@@ -291,16 +324,8 @@ export function CanvasVectorLayer({
   return (
     <canvas
       ref={canvasRef}
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        pointerEvents: "none",
-        zIndex: 420,
-      }}
+      className="pointer-events-none absolute inset-0 z-[350]"
+      style={{ width: "100%", height: "100%" }}
     />
   );
 }
-export default CanvasVectorLayer;
